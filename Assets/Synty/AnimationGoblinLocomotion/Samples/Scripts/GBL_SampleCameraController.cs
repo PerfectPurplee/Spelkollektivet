@@ -82,8 +82,8 @@ namespace Synty.AnimationGoblinLocomotion.Samples
 
             _cameraInversion = _invertCamera ? 1 : -1;
 
-            transform.position = _playerTarget.position;
-            transform.rotation = _playerTarget.rotation;
+            //transform.position = _playerTarget.position;
+            //transform.rotation = _playerTarget.rotation;
 
             _lastPosition = transform.position;
 
@@ -121,11 +121,11 @@ namespace Synty.AnimationGoblinLocomotion.Samples
             _newPosition = _playerTarget.position;
             _newPosition = Vector3.Lerp(_lastPosition, _newPosition, positionalFollowSpeed * Time.deltaTime);
 
-            transform.position = _newPosition;
-            transform.eulerAngles = new Vector3(_newAngleX, _newAngleY, 0);
+            //transform.position = _newPosition;
+            //transform.eulerAngles = new Vector3(_newAngleX, _newAngleY, 0);
 
-            _syntyCamera.localPosition = new Vector3(_cameraHorizontalOffset, _cameraHeightOffset, _cameraDistance * -1);
-            _syntyCamera.localEulerAngles = new Vector3(_cameraTiltOffset, 0f, 0f);
+            //_syntyCamera.localPosition = new Vector3(_cameraHorizontalOffset, _cameraHeightOffset, _cameraDistance * -1);
+            //_syntyCamera.localEulerAngles = new Vector3(_cameraTiltOffset, 0f, 0f);
 
             _lastPosition = _newPosition;
             _lastAngleX = _newAngleX;
