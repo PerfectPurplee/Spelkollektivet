@@ -13,6 +13,13 @@ namespace Synty.AnimationGoblinLocomotion.Samples
 {
     public class SamplePlayerAnimationController : MonoBehaviour
     {
+        #region moje gowno
+
+        [SerializeField]
+        private Transform targetPoint;
+
+        #endregion
+
         #region Enum
 
         private enum AnimationState
@@ -848,7 +855,9 @@ namespace Synty.AnimationGoblinLocomotion.Samples
             Vector3 characterRight = new Vector3(transform.right.x, 0f, transform.right.z).normalized;
             Vector3 directionForward = new Vector3(_moveDirection.x, 0f, _moveDirection.z).normalized;
 
-            _cameraForward = _cameraController.GetCameraForwardZeroedYNormalised();
+            _cameraForward = (targetPoint.position - transform.position);//_cameraController.GetCameraForwardZeroedYNormalised();
+            _cameraForward.y = 0; //gowno
+            _cameraForward.Normalize();
             Quaternion strafingTargetRotation = Quaternion.LookRotation(_cameraForward);
 
             _strafeAngle = characterForward != directionForward ? Vector3.SignedAngle(characterForward, directionForward, Vector3.up) : 0f;
@@ -963,7 +972,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                         _animator.SetFloat(_locomotionStartDirectionHash, _locomotionStartDirection);
                     }
 
-                    float delayTime = 0.2f;
+                    float delayTime = 0f;//gowno
                     _leanDelay = delayTime;
                     _headLookDelay = delayTime;
                     _bodyLookDelay = delayTime;
@@ -1145,7 +1154,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
             if (headLookActivated && _isTurningInPlace)
             {
                 _initialTurnValue = _cameraRotationOffset;
-                _headLookX = Mathf.Lerp(_headLookX, _initialTurnValue / 200, 5f * Time.deltaTime);
+                _headLookX = Mathf.Lerp(_headLookX, _initialTurnValue / 200, 5f * Time.deltaTime);//gowno
             }
             else
             {
@@ -1161,7 +1170,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                 );
             }
 
-            float bodyTurnSmoothness = 5f;
+            float bodyTurnSmoothness = 100f;
 
             _initialTurnValue = bodyLookActivated ? _rotationRate : 0f;
 
