@@ -3,16 +3,20 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour {
     public static Testing Instance { get; private set; }
-    public event EventHandler OnXPPickedUp;
+    public event EventHandler<OnXPGainedEventArgs> OnXPGained;
+
+    public class OnXPGainedEventArgs : EventArgs {
+    public int xpAmount;
+}
     public event EventHandler<OnHealTakenEventArgs> OnHealTaken;
 
     public class OnHealTakenEventArgs : EventArgs {
-        public int heal;
+        public int healAmount;
     }
     public event EventHandler<OnDamageTakenEventArgs> OnDamageTaken;
 
     public class OnDamageTakenEventArgs : EventArgs {
-        public int damage;
+        public int damageAmount;
     }
     private void Awake() {
         Instance = this;
@@ -20,18 +24,20 @@ public class Testing : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKey(KeyCode.Space)) {
-            OnXPPickedUp?.Invoke(this, EventArgs.Empty);
+            OnXPGained?.Invoke(this, new OnXPGainedEventArgs {
+                xpAmount = 1,
+            });
         }
 
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKey(KeyCode.E)) {
             OnDamageTaken?.Invoke(this, new OnDamageTakenEventArgs {
-                damage = 1,
+                damageAmount = 1,
             });
         }
         
-        if (Input.GetKeyDown(KeyCode.H)) {
+        if (Input.GetKey(KeyCode.H)) {
             OnHealTaken.Invoke(this, new OnHealTakenEventArgs {
-                heal = 1,
+                healAmount = 1,
             });
         }
 

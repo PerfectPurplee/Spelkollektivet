@@ -8,26 +8,32 @@ public class PlayerHealthUI : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI healthText;
     
     private int currentHealth;
-    private int maxHealth = 10;
+    private int maxHealth = 1000;
 
 
     private void Start() {
-        Testing.Instance.OnDamageTaken += TestingOnDamageTaken;
-        Testing.Instance.OnHealTaken += TestingOnHealTaken;
+        Testing.Instance.OnDamageTaken += Testing_OnDamageTaken;
+        Testing.Instance.OnHealTaken += Testing_OnHealTaken;
         currentHealth = maxHealth;
+        
+        
+        UpdateVisual();
     }
 
-    private void TestingOnHealTaken(object sender, Testing.OnHealTakenEventArgs e) {
-        currentHealth = Mathf.Min(maxHealth, currentHealth + e.heal);
-        healthSlider.value = (float)currentHealth / maxHealth;
-        healthText.text = currentHealth + "/" + maxHealth;
-        Debug.Log(currentHealth + "/" + maxHealth);
+    private void Testing_OnHealTaken(object sender, Testing.OnHealTakenEventArgs e) {
+        currentHealth = Mathf.Min(maxHealth, currentHealth + e.healAmount);
+
+        UpdateVisual();
     }
 
-    private void TestingOnDamageTaken(object sender, Testing.OnDamageTakenEventArgs e) {
-        currentHealth = Mathf.Max(0, currentHealth - e.damage);
+    private void Testing_OnDamageTaken(object sender, Testing.OnDamageTakenEventArgs e) {
+        currentHealth = Mathf.Max(0, currentHealth - e.damageAmount);
+
+        UpdateVisual();
+    }
+
+    private void UpdateVisual() {
         healthSlider.value = (float)currentHealth / maxHealth;
         healthText.text = currentHealth + "/" + maxHealth;
-        Debug.Log(currentHealth + "/" + maxHealth);
     }
 }
