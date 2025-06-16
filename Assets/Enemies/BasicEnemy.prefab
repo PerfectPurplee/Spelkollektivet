@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 73d520e804e6ca04b89f3abd196e9188, type: 3}
       propertyPath: m_Name
-      value: PolygonSyntyCharacter
+      value: BasicEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4711277005493638832, guid: 73d520e804e6ca04b89f3abd196e9188, type: 3}
       propertyPath: m_IsActive
@@ -114,5 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5cf95af70294d5987e64098ae20224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 934106960977871248, guid: a416ad23210fb4b74a689700ca835fd7, type: 3}
   attackDistance: 0
