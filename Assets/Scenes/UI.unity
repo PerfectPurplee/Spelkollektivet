@@ -396,7 +396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 307250060}
-  - component: {fileID: 307250059}
+  - component: {fileID: 307250061}
   m_Layer: 0
   m_Name: XPManager
   m_TagString: Untagged
@@ -404,18 +404,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &307250059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307250058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d93a52862fdd4dc1960c07ffcde3786, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &307250060
 Transform:
   m_ObjectHideFlags: 0
@@ -431,6 +419,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &307250061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307250058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d93a52862fdd4dc1960c07ffcde3786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &314909915
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expSlider: {fileID: 2129701112}
-  levelText: {fileID: 918877448}
+  levelNumberText: {fileID: 918877448}
 --- !u!1 &327894783
 GameObject:
   m_ObjectHideFlags: 0

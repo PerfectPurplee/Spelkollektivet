@@ -3,11 +3,7 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour {
     public static Testing Instance { get; private set; }
-    public event EventHandler<OnXPGainedEventArgs> OnXPGained;
 
-    public class OnXPGainedEventArgs : EventArgs {
-    public int xpAmount;
-}
     public event EventHandler<OnHealTakenEventArgs> OnHealTaken;
 
     public class OnHealTakenEventArgs : EventArgs {
@@ -24,9 +20,7 @@ public class Testing : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            OnXPGained?.Invoke(this, new OnXPGainedEventArgs {
-                xpAmount = 1,
-            });
+            XPManager.Instance.AddXP(20);
         }
 
         if (Input.GetKeyDown(KeyCode.E)) {
