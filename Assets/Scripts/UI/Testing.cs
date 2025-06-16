@@ -23,19 +23,19 @@ public class Testing : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             OnXPGained?.Invoke(this, new OnXPGainedEventArgs {
                 xpAmount = 1,
             });
         }
 
-        if (Input.GetKey(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E)) {
             OnDamageTaken?.Invoke(this, new OnDamageTakenEventArgs {
                 damageAmount = 1,
             });
         }
         
-        if (Input.GetKey(KeyCode.H)) {
+        if (Input.GetKeyDown(KeyCode.H)) {
             OnHealTaken.Invoke(this, new OnHealTakenEventArgs {
                 healAmount = 1,
             });

@@ -3,20 +3,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealthUI : MonoBehaviour {
-    
     [SerializeField] private Slider healthSlider;
     [SerializeField] private TextMeshProUGUI healthText;
-    
+
     private int currentHealth;
-    private int maxHealth = 1000;
+    private int maxHealth = 10;
 
 
     private void Start() {
         Testing.Instance.OnDamageTaken += Testing_OnDamageTaken;
         Testing.Instance.OnHealTaken += Testing_OnHealTaken;
         currentHealth = maxHealth;
-        
-        
+
+
         UpdateVisual();
     }
 
@@ -33,7 +32,17 @@ public class PlayerHealthUI : MonoBehaviour {
     }
 
     private void UpdateVisual() {
-        healthSlider.value = (float)currentHealth / maxHealth;
+        float healthVisualNormalized = (float)currentHealth / maxHealth;
+        if (healthVisualNormalized > 0.8f && healthVisualNormalized < 1f) {
+            healthSlider.value = 0.8f;
+        }
+        else if (healthVisualNormalized < 0.2f && healthVisualNormalized > 0f) {
+            healthSlider.value = 0.2f;
+        }
+        else {
+            healthSlider.value = healthVisualNormalized;
+        }
+
         healthText.text = currentHealth + "/" + maxHealth;
     }
 }
