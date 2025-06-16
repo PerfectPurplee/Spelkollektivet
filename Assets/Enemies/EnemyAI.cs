@@ -1,4 +1,5 @@
 using System;
+using Interface;
 using Player;
 using UnityEngine;
 using UnityEngine.AI;
@@ -6,7 +7,7 @@ using UnityEngine.Serialization;
 
 namespace Enemies {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class EnemyAI : MonoBehaviour {
+    public class EnemyAI : MonoBehaviour, IDamageable {
         public enum EnemyState {
             Walking,
             Attacking
@@ -14,19 +15,28 @@ namespace Enemies {
 
         public EnemyState State { get; set; } = EnemyState.Walking;
         public EventHandler OnAttack;
+        public EventHandler OnTakeDamage;
         public float distance;
 
+
+        public int MaxHealth { get; set; }
+        public int CurrentHealth { get; set; }
+
         [SerializeField] private EnemyAttack enemyAttack;
+        [SerializeField] private int initialHealth;
 
         private static readonly int Attack = Animator.StringToHash("Attack");
         private NavMeshAgent _agent;
-        private Animator _animator;
         private Transform _target;
         private float _attackTimer = 0;
 
+
+        private void Awake() {
+            this.CurrentHealth = this.MaxHealth = this.initialHealth;
+        }
+
         void Start() {
             this._agent = GetComponent<NavMeshAgent>();
-            this._animator = GetComponent<Animator>();
             this._target = PlayerPos.Instance.transform;
         }
 
@@ -60,6 +70,16 @@ namespace Enemies {
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        public void TakeDamage(int damage) {
+            CurrentHealth -= damage;
+            OnTakeDamage?.Invoke(this, EventArgs.Empty);
+            Debug.Log($"Enemy took {damage} damage");
+        }
+
+        public EnemyAttack GetEnemyAttack() {
+            return this.enemyAttack;
         }
     }
 }
