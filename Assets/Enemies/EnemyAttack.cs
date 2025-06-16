@@ -5,9 +5,10 @@ namespace Enemies {
     public abstract class EnemyAttack : MonoBehaviour {
         public abstract float TriggerDistance { get; }
         public abstract EnemyAttackType AttackType { get; }
-        
+
         public abstract float AttackDuration { get; }
-        
+        public abstract int Damage { get; }
+
 
         protected EnemyAI EnemyAI { get; set; }
         protected Animator AnimatorController { get; set; }
