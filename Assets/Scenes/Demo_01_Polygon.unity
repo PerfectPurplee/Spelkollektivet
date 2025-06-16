@@ -747,37 +747,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 031245d90840db043aab091e51907307, type: 3}
---- !u!1 &554254135
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 554254136}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &554254136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554254135}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7803833, y: 1.2506428, z: 3.1461005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &574889985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4bc605f2407aff144b5cf2b954503736, type: 3}
@@ -1429,6 +1398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097989161}
   - component: {fileID: 1097989162}
+  - component: {fileID: 1097989163}
   m_Layer: 0
   m_Name: CameraPoint
   m_TagString: Untagged
@@ -1464,9 +1434,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b2a4a79078e914384fad1d52466bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 554254136}
+  player: {fileID: 6606311126252421486}
   cameraLerpSpeed: 0
   targetInfluence: 0
+--- !u!114 &1097989163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097989160}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b956fba8029c554f9ab19e918bc5c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _syntyCharacter: {fileID: 6606311126252421484}
+  _mainCamera: {fileID: 1336742960}
+  _playerTarget: {fileID: 0}
+  _lockOnTarget: {fileID: 0}
+  _invertCamera: 0
+  _hideCursor: 0
+  _isLockedOn: 0
+  _mouseSensitivity: 0
+  _cameraDistance: 2.5
+  _cameraHeightOffset: 0
+  _cameraHorizontalOffset: 0
+  _cameraTiltOffset: 15
+  _cameraTiltBounds: {x: -70, y: 70}
+  _positionalCameraLag: 0.2
+  _rotationalCameraLag: 0.2
 --- !u!1 &1122941609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1360b32133c1b2b4ca9684d3d3a49fee, type: 3}
@@ -3700,7 +3697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 73d520e804e6ca04b89f3abd196e9188, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1346693338035923533, guid: 73d520e804e6ca04b89f3abd196e9188, type: 3}
       propertyPath: m_Layer
@@ -3862,7 +3859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470b66511dc64fa4b9e9ee443510c12a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraController: {fileID: 0}
+  targetPoint: {fileID: 1788074718}
+  _cameraController: {fileID: 1097989163}
   _inputReader: {fileID: 5053483745945004456}
   _animator: {fileID: 6606311126252421485}
   _controller: {fileID: 527452484210692116}
@@ -3930,7 +3928,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _enableBodyTurn: 1
+  _enableBodyTurn: 0
   _bodyLookDelay: 0
   _bodyLookX: 0
   _bodyLookY: 0
@@ -4085,4 +4083,3 @@ SceneRoots:
   - {fileID: 6606311126252421483}
   - {fileID: 1097989161}
   - {fileID: 1788074718}
-  - {fileID: 554254136}
