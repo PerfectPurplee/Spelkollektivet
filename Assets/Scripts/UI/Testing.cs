@@ -20,7 +20,7 @@ public class Testing : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            XPManager.Instance.AddXP(20);
+            XPManager.Instance.AddXP(3);
         }
 
         if (Input.GetKeyDown(KeyCode.E)) {
@@ -33,6 +33,10 @@ public class Testing : MonoBehaviour {
             OnHealTaken.Invoke(this, new OnHealTakenEventArgs {
                 healAmount = 1,
             });
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            PauseMenuUI.Instance.Show();
         }
 
     }
