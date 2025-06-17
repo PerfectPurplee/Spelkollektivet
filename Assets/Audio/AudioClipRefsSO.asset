@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cf42b87570148ebbabd322be6e66a1, type: 3}
+  m_Name: AudioClipRefsSO
+  m_EditorClassIdentifier: 
+  xp: {fileID: 8300000, guid: 8f79064db044a44cd889d606cf8ca0f7, type: 3}
+  playerHit: {fileID: 8300000, guid: 886dd3bee7d814be3b31424ace6f9a1f, type: 3}
+  levelUp: {fileID: 8300000, guid: 269fecf04dcd544f59ea2aa4057cb129, type: 3}
+  playerDeath: {fileID: 8300000, guid: d70f3aea7b2a64bf1a03581f06ecdc69, type: 3}
+  shieldHit:
+  - {fileID: 8300000, guid: e5a508f87f56d4992a07e5b260eb9b7e, type: 3}
+  - {fileID: 8300000, guid: 88ed9a2b781f54a6280d8d986a51c2d5, type: 3}
+  skeletonHurt:
+  - {fileID: 8300000, guid: c5bba6c10161746fc94378157572384e, type: 3}
+  - {fileID: 8300000, guid: a4157c058bbb34f0ca52e9155f5d9e83, type: 3}
+  - {fileID: 8300000, guid: a84f97624b86b4960a03b5d81ba76c30, type: 3}
+  - {fileID: 8300000, guid: 0fa9f6e0462c849d681c3a495f9c8706, type: 3}
+  skeletonDeath: {fileID: 8300000, guid: e05916f2e31a2463091e063de7d38c5f, type: 3}
+  shieldBlock: {fileID: 8300000, guid: 51b3aeb8e96d74474a84bfb97233f375, type: 3}
+  swordHit: {fileID: 8300000, guid: 84832cbb861b3484ab888d1102e343d6, type: 3}
+  menuSlider: {fileID: 8300000, guid: 26dca6f97ff894ca9bd1087982475729, type: 3}
+  menuCategory: {fileID: 8300000, guid: 69dfae0548ad940048efd0fb37f5b650, type: 3}
+  menuOption: {fileID: 8300000, guid: 0ff28e67e1fb5487880256dc1f5955ac, type: 3}
