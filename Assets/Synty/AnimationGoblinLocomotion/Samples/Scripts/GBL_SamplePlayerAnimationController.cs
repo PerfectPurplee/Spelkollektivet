@@ -1021,7 +1021,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                 _controller.transform.position.y - _groundedOffset,
                 _controller.transform.position.z
             );
-            _isGrounded = Physics.CheckSphere(spherePosition, _controller.radius * 0.8f, _groundLayerMask, QueryTriggerInteraction.Ignore);
+            _isGrounded = Physics.CheckSphere(spherePosition, _controller.radius, _groundLayerMask, QueryTriggerInteraction.Ignore);
             //_isGrounded = _controller.isGrounded;
             //Debug.Log(_controller.isGrounded);
 
