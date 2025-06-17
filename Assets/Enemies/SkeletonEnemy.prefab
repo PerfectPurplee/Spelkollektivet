@@ -2020,7 +2020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  enemyAttack: {fileID: 3411858728211344013}
+  attack: {fileID: 3411858728211344013}
   initialHealth: 100
 --- !u!114 &3491451484080423475
 MonoBehaviour:
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd94d51811b47cf9fc862145fdc036d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeHeaponWitbox: {fileID: 2110122662517015981}
+  sharedMeleeWeaponHitbox: {fileID: 2110122662517015981}
 --- !u!1 &3349201436910691856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,4 +4148,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9d869e3d3c54de1a5b0eaf001fe8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 6601086012731677550}

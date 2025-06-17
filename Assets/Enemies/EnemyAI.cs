@@ -65,6 +65,10 @@ namespace Enemies {
                 case EnemyState.Attacking:
                     _attackTimer -= Time.deltaTime;
                     if (_attackTimer <= 0) {
+                        if (this.attack is BasicMeleeAttack meleeAttack) {
+                            meleeAttack.TurnWeaponColliderOffAfterMeleeAttack();
+                        }
+
                         this.State = EnemyState.Walking;
                     }
 
@@ -75,7 +79,7 @@ namespace Enemies {
         }
 
         public void TakeDamage(int damage) {
-            ((IDamageable)this).TakeDamage(damage);
+            CurrentHealth -= damage;
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
             Debug.Log($"Enemy took {damage} damage");
         }

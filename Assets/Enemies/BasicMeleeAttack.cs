@@ -20,5 +20,8 @@ namespace Enemies {
 
             return false;
         }
+        public void TurnWeaponColliderOffAfterMeleeAttack() {
+            sharedMeleeWeaponHitbox.GetComponent<Collider>().enabled = false;
+        }
     }
 }

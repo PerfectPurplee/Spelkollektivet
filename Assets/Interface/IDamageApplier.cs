@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace Interface {
     public interface IDamageApplier {
-        public Attack Attack { get; set;}
+        Attack Attack { get; set;}
 
         public bool TryDealDamage(GameObject obj, Attack attack) {
             if (obj.TryGetComponent<IDamageable>(out IDamageable damageable)) {
                 damageable.TakeDamage(attack.Damage);
+                return true;
             }
 
             return false;
