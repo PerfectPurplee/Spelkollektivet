@@ -9,8 +9,7 @@ public class XPManager : MonoBehaviour {
     private int levelNumber;
     private int currentXP;
     private int XPNeededToNextLevel;
-
-
+    
     private void Awake() {
         if (Instance != null) {
             Debug.LogError("More than one instance of XPManager");
@@ -40,7 +39,6 @@ public class XPManager : MonoBehaviour {
     public int GetLevelNumber() {
         return levelNumber;
     }
-
     
     public float GetCurrentXPNormalized() {
         return (float)currentXP / XPNeededToNextLevel;
