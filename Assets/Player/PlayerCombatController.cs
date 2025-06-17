@@ -1,4 +1,5 @@
 using System;
+using Interface;
 using Synty.AnimationGoblinLocomotion.Samples;
 using UnityEngine;
 
@@ -35,6 +36,8 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private float dashAttackHitBoxDuration = 0.5f;
     [SerializeField]
+    private float dashPushForce = 1f;
+    [SerializeField]
     private AnimationCurve dashRotationSpeed;
     [SerializeField]
     private float defaultRotationSpeed = 10f;
@@ -56,6 +59,11 @@ public class PlayerCombatController : MonoBehaviour
 
     private float bufforTime;
     private Action bufforAction;
+
+    private void Awake()
+    {
+        dashAttackHitBox.OnAttackEntity += PushEnemyWhileDashing;
+    }
 
     private void Start()
     {
@@ -150,6 +158,27 @@ public class PlayerCombatController : MonoBehaviour
         direction.y = 0;
         transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
         dashAttackHitBox.StartAttack();
+    }
+
+    private void PushEnemyWhileDashing(IDamageable damageable)
+    {
+        Debug.Log("PUSH");
+        if (damageable is MonoBehaviour && ((MonoBehaviour)damageable).TryGetComponent(out Rigidbody enemy))
+        {
+            Debug.Log("yup");
+            if (
+                Vector3.Distance(player.transform.position + player.transform.right, enemy.position) 
+                > Vector3.Distance(player.transform.position - player.transform.right, enemy.position))
+            {
+                Debug.Log("left");
+                enemy.AddForce(-player.transform.right * dashPushForce);
+            }
+            else
+            {
+                Debug.Log("right");
+                enemy.AddForce(player.transform.right * dashPushForce);
+            }
+        }
     }
 
     private void CastBasicAttack()
