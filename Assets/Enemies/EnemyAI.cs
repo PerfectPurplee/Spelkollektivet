@@ -65,7 +65,7 @@ namespace Enemies {
                 case EnemyState.Attacking:
                     _attackTimer -= Time.deltaTime;
                     if (_attackTimer <= 0) {
-                        if (this.attack is BasicMeleeAttack meleeAttack) {
+                        if (this.attack is EnemyBasicMeleeAttack meleeAttack) {
                             meleeAttack.TurnWeaponColliderOffAfterMeleeAttack();
                         }
                         
