@@ -23,8 +23,10 @@ public class PauseMenuUI : MonoBehaviour {
         });
         mainMenuButton.onClick.AddListener(() => {
             Hide();
-            Debug.Log("MainMenu");
+            Loader.LoadScene(Loader.Scene.MainMenuScene);
         });
+        
+        Hide();
     }
 
 
