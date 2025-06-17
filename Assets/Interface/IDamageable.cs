@@ -17,8 +17,6 @@ namespace Interface {
         int CurrentHealth { get; set; }
         event EventHandler<DamageTakenArgs> OnDamageTaken;
 
-        void TakeDamage(int damage) {
-            CurrentHealth -= damage;
-        }
+        void TakeDamage(int damage);
     }
 }

@@ -902,7 +902,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                 }
                 else
                 {
-                    Debug.Log("a");
+                    // Debug.Log("a");
                     UpdateStrafeDirection(1f, 0f);
 
                     float t = 20 * Time.deltaTime;

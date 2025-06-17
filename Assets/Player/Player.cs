@@ -24,8 +24,9 @@ namespace Player {
 
 
         public void TakeDamage(int damage) {
-            ((IDamageable)this).TakeDamage(damage);
+            CurrentHealth -= damage;
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
+            Debug.Log($"Player took {damage} damage, current health: {CurrentHealth}");
         }
     }
 }

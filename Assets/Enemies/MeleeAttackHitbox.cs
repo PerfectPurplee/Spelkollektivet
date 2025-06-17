@@ -14,6 +14,7 @@ namespace Enemies {
             if (((IDamageApplier)this).TryDealDamage(other.gameObject, Attack)) {
                 OnAttackHitSuccess?.Invoke(this, EventArgs.Empty);
             }
+            
         }
 
         private void OnTriggerExit(Collider other) {
