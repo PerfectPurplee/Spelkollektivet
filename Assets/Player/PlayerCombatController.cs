@@ -27,9 +27,13 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private float basicAttackDuration = 0.5f;
     [SerializeField]
+    private float basicAttackHitBoxDuration = 0.2f;
+    [SerializeField]
     private float blockMinDuration = 0.1f;
     [SerializeField]
-    private float dashDuration = 0.2f;
+    private float dashDuration = 1f;
+    [SerializeField]
+    private float dashAttackHitBoxDuration = 0.5f;
     [SerializeField]
     private AnimationCurve dashRotationSpeed;
     [SerializeField]
@@ -45,6 +49,10 @@ public class PlayerCombatController : MonoBehaviour
     private Transform targetPoint;
     [SerializeField]
     private Player.Player player;
+    [SerializeField]
+    private SingleAttackHitBox basicAttackHitBox;
+    [SerializeField]
+    private SingleAttackHitBox dashAttackHitBox;
 
     private float bufforTime;
     private Action bufforAction;
@@ -97,6 +105,10 @@ public class PlayerCombatController : MonoBehaviour
                 {
                     ChangeToAnyState();
                 }
+                if (basicAttackHitBox.attackActive && Time.time - stateEnterTime > basicAttackHitBoxDuration)
+                {
+                    basicAttackHitBox.FinishAttack();
+                }
                 break;
             case State.Block:
                 player.shieldDirection = transform.forward;
@@ -118,6 +130,14 @@ public class PlayerCombatController : MonoBehaviour
                 {
                     ChangeToAnyState();
                 }
+                if (dashAttackHitBox.attackActive)
+                {
+                    //TODO: Pushing enemies away
+                    if (Time.time - stateEnterTime > dashAttackHitBoxDuration)
+                    {
+                        dashAttackHitBox.FinishAttack();
+                    }
+                }
                 break;
         }
     }
@@ -129,13 +149,14 @@ public class PlayerCombatController : MonoBehaviour
         Vector3 direction = targetPoint.transform.position - transform.position;
         direction.y = 0;
         transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
+        dashAttackHitBox.StartAttack();
     }
 
     private void CastBasicAttack()
     {
         ChangeState(State.BasicAttack);
         animator.SetTrigger("Basic Attack");
-        //attack logic
+        basicAttackHitBox.StartAttack();
     }
 
     private void StartBlock()
