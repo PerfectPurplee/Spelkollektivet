@@ -25,6 +25,11 @@ public class SoundManager : MonoBehaviour {
     private void Start() {
         MainMenuUI.Instance.OnButtonPressed += MainMenuUI_OnButtonPressed;
         PauseMenuUI.Instance.OnButtonPressed += PauseMenuUI_OnButtonPressed;
+        XPManager.Instance.OnLevelUp += XPManager_OnLevelUp;
+    }
+
+    private void XPManager_OnLevelUp(object sender, EventArgs e) {
+        PlaySound(audioClipRefsSO.levelUp, Camera.main.transform.position, 50f);
     }
 
     private void PauseMenuUI_OnButtonPressed(object sender, EventArgs e) {
