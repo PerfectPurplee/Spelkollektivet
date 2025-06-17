@@ -2,9 +2,9 @@ using System;
 using UnityEngine;
 
 namespace Enemies {
-    public abstract class EnemyAttack : MonoBehaviour {
+    public abstract class Attack : MonoBehaviour {
         public abstract float TriggerDistance { get; }
-        public abstract EnemyAttackType AttackType { get; }
+        public abstract AttackType AttackType { get; }
 
         public abstract float AttackDuration { get; }
         public abstract int Damage { get; }
