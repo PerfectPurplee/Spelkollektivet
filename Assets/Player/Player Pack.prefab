@@ -807,6 +807,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73d520e804e6ca04b89f3abd196e9188, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6686728855514579011}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73d520e804e6ca04b89f3abd196e9188, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2884482351908155594}
   m_SourcePrefab: {fileID: 100100000, guid: 73d520e804e6ca04b89f3abd196e9188, type: 3}
 --- !u!95 &1175326954771933316 stripped
 Animator:
@@ -1029,3 +1032,25 @@ MonoBehaviour:
     m_RotationOrder: 4
   _leansHeadLooksDelay: 0
   _animationClipEnd: 0
+--- !u!114 &2884482351908155594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5612723028993697860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592b3c0596414eb41a208c528d4dc618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  walkingSpeed: 2
+  walkingSpeedWhileBlocking: 0.44
+  walkingSpeedWhileAttacking: 1.5
+  bufforTimeLimit: 0.1
+  basicAttackDuration: 0.4
+  blockMinDuration: 0.1
+  dashDistance: 4
+  dashSpeed: 10
+  characterController: {fileID: 8933371271253780525}
