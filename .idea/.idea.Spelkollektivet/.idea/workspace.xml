@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Enemies/MeleeAttackHitbox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo_01_Polygon.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo_01_Polygon.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Attack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Attack.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAttackEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/AttackTypeEnum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAttackEnum.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/AttackTypeEnum.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyBasicMeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/BasicMeleeAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyBasicMeleeAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/BasicMeleeAttack.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/MeleeWeaponHitbox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/MeleeWeaponHitbox.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/MeleeAttackHitbox.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Interface/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interface/IDamageable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerPos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerPos.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -31,7 +45,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "kuby",
+    "git-widget-placeholder": "enemies",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

@@ -1,5 +1,5 @@
 namespace Enemies {
-    public enum  EnemyAttackType {
+    public enum  AttackType {
         Melee,
         Ranged,
     }

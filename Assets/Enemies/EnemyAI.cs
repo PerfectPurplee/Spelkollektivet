@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Interface;
 using Player;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine.Serialization;
 
 namespace Enemies {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class EnemyAI : MonoBehaviour, IDamageable, IDamageApplier {
+    public class EnemyAI : MonoBehaviour, IDamageable {
         public enum EnemyState {
             Walking,
             Attacking
@@ -15,14 +16,15 @@ namespace Enemies {
 
         public EnemyState State { get; set; } = EnemyState.Walking;
         public event EventHandler OnAttack;
-        public event EventHandler OnTakeDamage;
+        public event EventHandler<IDamageable.DamageTakenArgs> OnDamageTaken;
         public float distance;
 
 
+        public List<Attack> Attacks { get; set; } = new List<Attack>();
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
 
-        [SerializeField] private EnemyAttack enemyAttack;
+        [SerializeField] private Attack attack;
         [SerializeField] private int initialHealth;
 
         private static readonly int Attack = Animator.StringToHash("Attack");
@@ -48,11 +50,11 @@ namespace Enemies {
 
                     _agent.isStopped = false;
                     _agent.SetDestination(this._target.position);
-                    if (enemyAttack.TryAttack()) {
+                    if (attack.TryAttack()) {
                         this.State = EnemyState.Attacking;
 
                         _agent.isStopped = true;
-                        _attackTimer = enemyAttack.AttackDuration;
+                        _attackTimer = attack.AttackDuration;
 
 
                         OnAttack?.Invoke(this, EventArgs.Empty);
@@ -73,13 +75,13 @@ namespace Enemies {
         }
 
         public void TakeDamage(int damage) {
-            CurrentHealth -= damage;
-            OnTakeDamage?.Invoke(this, EventArgs.Empty);
+            ((IDamageable)this).TakeDamage(damage);
+            OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
             Debug.Log($"Enemy took {damage} damage");
         }
 
-        public EnemyAttack GetEnemyAttack() {
-            return this.enemyAttack;
+        public Attack GetEnemyAttack() {
+            return this.attack;
         }
     }
 }
