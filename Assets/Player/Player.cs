@@ -32,7 +32,9 @@ namespace Player {
         }
 
         public void TakeDamage(int damage, Vector3 attackerPosition, bool ranged) {
-            Vector3 attackVector = (transform.position - attackerPosition).normalized;
+            Vector3 attackVector = transform.position - attackerPosition;
+            attackVector.y = 0;
+            attackVector.Normalize();
             if (shielding && attackVector != Vector3.zero && Vector3.SqrMagnitude(shieldDirection + attackVector) < shieldingAngle)
             {
                 if (!ranged)

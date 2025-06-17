@@ -3093,7 +3093,7 @@ MonoBehaviour:
   basicAttackHitBoxDuration: 0.2
   blockMinDuration: 0.1
   dashDuration: 1
-  dashAttackHitBoxDuration: 0.5
+  dashAttackHitBoxDuration: 0.8
   dashRotationSpeed:
     serializedVersion: 2
     m_Curve:
@@ -3151,7 +3151,7 @@ MonoBehaviour:
   shielding: 0
   shieldDirection: {x: 0, y: 0, z: 0}
   meleeDamageShieldedMultiplier: 0.7
-  shieldingAngle: 0.1
+  shieldingAngle: 0.7
 --- !u!1001 &7027779882559257516
 PrefabInstance:
   m_ObjectHideFlags: 0
