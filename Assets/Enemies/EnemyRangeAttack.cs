@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Enemies {
-    public class EnemyRangeAttack : Attack {
+    public class EnemyRangeAttack : EnemyAttack {
         public override float TriggerDistance => 10f;
         public override AttackType AttackType => AttackType.Ranged;
         public override float AttackDuration => 4f;
