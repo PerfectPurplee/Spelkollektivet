@@ -18,6 +18,12 @@ namespace Synty.AnimationGoblinLocomotion.Samples
         [SerializeField]
         private Transform targetPoint;
 
+        public float targetMaxSpeed;
+
+        [Tooltip("Rotation smoothing factor.")]
+        [SerializeField]
+        public float rotationSmoothing = 10f;
+
         #endregion
 
         #region Enum
@@ -123,9 +129,6 @@ namespace Synty.AnimationGoblinLocomotion.Samples
         [Tooltip("Damping factor for changing speed")]
         [SerializeField]
         private float _speedChangeDamping = 10f;
-        [Tooltip("Rotation smoothing factor.")]
-        [SerializeField]
-        private float _rotationSmoothing = 10f;
         [Tooltip("Offset for camera rotation.")]
         [SerializeField]
         private float _cameraRotationOffset;
@@ -327,7 +330,6 @@ namespace Synty.AnimationGoblinLocomotion.Samples
 
         private const float _ANIMATION_DAMP_TIME = 5f;
         private const float _STRAFE_DIRECTION_DAMP_TIME = 20f;
-        private float _targetMaxSpeed;
         private float _fallStartTime;
         private float _rotationRate;
         private float _initialLeanValue;
@@ -773,28 +775,28 @@ namespace Synty.AnimationGoblinLocomotion.Samples
         {
             CalculateInput();
 
-            if (!_isGrounded)
-            {
-                _targetMaxSpeed = _currentMaxSpeed;
-            }
-            else if (_isCrouching)
-            {
-                _targetMaxSpeed = _walkSpeed;
-            }
-            else if (_isSprinting)
-            {
-                _targetMaxSpeed = _sprintSpeed;
-            }
-            else if (_isWalking)
-            {
-                _targetMaxSpeed = _walkSpeed;
-            }
-            else
-            {
-                _targetMaxSpeed = _runSpeed;
-            }
+            //if (!_isGrounded)
+            //{
+            //    _targetMaxSpeed = _currentMaxSpeed;
+            //}
+            //else if (_isCrouching)
+            //{
+            //    _targetMaxSpeed = _walkSpeed;
+            //}
+            //else if (_isSprinting)
+            //{
+            //    _targetMaxSpeed = _sprintSpeed;
+            //}
+            //else if (_isWalking)
+            //{
+            //    _targetMaxSpeed = _walkSpeed;
+            //}
+            //else
+            //{
+            //    _targetMaxSpeed = _runSpeed;
+            //}
 
-            _currentMaxSpeed = Mathf.Lerp(_currentMaxSpeed, _targetMaxSpeed, _ANIMATION_DAMP_TIME * Time.deltaTime);
+            _currentMaxSpeed = Mathf.Lerp(_currentMaxSpeed, targetMaxSpeed, _ANIMATION_DAMP_TIME * Time.deltaTime);
 
             _targetVelocity.x = _moveDirection.x * _currentMaxSpeed;
             _targetVelocity.z = _moveDirection.z * _currentMaxSpeed;
@@ -868,6 +870,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
             {
                 if (_moveDirection.magnitude > 0.01)
                 {
+                    Debug.Log("b");
                     if (_cameraForward != Vector3.zero)
                     {
                         // Shuffle direction values - these are separate from the strafe values as we don't want to lerp, we need to know immediately
@@ -880,7 +883,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                             Vector3.Dot(characterForward, directionForward),
                             Vector3.Dot(characterRight, directionForward)
                         );
-                        _cameraRotationOffset = Mathf.Lerp(_cameraRotationOffset, 0f, _rotationSmoothing * Time.deltaTime);
+                        _cameraRotationOffset = Mathf.Lerp(_cameraRotationOffset, 0f, rotationSmoothing * Time.deltaTime);
 
                         float targetValue = _strafeAngle > _forwardStrafeMinThreshold && _strafeAngle < _forwardStrafeMaxThreshold ? 1f : 0f;
 
@@ -895,10 +898,11 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                         }
                     }
 
-                    transform.rotation = Quaternion.Slerp(transform.rotation, strafingTargetRotation, _rotationSmoothing * Time.deltaTime);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, strafingTargetRotation, rotationSmoothing * Time.deltaTime);
                 }
                 else
                 {
+                    Debug.Log("a");
                     UpdateStrafeDirection(1f, 0f);
 
                     float t = 20 * Time.deltaTime;
@@ -915,12 +919,14 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                     {
                         _isTurningInPlace = true;
                     }
+
+                    transform.rotation = Quaternion.Slerp(transform.rotation, strafingTargetRotation, rotationSmoothing * Time.deltaTime);
                 }
             }
             else
             {
                 UpdateStrafeDirection(1f, 0f);
-                _cameraRotationOffset = Mathf.Lerp(_cameraRotationOffset, 0f, _rotationSmoothing * Time.deltaTime);
+                _cameraRotationOffset = Mathf.Lerp(_cameraRotationOffset, 0f, rotationSmoothing * Time.deltaTime);
 
                 _shuffleDirectionZ = 1;
                 _shuffleDirectionX = 0;
@@ -935,7 +941,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                 transform.rotation = Quaternion.Slerp(
                     transform.rotation,
                     Quaternion.LookRotation(faceDirection),
-                    _rotationSmoothing * Time.deltaTime
+                    rotationSmoothing * Time.deltaTime
                 );
             }
         }
