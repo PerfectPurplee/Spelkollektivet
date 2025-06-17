@@ -2,8 +2,8 @@ using Interface;
 using UnityEngine;
 
 namespace Player {
-    public class PlayerPos : MonoBehaviour, IDamageable {
-        public static PlayerPos Instance { get; private set; }
+    public class Player : MonoBehaviour, IDamageable, IDamageApplier {
+        public static Player Instance { get; private set; }
 
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }

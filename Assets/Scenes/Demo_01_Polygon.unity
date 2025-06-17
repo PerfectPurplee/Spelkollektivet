@@ -3077,6 +3077,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 1175326954771933316, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
       propertyPath: m_WarningMessage
       value: "\nBinding warning: Some generic clip(s) animate transforms that are
@@ -3195,6 +3196,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
       propertyPath: dashRotationSpeed.m_Curve.Array.data[1].tangentMode
+=======
+    - target: {fileID: 2949097993891976190, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
+      propertyPath: physicsLayer.m_Bits
+>>>>>>> Stashed changes
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5095995248459280301, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}

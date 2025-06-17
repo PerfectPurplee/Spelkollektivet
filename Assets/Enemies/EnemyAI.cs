@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 
 namespace Enemies {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class EnemyAI : MonoBehaviour, IDamageable {
+    public class EnemyAI : MonoBehaviour, IDamageable, IDamageApplier {
         public enum EnemyState {
             Walking,
             Attacking
@@ -37,7 +37,7 @@ namespace Enemies {
 
         void Start() {
             this._agent = GetComponent<NavMeshAgent>();
-            this._target = PlayerPos.Instance.transform;
+            this._target = Player.Player.Instance.transform;
         }
 
         void Update() {
