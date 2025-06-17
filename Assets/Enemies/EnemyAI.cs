@@ -14,8 +14,8 @@ namespace Enemies {
         }
 
         public EnemyState State { get; set; } = EnemyState.Walking;
-        public EventHandler OnAttack;
-        public EventHandler OnTakeDamage;
+        public event EventHandler OnAttack;
+        public event EventHandler OnTakeDamage;
         public float distance;
 
 
