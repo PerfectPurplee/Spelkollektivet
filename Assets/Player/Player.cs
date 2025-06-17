@@ -1,14 +1,19 @@
+using System;
+using System.Collections.Generic;
+using Enemies;
 using Interface;
 using UnityEngine;
 
 namespace Player {
-    public class Player : MonoBehaviour, IDamageable, IDamageApplier {
+    public class Player : MonoBehaviour, IDamageable {
         public static Player Instance { get; private set; }
-
+        public event EventHandler<IDamageable.DamageTakenArgs> OnDamageTaken;
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
 
-        [SerializeField] int initialHealth;
+        public List<Attack> Attacks { get; set; }
+
+        [SerializeField] private int initialHealth;
 
         private void Awake() {
             if (Instance == null) Instance = this;
@@ -19,8 +24,8 @@ namespace Player {
 
 
         public void TakeDamage(int damage) {
-            CurrentHealth -= damage;
-            Debug.Log($"Player took {damage} damage. Current health: {CurrentHealth}");
+            ((IDamageable)this).TakeDamage(damage);
+            OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
         }
     }
 }
