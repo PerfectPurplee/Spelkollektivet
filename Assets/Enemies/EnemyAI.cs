@@ -48,12 +48,12 @@ namespace Enemies {
             switch (this.State) {
                 case EnemyState.Walking:
 
-                    _agent.isStopped = false;
                     _agent.SetDestination(this._target.position);
                     if (attack.TryAttack()) {
                         this.State = EnemyState.Attacking;
 
                         _agent.isStopped = true;
+                        _agent.ResetPath();
                         _attackTimer = attack.AttackDuration;
 
 
@@ -68,7 +68,8 @@ namespace Enemies {
                         if (this.attack is BasicMeleeAttack meleeAttack) {
                             meleeAttack.TurnWeaponColliderOffAfterMeleeAttack();
                         }
-
+                        
+                        _agent.isStopped = false;
                         this.State = EnemyState.Walking;
                     }
 
