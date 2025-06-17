@@ -43,6 +43,8 @@ public class PlayerCombatController : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private Transform targetPoint;
+    [SerializeField]
+    private Player.Player player;
 
     private float bufforTime;
     private Action bufforAction;
@@ -97,6 +99,7 @@ public class PlayerCombatController : MonoBehaviour
                 }
                 break;
             case State.Block:
+                player.shieldDirection = transform.forward;
                 if (Time.time - stateEnterTime > blockMinDuration)
                 {
                     if (bufforAction != null)
@@ -138,7 +141,6 @@ public class PlayerCombatController : MonoBehaviour
     private void StartBlock()
     {
         ChangeState(State.Block);
-        //block logic
     }
 
     private void SetBufforAction(Action action)
@@ -167,6 +169,8 @@ public class PlayerCombatController : MonoBehaviour
 
     private void ChangeState(State newState)
     {
+        player.shielding = false;
+
         float speed = 0;
         switch (newState)
         {
@@ -180,6 +184,7 @@ public class PlayerCombatController : MonoBehaviour
                 break;
             case State.Block:
                 speed = walkingSpeedWhileBlocking;
+                player.shielding = true;
                 break;
             case State.Dash:
                 speed = 0;
