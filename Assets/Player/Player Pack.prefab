@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physicsLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
 --- !u!1 &5095995248459280301
 GameObject:
   m_ObjectHideFlags: 0
