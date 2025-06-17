@@ -194,24 +194,24 @@ public class PlayerCombatController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Color color = Color.white;
-        switch (state)
-        {
-            case State.None:
-                break;
-            case State.Walking:
-                color = Color.yellow;
-                break;
-            case State.BasicAttack:
-                color = Color.red;
-                break;
-            case State.Block:
-                color = Color.blue;
-                break;
-            case State.Dash:
-                color = Color.green;
-                break;
-        }
+        //Color color = Color.white;
+        //switch (state)
+        //{
+        //    case State.None:
+        //        break;
+        //    case State.Walking:
+        //        color = Color.yellow;
+        //        break;
+        //    case State.BasicAttack:
+        //        color = Color.red;
+        //        break;
+        //    case State.Block:
+        //        color = Color.blue;
+        //        break;
+        //    case State.Dash:
+        //        color = Color.green;
+        //        break;
+        //}
         //Gizmos.color = color;
         //Gizmos.DrawWireSphere(transform.position, 2);
     }
