@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/BasicMeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/BasicMeleeAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/MeleeAttackHitbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/MeleeAttackHitbox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/SkeletonEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/SkeletonEnemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interface/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interface/IDamageable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/AnimationGoblinLocomotion/Samples/Scripts/GBL_SamplePlayerAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/AnimationGoblinLocomotion/Samples/Scripts/GBL_SamplePlayerAnimationController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
