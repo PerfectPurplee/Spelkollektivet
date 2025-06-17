@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/MainMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/MainMenuUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/PauseMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/PauseMenuUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
