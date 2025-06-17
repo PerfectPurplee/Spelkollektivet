@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class LevelManagerUI : MonoBehaviour {
+public class XPManagerUI : MonoBehaviour {
 
     
     [SerializeField] private Slider expSlider;
