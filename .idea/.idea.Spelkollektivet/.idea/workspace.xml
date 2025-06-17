@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyRangeAttack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyRangeAttack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Enemies/RangeAttackHitbox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Enemies/RangeAttackHitbox.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/SkeletonEnemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/SkeletonEnemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
