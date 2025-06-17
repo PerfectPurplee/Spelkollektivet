@@ -18,6 +18,7 @@ namespace Enemies {
         public event EventHandler OnAttack;
         public event EventHandler<IDamageable.DamageTakenArgs> OnDamageTaken;
         public float distance;
+        public event Action OnDeath;
 
 
         public List<Attack> Attacks { get; set; } = new List<Attack>();
@@ -79,7 +80,7 @@ namespace Enemies {
             }
         }
 
-        public void TakeDamage(int damage) {
+        public void TakeDamage(int damage, Vector3 attackerPosition, bool range) {
             CurrentHealth -= damage;
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
             Debug.Log($"Enemy took {damage} damage");
