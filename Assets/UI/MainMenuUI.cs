@@ -9,7 +9,7 @@ public class MainMenuUI : MonoBehaviour {
 
     private void Awake() {
         playButton.onClick.AddListener(() => {
-            Debug.Log("play button clicked");
+            Loader.LoadScene(Loader.Scene.UIScene);
         });
         settingsButton.onClick.AddListener(() => {
             Debug.Log("settings button clicked");

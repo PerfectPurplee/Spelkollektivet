@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_02_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_02_B.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_02_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_02_C.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_03_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_03_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_03_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_03_C.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_04_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Alts/PolygonDarkFantasy_Mat_04_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Additive_Circle_Glow_01 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Additive_Circle_Glow_01 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Additive_Circle_Glow_01 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Additive_Circle_Glow_01 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Additive_Circle_Glow_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Additive_Circle_Glow_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Additive_Circle_Soft_FX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Additive_Circle_Soft_FX.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Blank.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Blank.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Fireflies.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Fireflies.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Moon_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Moon_02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/WindStreak_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/WindStreak_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/Cloud_Dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/Cloud_Dark.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/Roof_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/Roof_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/SeaFloor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/SeaFloor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/Vines.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/Vines.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/Misc/Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MainMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/MainMenuUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/PauseMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/PauseMenuUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
