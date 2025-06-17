@@ -295,6 +295,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
         private bool _crouchKeyPressed;
         private bool _isAiming;
         private bool _isCrouching;
+        [SerializeField]
         private bool _isGrounded = true;
         private bool _isLockedOn;
         private bool _isSliding;
@@ -870,7 +871,6 @@ namespace Synty.AnimationGoblinLocomotion.Samples
             {
                 if (_moveDirection.magnitude > 0.01)
                 {
-                    Debug.Log("b");
                     if (_cameraForward != Vector3.zero)
                     {
                         // Shuffle direction values - these are separate from the strafe values as we don't want to lerp, we need to know immediately
@@ -902,7 +902,6 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                 }
                 else
                 {
-                    // Debug.Log("a");
                     UpdateStrafeDirection(1f, 0f);
 
                     float t = 20 * Time.deltaTime;
@@ -1023,6 +1022,8 @@ namespace Synty.AnimationGoblinLocomotion.Samples
                 _controller.transform.position.z
             );
             _isGrounded = Physics.CheckSphere(spherePosition, _controller.radius, _groundLayerMask, QueryTriggerInteraction.Ignore);
+            //_isGrounded = _controller.isGrounded;
+            //Debug.Log(_controller.isGrounded);
 
             if (_isGrounded)
             {
