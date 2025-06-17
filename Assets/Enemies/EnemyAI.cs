@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Interface;
 using Player;
 using UnityEngine;
@@ -15,14 +16,15 @@ namespace Enemies {
 
         public EnemyState State { get; set; } = EnemyState.Walking;
         public event EventHandler OnAttack;
-        public event EventHandler OnTakeDamage;
+        public event EventHandler<IDamageable.DamageTakenArgs> OnDamageTaken;
         public float distance;
 
 
+        public List<Attack> Attacks { get; set; } = new List<Attack>();
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
 
-        [SerializeField] private EnemyAttack enemyAttack;
+        [SerializeField] private Attack attack;
         [SerializeField] private int initialHealth;
 
         private static readonly int Attack = Animator.StringToHash("Attack");
@@ -37,7 +39,7 @@ namespace Enemies {
 
         void Start() {
             this._agent = GetComponent<NavMeshAgent>();
-            this._target = PlayerPos.Instance.transform;
+            this._target = Player.Player.Instance.transform;
         }
 
         void Update() {
@@ -46,13 +48,13 @@ namespace Enemies {
             switch (this.State) {
                 case EnemyState.Walking:
 
-                    _agent.isStopped = false;
                     _agent.SetDestination(this._target.position);
-                    if (enemyAttack.TryAttack()) {
+                    if (attack.TryAttack()) {
                         this.State = EnemyState.Attacking;
 
                         _agent.isStopped = true;
-                        _attackTimer = enemyAttack.AttackDuration;
+                        _agent.ResetPath();
+                        _attackTimer = attack.AttackDuration;
 
 
                         OnAttack?.Invoke(this, EventArgs.Empty);
@@ -63,6 +65,11 @@ namespace Enemies {
                 case EnemyState.Attacking:
                     _attackTimer -= Time.deltaTime;
                     if (_attackTimer <= 0) {
+                        if (this.attack is BasicMeleeAttack meleeAttack) {
+                            meleeAttack.TurnWeaponColliderOffAfterMeleeAttack();
+                        }
+                        
+                        _agent.isStopped = false;
                         this.State = EnemyState.Walking;
                     }
 
@@ -74,12 +81,12 @@ namespace Enemies {
 
         public void TakeDamage(int damage) {
             CurrentHealth -= damage;
-            OnTakeDamage?.Invoke(this, EventArgs.Empty);
+            OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
             Debug.Log($"Enemy took {damage} damage");
         }
 
-        public EnemyAttack GetEnemyAttack() {
-            return this.enemyAttack;
+        public Attack GetEnemyAttack() {
+            return this.attack;
         }
     }
 }
