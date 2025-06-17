@@ -9,6 +9,8 @@ public class SingleAttackHitBox : MonoBehaviour
     public int damage;
     public bool attackActive = false;
 
+    public event Action<IDamageable> OnAttackEntity;
+
     [NonSerialized]
     public List<IDamageable> damagedEntities = new List<IDamageable>();
 
@@ -50,6 +52,7 @@ public class SingleAttackHitBox : MonoBehaviour
             Debug.Log($"Damaged something! : {other.gameObject.name}");
             damageable.TakeDamage(damage, Vector3.zero, false);
             damagedEntities.Add(damageable);
+            OnAttackEntity?.Invoke(damageable);
         }
     }
 }
