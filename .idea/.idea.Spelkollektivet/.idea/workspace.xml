@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo_01_Polygon.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo_01_Polygon.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +31,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "enemies",
+    "git-widget-placeholder": "kuby",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -99,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750061296971</updated>
       <workItem from="1750061298053" duration="9013000" />
-      <workItem from="1750148987326" duration="1119000" />
+      <workItem from="1750148987326" duration="2781000" />
     </task>
     <servers />
   </component>
