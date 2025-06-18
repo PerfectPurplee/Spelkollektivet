@@ -9,6 +9,7 @@ namespace Enemies {
         private void OnTriggerEnter(Collider other) {
             if (!other.TryGetComponent<Player.Player>(out Player.Player player)) return;
             XPManager.Instance.GainExp(exp);
+            Destroy(gameObject);
         }
     }
 }

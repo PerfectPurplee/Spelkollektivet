@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyRangeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyRangeAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemySpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemySpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemySpawnManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/RangeAttackHitbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/RangeAttackHitbox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/SkeleteonRange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/SkeleteonRange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/SkeletonMelee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/SkeletonMelee.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player Pack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player Pack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerCombatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerCombatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/XPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/XPManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Prefabs/Props/SM_Prop_Apple_Rotten_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Prefabs/Props/SM_Prop_Apple_Rotten_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy/NavMesh-NavMesh Surface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy/NavMesh-NavMesh Surface.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Testing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Testing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +104,7 @@
       <workItem from="1750233622562" duration="826000" />
       <workItem from="1750234474419" duration="79000" />
       <workItem from="1750234585833" duration="7000" />
-      <workItem from="1750234612313" duration="13531000" />
+      <workItem from="1750234612313" duration="13833000" />
     </task>
     <servers />
   </component>
