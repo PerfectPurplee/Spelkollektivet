@@ -1,4 +1,5 @@
 using System;
+using Interface;
 using Synty.AnimationGoblinLocomotion.Samples;
 using UnityEngine;
 
@@ -27,9 +28,15 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private float basicAttackDuration = 0.5f;
     [SerializeField]
+    private float basicAttackHitBoxDuration = 0.2f;
+    [SerializeField]
     private float blockMinDuration = 0.1f;
     [SerializeField]
-    private float dashDuration = 0.2f;
+    private float dashDuration = 1f;
+    [SerializeField]
+    private float dashAttackHitBoxDuration = 0.5f;
+    [SerializeField]
+    private float dashPushForce = 1f;
     [SerializeField]
     private AnimationCurve dashRotationSpeed;
     [SerializeField]
@@ -43,9 +50,20 @@ public class PlayerCombatController : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private Transform targetPoint;
+    [SerializeField]
+    private Player.Player player;
+    [SerializeField]
+    private SingleAttackHitBox basicAttackHitBox;
+    [SerializeField]
+    private SingleAttackHitBox dashAttackHitBox;
 
     private float bufforTime;
     private Action bufforAction;
+
+    private void Awake()
+    {
+        dashAttackHitBox.OnAttackEntity += PushEnemyWhileDashing;
+    }
 
     private void Start()
     {
@@ -95,8 +113,13 @@ public class PlayerCombatController : MonoBehaviour
                 {
                     ChangeToAnyState();
                 }
+                if (basicAttackHitBox.attackActive && Time.time - stateEnterTime > basicAttackHitBoxDuration)
+                {
+                    basicAttackHitBox.FinishAttack();
+                }
                 break;
             case State.Block:
+                player.shieldDirection = transform.forward;
                 if (Time.time - stateEnterTime > blockMinDuration)
                 {
                     if (bufforAction != null)
@@ -115,6 +138,14 @@ public class PlayerCombatController : MonoBehaviour
                 {
                     ChangeToAnyState();
                 }
+                if (dashAttackHitBox.attackActive)
+                {
+                    //TODO: Pushing enemies away
+                    if (Time.time - stateEnterTime > dashAttackHitBoxDuration)
+                    {
+                        dashAttackHitBox.FinishAttack();
+                    }
+                }
                 break;
         }
     }
@@ -126,19 +157,40 @@ public class PlayerCombatController : MonoBehaviour
         Vector3 direction = targetPoint.transform.position - transform.position;
         direction.y = 0;
         transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
+        dashAttackHitBox.StartAttack();
+    }
+
+    private void PushEnemyWhileDashing(IDamageable damageable)
+    {
+        Debug.Log("PUSH");
+        if (damageable is MonoBehaviour && ((MonoBehaviour)damageable).TryGetComponent(out Rigidbody enemy))
+        {
+            Debug.Log("yup");
+            if (
+                Vector3.Distance(player.transform.position + player.transform.right, enemy.position) 
+                > Vector3.Distance(player.transform.position - player.transform.right, enemy.position))
+            {
+                Debug.Log("left");
+                enemy.AddForce(-player.transform.right * dashPushForce);
+            }
+            else
+            {
+                Debug.Log("right");
+                enemy.AddForce(player.transform.right * dashPushForce);
+            }
+        }
     }
 
     private void CastBasicAttack()
     {
         ChangeState(State.BasicAttack);
         animator.SetTrigger("Basic Attack");
-        //attack logic
+        basicAttackHitBox.StartAttack();
     }
 
     private void StartBlock()
     {
         ChangeState(State.Block);
-        //block logic
     }
 
     private void SetBufforAction(Action action)
@@ -167,6 +219,8 @@ public class PlayerCombatController : MonoBehaviour
 
     private void ChangeState(State newState)
     {
+        player.shielding = false;
+
         float speed = 0;
         switch (newState)
         {
@@ -180,6 +234,7 @@ public class PlayerCombatController : MonoBehaviour
                 break;
             case State.Block:
                 speed = walkingSpeedWhileBlocking;
+                player.shielding = true;
                 break;
             case State.Dash:
                 speed = 0;

@@ -16,7 +16,8 @@ namespace Interface {
         int MaxHealth { get; set; }
         int CurrentHealth { get; set; }
         event EventHandler<DamageTakenArgs> OnDamageTaken;
+        event Action OnDeath;
 
-        void TakeDamage(int damage);
+        void TakeDamage(int damage, Vector3 attackerPosition, bool ranged);
     }
 }
