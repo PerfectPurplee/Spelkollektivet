@@ -35,25 +35,25 @@ namespace Player {
             Vector3 attackVector = transform.position - attackerPosition;
             attackVector.y = 0;
             attackVector.Normalize();
-            if (shielding && attackVector != Vector3.zero && Vector3.SqrMagnitude(shieldDirection + attackVector) < shieldingAngle)
-            {
-                if (!ranged)
-                {
+            if (shielding && attackVector != Vector3.zero &&
+                Vector3.SqrMagnitude(shieldDirection + attackVector) < shieldingAngle) {
+                if (!ranged) {
                     float startDamage = damage;
                     damage = Mathf.CeilToInt(damage * meleeDamageShieldedMultiplier);
                     OnBlockMelee?.Invoke();
                     Debug.Log($"Player blocked melee attack, reducing from {startDamage} to {damage} damage");
                 }
-                else
-                {
+                else {
                     OnBlockRanged?.Invoke();
                     Debug.Log("Player blocked ranged attack");
                     return;
                 }
             }
+
             CurrentHealth -= damage;
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
             Debug.Log($"Player took {damage} damage, current health: {CurrentHealth}");
         }
     }
+
 }
