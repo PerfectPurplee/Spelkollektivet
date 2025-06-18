@@ -20,7 +20,7 @@ public class Testing : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            XPManager.Instance.AddXP(3);
+            XPManager.Instance.GainExp(3);
         }
 
         if (Input.GetKeyDown(KeyCode.E)) {
