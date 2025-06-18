@@ -15,6 +15,9 @@ namespace Enemies {
         private Player.Player _player;
         private float _playerHeight;
 
+        // TODO: do a logic for increasing experience drops
+        [SerializeField] private int currentExpDrop = 10;
+
 
         private void Awake() {
             if (Instance != null) {
@@ -42,9 +45,14 @@ namespace Enemies {
             Debug.Log("IN RANGE: " + expDropsInRange.Count);
         }
 
-        public void SpawnExpDrop(Vector3 position) {
+        public void SpawnExpDrop(Vector3 position, int? expAmount = null) {
             GameObject expDrop = Instantiate(xpDropPrefab, position, Quaternion.identity);
-            _expDrops.Add(expDrop.GetComponent<ExpDrop>());
+            ExpDrop expDropScript = expDrop.GetComponent<ExpDrop>();
+            if (expAmount != null) {
+                expDropScript.Initialize(expAmount.Value);
+            }
+
+            _expDrops.Add(expDropScript);
             Debug.Log(_expDrops.Count);
         }
 
