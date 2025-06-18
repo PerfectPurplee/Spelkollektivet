@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Enemies {
-    public class BasicMeleeAttack : Attack {
+    public class EnemyBasicMeleeAttack : EnemyAttack {
         public override float TriggerDistance => 2f;
         public override AttackType AttackType => AttackType.Melee;
         public override float AttackDuration => 3f;

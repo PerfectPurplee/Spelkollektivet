@@ -2448,22 +2448,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 974f9cebc5475044389f93272cd3ce57, type: 3}
---- !u!114 &1861919516 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6686728855514579011, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-  m_PrefabInstance: {fileID: 1816929791556503157}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816929791556503158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 470b66511dc64fa4b9e9ee443510c12a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &1861919520 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1175326954771933316, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-  m_PrefabInstance: {fileID: 1816929791556503157}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1864392093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2665,11 +2649,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 218989387}
   m_SourcePrefab: {fileID: 100100000, guid: 06159f7f2876f6b49b773178356161a1, type: 3}
---- !u!4 &1966873190 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7058559977008105785, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-  m_PrefabInstance: {fileID: 1816929791556503157}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1971263159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3077,131 +3056,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
-    - target: {fileID: 1175326954771933316, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Jaw'\n\tFrom animation clip 'A_Attack_LightLeaping01_RootMotion_Sword'\n\tFrom
-        animation clip 'A_Attack_LightCombo01A_RootMotion_Sword'\n\tFrom animation
-        clip 'A_Attack_LightCombo01A_RootMotion_Sword'"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: xd
-      value: 0.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1861919520}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: targetPoint
-      value: 
-      objectReference: {fileID: 1966873190}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashDuration
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: walkingSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: defaultRotationSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: walkingSpeedWhileBlocking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: walkingSpeedWhileAttacking
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: samplePlayerAnimationController
-      value: 
-      objectReference: {fileID: 1861919516}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[1].time
-      value: 1.063915
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[2].time
-      value: 4.626565
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[0].value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[1].value
-      value: -0.021005692
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[2].value
-      value: -0.037405133
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[0].inSlope
-      value: -0.010769072
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[1].inSlope
-      value: -7.3705378
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[2].inSlope
-      value: -0.012686796
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[0].outSlope
-      value: -0.010769072
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[1].inWeight
-      value: 0.0851187
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[1].outSlope
-      value: -0.06457437
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[2].inWeight
-      value: 0.25543377
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[2].outSlope
-      value: -0.012686796
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[0].outWeight
-      value: 0.24230555
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[1].outWeight
-      value: 0.32035798
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[0].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884482351908155594, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: dashRotationSpeed.m_Curve.Array.data[1].tangentMode
-=======
-    - target: {fileID: 2949097993891976190, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      propertyPath: physicsLayer.m_Bits
->>>>>>> Stashed changes
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5095995248459280301, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
       propertyPath: m_Name
       value: Player Pack
@@ -3249,29 +3103,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5612723028993697860, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1816929791556503159}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
---- !u!1 &1816929791556503158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5612723028993697860, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
-  m_PrefabInstance: {fileID: 1816929791556503157}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1816929791556503159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816929791556503158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cdc49fe8d7444984a3f1e42af814a7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialHealth: 100
 --- !u!1 &2114283753834967212
 GameObject:
   m_ObjectHideFlags: 0

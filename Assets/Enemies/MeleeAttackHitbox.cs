@@ -9,9 +9,10 @@ namespace Enemies {
     public class MeleeAttackHitbox : MonoBehaviour, IDamageApplier {
         public Attack Attack { get; set; }
         public event EventHandler OnAttackHitSuccess;
+        public Transform attacker;
 
         private void OnTriggerEnter(Collider other) {
-            if (((IDamageApplier)this).TryDealDamage(other.gameObject, Attack)) {
+            if (((IDamageApplier)this).TryDealDamage(other.gameObject, Attack, attacker.position)) {
                 OnAttackHitSuccess?.Invoke(this, EventArgs.Empty);
             }
             
