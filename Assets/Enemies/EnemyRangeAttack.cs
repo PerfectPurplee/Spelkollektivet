@@ -22,15 +22,24 @@ namespace Enemies {
             if (dot < coneAngle)
                 return false;
             if (Physics.Raycast(transform.position + Vector3.up * 1f, directionToPlayer, out RaycastHit hit,
-                    TriggerDistance)) {
-                if (!hit.collider.CompareTag("Player"))
-                    return false;
-            }
-            else {
+                    TriggerDistance, 0)) {
+                Debug.Log("Hit Obstacle, wont attack");
                 return false;
             }
 
+            PerformAttack(directionToPlayer);
             return true;
+        }
+
+        public void PerformAttack(Vector3 directionToPlayer) {
+            Vector3 spawnPosition =
+                transform.position + Vector3.up * 1.5f + transform.forward * 1f;
+            Quaternion
+                rotation = Quaternion.LookRotation(directionToPlayer);
+
+            var arrow = GameObject.Instantiate(arrowObject, spawnPosition, rotation);
+            RangeAttackHitbox hitbox = arrow.GetComponent<RangeAttackHitbox>();
+            hitbox.Attack = this;
         }
     }
 }
