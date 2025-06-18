@@ -13,10 +13,10 @@ TagManager:
   - UI
   - wall
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Player Attack
+  - Enemy Attack
   - 
   - 
   - 
