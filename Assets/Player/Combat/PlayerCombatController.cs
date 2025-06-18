@@ -16,6 +16,8 @@ public partial class PlayerCombatController : MonoBehaviour
         Dash
     }
     public State state;
+    public bool shieldInHand = true;
+
     private float stateEnterTime = -1;
 
     [SerializeField]
@@ -34,6 +36,8 @@ public partial class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private float blockMinDuration = 0.1f;
     [SerializeField]
+    private float dashCooldownDuration = 3f;
+    [SerializeField]
     private float dashDuration = 1f;
     [SerializeField]
     private float dashAttackHitBoxDuration = 0.5f;
@@ -42,7 +46,30 @@ public partial class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private AnimationCurve dashRotationSpeed;
     [SerializeField]
+    private Cooldown dashCooldown;
+    [SerializeField]
     private float defaultRotationSpeed = 10f;
+    [SerializeField]
+    private float shieldThrowingForwardDuration = 1.5f;
+    [SerializeField]
+    private float shieldThrowDistance = 3f;
+    [SerializeField]
+    private float rotationSpeed;
+    [SerializeField]
+    private Transform shield;
+    [SerializeField]
+    private float distanceToShieldToCatch = 0.3f;
+    [SerializeField]
+    private float shieldMagnetForce = 1f;
+    [SerializeField]
+    private Quaternion shieldThrowingRotation;
+    private Transform defaultShieldParent;
+    private Vector3 defaultShieldPosition;
+    private Quaternion defaultShieldRotation;
+    private Vector3 currentShieldMovementDirection;
+    private float currentShieldSpeed;
+    private float shieldAcceleration;
+    private float shieldStartSpeed;
 
     [SerializeField]
     private CharacterController characterController;
@@ -58,6 +85,8 @@ public partial class PlayerCombatController : MonoBehaviour
     private SingleAttackHitBox basicAttackHitBox;
     [SerializeField]
     private SingleAttackHitBox dashAttackHitBox;
+    [SerializeField]
+    private SingleAttackHitBox throwAttackHitBox;
 
     private float bufforTime;
     private Action bufforAction;
@@ -66,6 +95,9 @@ public partial class PlayerCombatController : MonoBehaviour
     {
         Instance = this;
         dashAttackHitBox.OnAttackEntity += PushEnemyWhileDashing;
+        defaultShieldPosition = shield.localPosition;
+        defaultShieldRotation = shield.localRotation;
+        defaultShieldParent = shield.parent;
     }
 
     private void Start()
@@ -83,13 +115,17 @@ public partial class PlayerCombatController : MonoBehaviour
         {
             SetBufforAction(StartBlock);
         }
-        if (Input.GetMouseButtonDown(2))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldown.IsUsable)
         {
             SetBufforAction(Dash);
         }
         if (Input.GetMouseButton(1) && bufforAction == null)
         {
             SetBufforAction(StartBlock);
+        }
+        if (Input.GetMouseButton(2))
+        {
+            SetBufforAction(ThrowShield);
         }
         if (Time.time - bufforTime > bufforTimeLimit)
         {
@@ -101,12 +137,17 @@ public partial class PlayerCombatController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!shieldInHand)
+        {
+            UpdateThrowingShield();
+        }
+
         switch (state)
         {
             case State.None:
                 break;
             case State.Walking:
-                if (bufforAction != null)
+                if (bufforAction != null && (shieldInHand || bufforAction == Dash))
                 {
                     InvokeBufforAction();
                 }
@@ -139,11 +180,17 @@ public partial class PlayerCombatController : MonoBehaviour
                 samplePlayerAnimationController.rotationSmoothing = dashRotationSpeed.Evaluate(Time.time - stateEnterTime);
                 if (Time.time - stateEnterTime > dashDuration)
                 {
-                    ChangeToAnyState();
+                    if (shieldInHand)
+                    {
+                        ChangeToAnyState();
+                    }
+                    else
+                    {
+                        ChangeState(State.Walking);
+                    }
                 }
                 if (dashAttackHitBox.attackActive)
                 {
-                    //TODO: Pushing enemies away
                     if (Time.time - stateEnterTime > dashAttackHitBoxDuration)
                     {
                         dashAttackHitBox.FinishAttack();
@@ -151,6 +198,55 @@ public partial class PlayerCombatController : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    private void UpdateThrowingShield()
+    {
+        float lastFrameSpeed = currentShieldSpeed;
+        currentShieldSpeed -= shieldAcceleration * Time.fixedDeltaTime;
+        if (lastFrameSpeed > 0 && currentShieldSpeed <= 0)
+        {
+            throwAttackHitBox.FinishAttack();
+            throwAttackHitBox.StartAttack();
+        }
+        shield.transform.position += currentShieldMovementDirection * currentShieldSpeed * Time.fixedDeltaTime;
+        shield.transform.Rotate(Vector3.up, rotationSpeed * Time.fixedDeltaTime);
+        if (currentShieldSpeed <= 0)
+        {
+            if (Vector2.Distance(ToVectorXZ(transform.position), ToVectorXZ(shield.position)) <= distanceToShieldToCatch)
+            {
+                shield.parent = defaultShieldParent;
+                shield.SetLocalPositionAndRotation(defaultShieldPosition, defaultShieldRotation);
+                throwAttackHitBox.FinishAttack();
+                shieldInHand = true;
+            }
+            else
+            {
+                Vector3 movementChangeVector = transform.position - shield.position;
+                movementChangeVector.y = 0;
+                movementChangeVector *= -1;
+                movementChangeVector.Normalize();
+                movementChangeVector *= Time.fixedDeltaTime * (-currentShieldSpeed) * shieldMagnetForce / (5 + Vector3.Distance(transform.position, shield.position));
+                currentShieldMovementDirection += movementChangeVector;
+                currentShieldMovementDirection.Normalize();
+            }
+        }
+    }
+
+    private void ThrowShield()
+    {
+        animator.SetTrigger("Throw");
+        Vector3 direction = targetPoint.transform.position - transform.position;
+        direction.y = 0;
+        transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
+        currentShieldMovementDirection = direction.normalized;
+        shield.SetParent(null);
+        shield.rotation = shieldThrowingRotation;
+        shieldStartSpeed = shieldThrowDistance * shieldThrowingForwardDuration * 2;
+        currentShieldSpeed = shieldStartSpeed;
+        shieldAcceleration = shieldStartSpeed / shieldThrowingForwardDuration;
+        throwAttackHitBox.StartAttack();
+        shieldInHand = false;
     }
 
     private void Dash()
@@ -161,6 +257,7 @@ public partial class PlayerCombatController : MonoBehaviour
         direction.y = 0;
         transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
         dashAttackHitBox.StartAttack();
+        dashCooldown.Use();
     }
 
     private void PushEnemyWhileDashing(IDamageable damageable)
@@ -248,6 +345,11 @@ public partial class PlayerCombatController : MonoBehaviour
 
         stateEnterTime = Time.time;
         state = newState;
+    }
+
+    private Vector2 ToVectorXZ(Vector3 vector)
+    {
+        return new Vector2(vector.x, vector.z);
     }
 
     private void OnDrawGizmos()
