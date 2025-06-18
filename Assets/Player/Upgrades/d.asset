@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: d
   m_EditorClassIdentifier: 
   maxStacks: 100
-  iconPrefab: {fileID: 8180048857376544453, guid: 9a302b46f73752d47b9fada082b216bb, type: 3}
+  iconPrefab: {fileID: 3582263355776038890, guid: 525cc9d5ddcd24a67a3313d315236032, type: 3}
   conflictingUpgrades: []
   requiredUpgrades:
   - {fileID: 11400000, guid: d6e5fd8b6021a3f46b03b7d9b450f273, type: 2}
