@@ -125,7 +125,7 @@ public class UpgradesManager : MonoBehaviour
         }
 
         var upgradesThatNowMeetRequirenmentd = upgradesWaitingForRequirenment.Where(
-            upgradeToCheck => upgradeToCheck.requiredUpgrades.All(requiredUpgrade => upgradesAcquired.Contains(requiredUpgrade))
+            upgradeToCheck => upgradeToCheck.requiredUpgrades.Any(requiredUpgrade => upgradesAcquired.Contains(requiredUpgrade))
             ).ToList();
         upgradesWaitingForRequirenment.RemoveAll(upgrade => upgradesThatNowMeetRequirenmentd.Contains(upgrade));
         upgradesPool.AddRange(upgradesThatNowMeetRequirenmentd);

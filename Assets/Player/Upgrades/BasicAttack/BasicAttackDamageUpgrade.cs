@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Basic attack damage upgrade _", menuName = "Upgrade/Basic attack damage")]
+[CreateAssetMenu(fileName = "Basic attack damage upgrade _", menuName = "Upgrade/Basic attack/Basic attack damage")]
 public class BasicAttackDamageUpgrade : Upgrade
 {
     [SerializeField]
