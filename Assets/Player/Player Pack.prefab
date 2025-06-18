@@ -867,7 +867,8 @@ MonoBehaviour:
   enemiesLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  slamEffectPrefab: {fileID: 7248412773819757887, guid: 26890aab36bc3fd4d926c0766c17063e, type: 3}
+  slamEffectPrefab: {fileID: 4263566685982961678, guid: 6875d05224d650f46934bf9117e0a281, type: 3}
+  a: {fileID: 0}
   damage: 100
   size: 3
   pushForce: 1

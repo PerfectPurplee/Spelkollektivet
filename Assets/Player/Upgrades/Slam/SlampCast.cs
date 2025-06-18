@@ -1,5 +1,6 @@
 using Interface;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class SlampCast : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class SlampCast : MonoBehaviour
 
     public void Cast(Vector3 position)
     {
-        Instantiate(slamEffectPrefab, position, Quaternion.identity);
+        Debug.Log("udalo sie");
+        Instantiate(slamEffectPrefab, position+Vector3.up*0.1f, Quaternion.identity).GetComponent<VisualEffect>().Play();
         Collider[] enemiesHit = Physics.OverlapSphere(position, size, enemiesLayerMask);
         foreach (Collider enemyCollider in enemiesHit)
         {
