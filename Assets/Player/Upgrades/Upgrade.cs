@@ -9,7 +9,10 @@ public abstract class Upgrade : ScriptableObject
     public List<Upgrade> requiredUpgrades;
 
     public abstract void Apply();
-    public abstract GameObject InstantiateIcon(Transform parent);
+    public virtual GameObject InstantiateIcon(Transform parent)
+    {
+        return Instantiate(iconPrefab, parent);
+    }
 
     protected Player.Player player => Player.Player.Instance;
     protected PlayerCombatController playerCombatController => PlayerCombatController.Instance;

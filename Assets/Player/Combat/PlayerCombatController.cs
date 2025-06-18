@@ -87,6 +87,8 @@ public partial class PlayerCombatController : MonoBehaviour
     private SingleAttackHitBox dashAttackHitBox;
     [SerializeField]
     private SingleAttackHitBox throwAttackHitBox;
+    [SerializeField]
+    private SlampCast slamCast;
 
     private float bufforTime;
     private Action bufforAction;
@@ -219,6 +221,10 @@ public partial class PlayerCombatController : MonoBehaviour
                 shield.SetLocalPositionAndRotation(defaultShieldPosition, defaultShieldRotation);
                 throwAttackHitBox.FinishAttack();
                 shieldInHand = true;
+                if (state == State.Dash)
+                {
+                    OnShieldCatchWhileDashing?.Invoke();
+                }
             }
             else
             {

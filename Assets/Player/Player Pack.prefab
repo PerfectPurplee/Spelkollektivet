@@ -127,6 +127,7 @@ Transform:
   - {fileID: 5591655570759739161}
   - {fileID: 3205112015942453370}
   - {fileID: 2058230782977134296}
+  - {fileID: 578906495559070282}
   m_Father: {fileID: 5093489230167061246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1008694763525257683
@@ -819,6 +820,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2961539389648540113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3666906214183484477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578906495559070282}
+  - component: {fileID: 6693111960157651818}
+  m_Layer: 8
+  m_Name: SlamCast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &578906495559070282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666906214183484477}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6288844770753329298}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6693111960157651818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666906214183484477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aaddf245459482478baff57ceb8056d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  slamEffectPrefab: {fileID: 7248412773819757887, guid: 26890aab36bc3fd4d926c0766c17063e, type: 3}
+  damage: 100
+  size: 3
+  pushForce: 1
 --- !u!1 &3900586869389971271
 GameObject:
   m_ObjectHideFlags: 0
@@ -3348,6 +3400,7 @@ MonoBehaviour:
   basicAttackHitBox: {fileID: 2415009414129664598}
   dashAttackHitBox: {fileID: 886952581547012102}
   throwAttackHitBox: {fileID: 8847243007925358952}
+  slamCast: {fileID: 6693111960157651818}
 --- !u!114 &6720413327638953297
 MonoBehaviour:
   m_ObjectHideFlags: 0

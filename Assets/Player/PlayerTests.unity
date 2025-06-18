@@ -394,7 +394,8 @@ MonoBehaviour:
   allUpgrades:
   - {fileID: 11400000, guid: d6e5fd8b6021a3f46b03b7d9b450f273, type: 2}
   - {fileID: 11400000, guid: e219e77e49fb9864d9bb3aaf55ff411d, type: 2}
-  - {fileID: 11400000, guid: 4fd606591f413364c9d66b1f8e8b6045, type: 2}
+  - {fileID: 11400000, guid: e8a8771a8383fbc43971205ece4f05f8, type: 2}
+  - {fileID: 11400000, guid: c692345779c0dbe4d8dae95902f5894b, type: 2}
   iconsParents:
   - {fileID: 2111693939}
   - {fileID: 2016659583}

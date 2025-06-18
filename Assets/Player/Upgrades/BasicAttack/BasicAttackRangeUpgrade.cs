@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Basic attack range upgrade  _", menuName = "Upgrade/Basic attack range")]
+[CreateAssetMenu(fileName = "Basic attack range upgrade  _", menuName = "Upgrade/Basic attack/Basic attack range")]
 public class BasicAttackRangeUpgrade : Upgrade
 {
     public float bonusRange;
