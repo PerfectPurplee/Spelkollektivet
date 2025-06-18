@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Slam on catching shiled while dashing
   m_EditorClassIdentifier: 
   maxStacks: 1
-  iconPrefab: {fileID: 7248412773819757887, guid: 26890aab36bc3fd4d926c0766c17063e, type: 3}
+  iconPrefab: {fileID: 8603199109843563708, guid: 792ac56c7b26a8c4b82e33f6cfff09b3, type: 3}
   conflictingUpgrades: []
   requiredUpgrades: []
