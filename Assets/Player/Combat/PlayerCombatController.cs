@@ -3,8 +3,10 @@ using Interface;
 using Synty.AnimationGoblinLocomotion.Samples;
 using UnityEngine;
 
-public class PlayerCombatController : MonoBehaviour
+public partial class PlayerCombatController : MonoBehaviour
 {
+    public static PlayerCombatController Instance;
+
     public enum State
     {
         None,
@@ -62,6 +64,7 @@ public class PlayerCombatController : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         dashAttackHitBox.OnAttackEntity += PushEnemyWhileDashing;
     }
 
