@@ -10,9 +10,21 @@ namespace Boss {
         public override float AttackDuration => 3f;
         public override int Damage => 20;
 
-        [SerializeField] private List<IDamageApplier> _attackDamageApplierList = new List<IDamageApplier>();
+        public override string AnimatorAttackName {
+            get => "MeleeAttack";
+            set { }
+        }
+
+        [SerializeField] private List<IDamageApplier> _attackDamageApplierList;
 
         public override bool TryAttack() {
+            if (GameBoss.distanceToPlayer < this.TriggerDistance && GameBoss.BossState != BossState.Attacking) {
+                // przekazac info do animatora. Odpalic korutyne czekajaca na koniec animacji. Zeby powrocila bossowi stan walking. 
+                // zinstantietowac damageAppliery
+                InvokeOnBossAttack();
+                return true;
+            }
+
             return false;
         }
     }
