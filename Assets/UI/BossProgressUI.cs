@@ -9,6 +9,11 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] private Image gemImage2;
     [SerializeField] private Image gemImage3;
     [SerializeField] private Image gemImage4;
+    [SerializeField] private GameObject altarFlame1;
+    [SerializeField] private GameObject altarFlame2;
+    [SerializeField] private GameObject altarFlame3;
+    [SerializeField] private GameObject altarFlame4;
+
 
     private void Awake() {
         if (Instance != null) {
@@ -17,7 +22,7 @@ public class BossProgressUI : MonoBehaviour {
 
         Instance = this;
 
-        HideAllGems();
+        HideAllGemsAndFlames();
     }
 
     private void Start() {
@@ -26,19 +31,34 @@ public class BossProgressUI : MonoBehaviour {
 
     private void GemCollectible_OnGemCollected(object sender, EventArgs e) {
         switch (BossProgress.Instance.gemsCollected) {
-            case 0: HideAllGems(); break;
-            case 1: gemImage1.gameObject.SetActive(true); break;
-            case 2: gemImage2.gameObject.SetActive(true); break;
-            case 3: gemImage3.gameObject.SetActive(true); break;
-            case 4: gemImage4.gameObject.SetActive(true); break;
+            case 1:
+                gemImage1.gameObject.SetActive(true);
+                altarFlame1.gameObject.SetActive(true);
+                break;
+            case 2:
+                gemImage2.gameObject.SetActive(true);
+                altarFlame2.gameObject.SetActive(true);
+                break;
+            case 3:
+                gemImage3.gameObject.SetActive(true);
+                altarFlame3.gameObject.SetActive(true);
+                break;
+            case 4:
+                gemImage4.gameObject.SetActive(true);
+                altarFlame4.gameObject.SetActive(true);
+                break;
         }
     }
 
 
-    private void HideAllGems() {
+    private void HideAllGemsAndFlames() {
         gemImage1.gameObject.SetActive(false);
         gemImage2.gameObject.SetActive(false);
         gemImage3.gameObject.SetActive(false);
         gemImage4.gameObject.SetActive(false);
+        altarFlame1.gameObject.SetActive(false);
+        altarFlame2.gameObject.SetActive(false);
+        altarFlame3.gameObject.SetActive(false);
+        altarFlame4.gameObject.SetActive(false);
     }
 }

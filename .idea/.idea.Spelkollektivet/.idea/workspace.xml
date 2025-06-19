@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/Arrow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/Arrow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/FX_CandleFlame.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/FX_CandleFlame.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/Smoke_Mat_04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/Smoke_Mat_04.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_01_A_Emmisive.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_01_A_Emmisive.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss/Gem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss/Gem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossProgress.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/BossProgressUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/BossProgressUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
