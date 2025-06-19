@@ -16,6 +16,7 @@ public class XPManagerUI : MonoBehaviour {
 
     private void XPManager_OnLevelUp(object sender, EventArgs e) {
         levelNumberText.text = XPManager.Instance.GetLevelNumber().ToString();
+        Debug.Log("ui level up xdd");
     }
 
     private void Update() {
