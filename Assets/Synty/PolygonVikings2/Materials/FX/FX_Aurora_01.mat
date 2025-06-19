@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5000810915715520048
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_Aurora_01
+  m_Shader: {fileID: -6465566751694194690, guid: d2820334f2975bb47ab3f2fffa1b4cbe, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2DLOD_f5ea1ff3d7f14000b554f68463659377_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 59bda77e6d920064394e240b07fcb8ed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2DLOD_f5ea1ff3d7f14000b554f68463659377_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 59bda77e6d920064394e240b07fcb8ed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_2b8993583c4a422b977b98b032482434_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 8298b6f064c92704a842970f3368ad35, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_2b8993583c4a422b977b98b032482434_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 8298b6f064c92704a842970f3368ad35, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_56693b08404340d993f95505a4b9ac34_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 59bda77e6d920064394e240b07fcb8ed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_724101747817466795e43a2cbac86f47_Texture_1:
+        m_Texture: {fileID: 2800000, guid: ef449a7ecc2570e45b658315ff6e4267, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_724101747817466795e43a2cbac86f47_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: ef449a7ecc2570e45b658315ff6e4267, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d32a817544d14e7ca2ba608facb0aa43_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 023084bb3e930074daf0dfa76d946b86, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d32a817544d14e7ca2ba608facb0aa43_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 023084bb3e930074daf0dfa76d946b86, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _Brightness: 1.59
+    - _Colour_Spread: 1
+    - _Edge_Softness: 0.737
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Scroll_Speed: 0.1
+    - _Wave_Amplitude: 1.41
+    - _Wave_Speed: 0.2
+    - _uv_pan: 1.05
+    m_Colors:
+    - _Colour_Bottom: {r: 0.85877466, g: 0, b: 1, a: 0}
+    - _Colour_Top: {r: 0, g: 1, b: 0.52727336, a: 0}
+    - _Wave_Min_Max: {r: -10, g: 10, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &8233147317013197954
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
