@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Boss/AnimatorEventHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Boss/AnimatorEventHelper.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/BossAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossAnimatorController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/BossCircleAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossCircleAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Boss/BossDamageApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossDamageApplier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Boss/BossRectangleAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossRectangleAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Boss/BossRectangleDamageAnim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossRectangleDamageAnim.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Boss/BoxRectangleDamageApplier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BoxRectangleDamageApplier.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/BoxRectangleDamageApplier.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BoxRectangleDamageApplier.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +113,7 @@
       <workItem from="1750234474419" duration="79000" />
       <workItem from="1750234585833" duration="7000" />
       <workItem from="1750234612313" duration="14333000" />
-      <workItem from="1750332201777" duration="869000" />
+      <workItem from="1750332201777" duration="4538000" />
     </task>
     <servers />
   </component>

@@ -36,10 +36,9 @@ namespace Boss {
 
 
         public void CreateDamageAppliers() {
-            Vector3 direction = transform.forward.normalized;
-            Vector3 startPos = transform.position + (direction);
+            GameObject instance = Instantiate(attackDamageApplierList[0].gameObject, transform);
+            instance.transform.localPosition = Vector3.forward;
 
-            Instantiate(attackDamageApplierList[0].gameObject, startPos, Quaternion.identity);
         }
     }
 }
