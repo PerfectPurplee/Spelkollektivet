@@ -14,6 +14,8 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] private GameObject altarFlame3;
     [SerializeField] private GameObject altarFlame4;
 
+    [SerializeField] private Transform arrowTransform;
+    private Vector3 targetPosition = Vector3.zero;
 
     private void Awake() {
         if (Instance != null) {
@@ -27,6 +29,16 @@ public class BossProgressUI : MonoBehaviour {
 
     private void Start() {
         GemCollectible.OnGemCollected += GemCollectible_OnGemCollected;
+    }
+
+    private void Update() {
+        Vector3 toPosition = targetPosition;
+        Vector3 fromPosition = Camera.main.transform.position;
+        fromPosition.z = 0f;
+        Vector3 direction = (toPosition - fromPosition).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (angle < 0) angle += 360;
+        arrowTransform.localEulerAngles = new Vector3(0, 0, angle);
     }
 
     private void GemCollectible_OnGemCollected(object sender, EventArgs e) {
