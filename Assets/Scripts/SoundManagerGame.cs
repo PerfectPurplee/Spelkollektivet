@@ -25,6 +25,10 @@ public class SoundManagerGame : MonoBehaviour {
         PauseMenuUI.Instance.OnButtonPressed += PauseMenuUI_OnButtonPressed;
         XPManager.Instance.OnLevelUp += XPManager_OnLevelUp;
         PauseMenuUI.Instance.OnButtonHovered += PauseMenuUI_OnButtonHovered;
+        Player.Player.Instance.OnDamageTaken += PlayerGetsHitSound;
+        Player.Player.Instance.OnBlockMelee += PlayerOnBlockMeleSound;
+        Player.Player.Instance.OnBlockRanged += PlayerOnBlockRangedSound;
+        Player.Player.Instance.OnDeath += PlayerOnDeathSound;
 
     }
 
@@ -55,6 +59,33 @@ public class SoundManagerGame : MonoBehaviour {
 
     public void PlaySwordSwishSound()
     {
-        PlaySound(audioClipRefsSO.swordHit, transform.position);
+        PlaySound(audioClipRefsSO.swordHit, Camera.main.transform.position);
+    }
+
+    private void PlayerOnDeathSound()
+    {
+        PlaySound(audioClipRefsSO.playerDeath, Camera.main.transform.position);
+    }
+
+    private void PlayerGetsHitSound(object sender, EventArgs e)
+    {
+        PlaySound(audioClipRefsSO.playerGotHit, Camera.main.transform.position);
+    }
+
+    private void PlayerOnBlockMeleSound()
+    {
+        PlaySound(audioClipRefsSO.shieldBlockMele, Camera.main.transform.position);
+        Debug.Log("Dzwiek bloku miecza");
+    }
+
+    private void PlayerOnBlockRangedSound()
+    {
+        PlaySound(audioClipRefsSO.shieldBLockRanged, Camera.main.transform.position);
+        Debug.Log("Dzwiek bloku strzaly");
+    }
+
+    public void PlayBasicPlayerAttackSound()
+    {
+        PlaySound(audioClipRefsSO.swordHit, Camera.main.transform.position);
     }
 }
