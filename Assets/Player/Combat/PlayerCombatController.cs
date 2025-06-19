@@ -93,6 +93,14 @@ public partial class PlayerCombatController : MonoBehaviour
     private float bufforTime;
     private Action bufforAction;
 
+    public event Action OnEmpoweredAttack;
+    public bool empoweredAttacks = false;
+    public int empoweredAttackEveryX;
+    public float empoweredAttackDamageMultiplier;
+    private int empoweredAttackCounter = 0;
+    [SerializeField]
+    private Light empoweredAttackLight;
+
     private void Awake()
     {
         Instance = this;
@@ -161,6 +169,17 @@ public partial class PlayerCombatController : MonoBehaviour
                 }
                 if (basicAttackHitBox.attackActive && Time.time - stateEnterTime > basicAttackHitBoxDuration)
                 {
+                    if (empoweredAttacks)
+                    {
+                        if (empoweredAttackCounter + 1 == empoweredAttackEveryX)
+                        {
+                            empoweredAttackLight.enabled = true;
+                        }
+                        else
+                        {
+                            empoweredAttackLight.enabled = false;
+                        }
+                    }
                     basicAttackHitBox.FinishAttack();
                 }
                 break;
@@ -291,6 +310,21 @@ public partial class PlayerCombatController : MonoBehaviour
     {
         ChangeState(State.BasicAttack);
         animator.SetTrigger("Basic Attack");
+        if (empoweredAttacks)
+        {
+            empoweredAttackCounter++;
+            if (empoweredAttackCounter >= empoweredAttackEveryX)
+            {
+                basicAttackHitBox.multiplier = empoweredAttackDamageMultiplier;
+                empoweredAttackCounter = 0;
+                OnEmpoweredAttack?.Invoke();
+            }
+            else
+            {
+                basicAttackHitBox.multiplier = 1;
+                empoweredAttackLight.enabled = false;
+            }
+        }
         basicAttackHitBox.StartAttack();
     }
 

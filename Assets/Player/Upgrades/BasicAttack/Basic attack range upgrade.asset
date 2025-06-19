@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efe516c2693f683498891015f2c18699, type: 3}
-  m_Name: Slam on catching shiled while dashing
+  m_Script: {fileID: 11500000, guid: 09e7dbac0615e69499b1f6874186113c, type: 3}
+  m_Name: Basic attack range upgrade
   m_EditorClassIdentifier: 
-  maxStacks: 1
-  iconPrefab: {fileID: 8603199109843563708, guid: 792ac56c7b26a8c4b82e33f6cfff09b3, type: 3}
+  maxStacks: 100
+  iconPrefab: {fileID: 0}
   conflictingUpgrades: []
   requiredUpgrades: []
+  bonusRange: 1

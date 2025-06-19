@@ -1,11 +1,9 @@
 using System;
 using UnityEngine;
 
-public abstract class UpgradeTrigger : ScriptableObject
+public abstract class UpgradeAction : ScriptableObject
 {
-    public Action OnTrigger;
-
-    public abstract void Apply();
+    public abstract Action GetAction();
 
     protected Player.Player player => Player.Player.Instance;
     protected PlayerCombatController playerCombat => PlayerCombatController.Instance;
