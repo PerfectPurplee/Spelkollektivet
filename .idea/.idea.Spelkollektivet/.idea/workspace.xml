@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="" />
+    <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Interface/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interface/IDamageable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_Emissive_Fire.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_Emissive_Fire.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_Smoke_Mat_05.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_Smoke_Mat_05.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_SunBeam_Particles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_SunBeam_Particles.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_Sun_Beams.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonParticleFX/Materials/PolygonParticleFX_Sun_Beams.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonParticleFX/Models/FX_Sphere_03.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonParticleFX/Models/FX_Sphere_03.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonParticleFX/Models/SunShafts.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonParticleFX/Models/SunShafts.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonParticleFX/Textures/PolygonParticles_Smoke_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonParticleFX/Textures/PolygonParticles_Smoke_01.png.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Boss/BossBulletHellAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/simon/Spelkollektivet/Assets/Player/XPManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/simon/Spelkollektivet/Assets/Player/XPManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -105,7 +116,7 @@
       <workItem from="1750234474419" duration="79000" />
       <workItem from="1750234585833" duration="7000" />
       <workItem from="1750234612313" duration="14333000" />
-      <workItem from="1750332201777" duration="12306000" />
+      <workItem from="1750332201777" duration="13563000" />
     </task>
     <servers />
   </component>
