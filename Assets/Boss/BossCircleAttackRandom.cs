@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using Enemies;
 using Interface;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Boss {
-    public class BossCircleAttack : BossAttack {
+    public class BossCircleAttackRandom : BossAttack {
         public override float TriggerDistance => 4f;
         public override AttackType AttackType => AttackType.Melee;
         public override float AttackDuration => 3f;
@@ -17,7 +18,7 @@ namespace Boss {
         }
 
         [SerializeField] protected List<BossDamageApplier> attackDamageApplierList;
-        [SerializeField] private float spacing = 3f;
+        [SerializeField] private float spawnRadius = 20f;
 
 
         private void Start() {
@@ -40,18 +41,18 @@ namespace Boss {
             return false;
         }
 
+
         private void CreateDamageAppliers() {
             if (attackDamageApplierList == null || attackDamageApplierList.Count == 0)
                 return;
 
-            Vector3 direction = transform.forward.normalized;
-            Vector3 startPos = transform.position + direction * spacing;
-
             for (int i = 0; i < attackDamageApplierList.Count; i++) {
-                Vector3 spawnPos = startPos + direction * spacing * i;
-                var instance =
-                    Instantiate(attackDamageApplierList[i].gameObject, spawnPos,
-                        transform.rotation); // optional: face same direction
+                Vector2 randomCircle = Random.insideUnitCircle * spawnRadius;
+                Vector3 spawnOffset = new Vector3(randomCircle.x, 0, randomCircle.y); // flat circle on XZ plane
+                Vector3 spawnPos = transform.position + spawnOffset;
+
+                var instance = Instantiate(attackDamageApplierList[i].gameObject, spawnPos, transform.rotation);
+
                 if (instance.TryGetComponent<IDamageApplier>(out var applier)) {
                     applier.Attack = this;
                 }

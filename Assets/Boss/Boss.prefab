@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7191477966710923085}
   - component: {fileID: 1426706707922698142}
   - component: {fileID: 3399148867383704297}
+  - component: {fileID: 4171851450414399345}
+  - component: {fileID: 774504857582618815}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -50,10 +52,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToPlayer: 0
   <AttackList>k__BackingField:
+  - {fileID: 4171851450414399345}
   - {fileID: 1426706707922698142}
   - {fileID: 3399148867383704297}
+  - {fileID: 774504857582618815}
   initialHealth: 1000
-  bossAnimator: {fileID: 6181231473855856209}
+  bossAnimator: {fileID: 6592701985952296629}
 --- !u!195 &7191477966710923085
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -88,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdb7b2414a647dc9c9f05e36c6e635a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 5
   attackDamageApplierList:
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
@@ -105,8 +110,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9632be20139c44e3a39408ff2d08a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 5
   attackDamageApplierList:
-  - {fileID: 7619437769399884654, guid: 14db6df03fced47aabe5f34b91f3c291, type: 3}
+  - {fileID: 5314213952194995473, guid: 354c31c55cf9e4a219b4684ce4e2f4af, type: 3}
+  vfx: {fileID: 0}
+--- !u!114 &4171851450414399345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6489778646626514513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 354f703ccd83c4f26af84902feeb1343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 5
+  attackDamageApplierList:
+  - {fileID: 1231784561591236736, guid: 975fec6e98e31479b8b2cdbd64821cae, type: 3}
+--- !u!114 &774504857582618815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6489778646626514513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ffc82adc964f15b9ad7f0a6f9880b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 5
+  attackDamageApplierList:
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 1231784561591236736, guid: 975fec6e98e31479b8b2cdbd64821cae, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 5314213952194995473, guid: 354c31c55cf9e4a219b4684ce4e2f4af, type: 3}
+  spawnRadius: 20
 --- !u!1001 &3533548997370925182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,23 +160,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 815677666821533133}
     m_Modifications:
-    - target: {fileID: 3013918076770643685, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
-      propertyPath: m_Controller
+    - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
+      propertyPath: 'bossAttackList.Array.data[0]'
       value: 
-      objectReference: {fileID: 9100000, guid: 242c4e279bd784fde9968947602349db, type: 2}
-    - target: {fileID: 3013918076770643685, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform
-        'Toes_L'\n\tTransform 'Jaw'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform
-        'Toes_R'\n\tFrom animation clip 'A_POLY_GBL_Walk_F_RM_Neut'\n\tFrom animation
-        clip 'A_Attack_HeavyCombo01A_RootMotion_Sword'\n\tFrom animation clip 'A_Attack_HeavyCombo01A_Hit_RootMotion_Sword'"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013918076770643685, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1426706707922698142}
+    - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
+      propertyPath: 'bossAttackList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3399148867383704297}
+    - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
+      propertyPath: 'bossAttackList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4171851450414399345}
+    - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
+      propertyPath: 'bossAttackList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 774504857582618815}
     - target: {fileID: 8392575543211945509, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
       propertyPath: m_Name
       value: Visual
@@ -179,39 +223,21 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8392575543211945509, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6181231473855856209}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
---- !u!95 &1790786213774474907 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3013918076770643685, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
-  m_PrefabInstance: {fileID: 3533548997370925182}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5004021363090669147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8392575543211945509, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
-  m_PrefabInstance: {fileID: 3533548997370925182}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6181231473855856209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5004021363090669147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f04a9ae25ce4e5ba6fe037dd5b0c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1790786213774474907}
-  bossAttackList:
-  - {fileID: 1426706707922698142}
-  - {fileID: 3399148867383704297}
 --- !u!4 &5636829180609717473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9165874524648322207, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
   m_PrefabInstance: {fileID: 3533548997370925182}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6592701985952296629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
+  m_PrefabInstance: {fileID: 3533548997370925182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f04a9ae25ce4e5ba6fe037dd5b0c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,5 +1,6 @@
 using System;
 using Enemies;
+using UnityEngine;
 
 namespace Boss {
     public abstract class BossAttack : Attack {
@@ -14,6 +15,13 @@ namespace Boss {
         public event EventHandler<BossAttackArgs> OnBossAttack;
         public abstract string AnimatorAttackName { get; set; }
         protected GameBoss GameBoss { get; private set; }
+
+        protected float LastAttackTime = Mathf.NegativeInfinity;
+
+        [SerializeField] protected float cooldown = 5f;
+        
+        protected bool IsOnCooldown => Time.time < LastAttackTime + cooldown;
+
 
         private void Awake() {
             GameBoss = GetComponent<GameBoss>();
