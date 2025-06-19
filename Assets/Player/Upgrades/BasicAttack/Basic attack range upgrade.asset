@@ -16,4 +16,4 @@ MonoBehaviour:
   iconPrefab: {fileID: 0}
   conflictingUpgrades: []
   requiredUpgrades: []
-  bonusRange: 1
+  bonusRange: 0.3

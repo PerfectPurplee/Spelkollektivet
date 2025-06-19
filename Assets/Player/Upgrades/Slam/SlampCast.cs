@@ -17,8 +17,15 @@ public class SlampCast : MonoBehaviour
 
     public void Cast(Vector3 position)
     {
-        Debug.Log("udalo sie");
-        Instantiate(slamEffectPrefab, position+Vector3.up*0.1f, Quaternion.identity).GetComponent<VisualEffect>().Play();
+        #region vfx
+        GameObject slamInstance = Instantiate(slamEffectPrefab, position + Vector3.up * 0.1f, Quaternion.identity);
+        VisualEffect vfx1 = slamInstance.GetComponent<VisualEffect>();
+        vfx1.SetFloat("Size", size);
+        ParticleSystem.MainModule vfx2 = slamInstance.GetComponentInChildren<ParticleSystem>().main;
+        vfx2.startSizeXMultiplier = size;
+        vfx2.startSizeZMultiplier = size;
+        #endregion
+
         Collider[] enemiesHit = Physics.OverlapSphere(position, size, enemiesLayerMask);
         foreach (Collider enemyCollider in enemiesHit)
         {
