@@ -6,26 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Upgrades/Basic attack damage upgrade a.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Upgrades/Basic attack damage upgrade a.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Upgrades/UpgradesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Upgrades/UpgradesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Upgrades/a.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Upgrades/a.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Upgrades/b.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Upgrades/b.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Upgrades/c.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Upgrades/c.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Upgrades/d.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Upgrades/d.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Upgrades/e.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Upgrades/e.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CanvasGame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CanvasGame.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map/MapTerrainb/Cemetary.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map/MapTerrainb/Cemetary.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/UIScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UIScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Buttons/Button_FantasyMenus_Simple_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Buttons/Button_FantasyMenus_Simple_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Buttons/Menu_FantasyMenus_Navigation_Header_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Buttons/Menu_FantasyMenus_Navigation_Header_05.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Buttons/Menu_FantasyMenus_Navigation_Icons_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Buttons/Menu_FantasyMenus_Navigation_Icons_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Popups/Popup_FantasyMenus_Generic_Error_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Popups/Popup_FantasyMenus_Generic_Error_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Popups/Popup_FantasyMenus_Load_Confirmation_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Popups/Popup_FantasyMenus_Load_Confirmation_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Popups/Popup_FantasyMenus_Overwrite_Confirmation_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Popups/Popup_FantasyMenus_Overwrite_Confirmation_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Popups/Popup_FantasyMenus_Quit_Game_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Prefabs/Popups/Popup_FantasyMenus_Quit_Game_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyWarriorHUD/Prefabs/Portraits/HUD_FantasyWarrior_CharacterPortrait_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyWarriorHUD/Prefabs/Portraits/HUD_FantasyWarrior_CharacterPortrait_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyWarriorHUD/Prefabs/Portraits/HUD_FantasyWarrior_Companions_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyWarriorHUD/Prefabs/Portraits/HUD_FantasyWarrior_Companions_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Loader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyWarriorHUD/Prefabs/Player_Health_Equipment/HUD_FantasyWarrior_HealthStats_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyWarriorHUD/Prefabs/Player_Health_Equipment/HUD_FantasyWarrior_HealthStats_04.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MainMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/MainMenuUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
