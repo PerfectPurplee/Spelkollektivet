@@ -8,6 +8,8 @@ using UnityEngine.AI;
 
 namespace Boss {
     public class GameBoss : MonoBehaviour, IDamageable {
+        public static GameBoss Instance { get; private set; }
+
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
 
@@ -25,6 +27,8 @@ namespace Boss {
         private Transform _target;
 
         private void Awake() {
+            if (Instance == null) Instance = this;
+            else Destroy(gameObject);
             this.CurrentHealth = this.MaxHealth = this.initialHealth;
         }
 
@@ -67,8 +71,12 @@ namespace Boss {
         }
 
         private bool AttackCheck() {
-            // AttackList.Shuffle();
-            return AttackList.Any(attack => attack.TryAttack());
+            AttackList.Shuffle();
+            foreach (var attack in AttackList) {
+                if (attack.TryAttack()) return true;
+            }
+
+            return false;
         }
 
         private void UpdateAgent(bool isActive) {
