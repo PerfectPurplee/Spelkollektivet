@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +13,7 @@ public class BossProgressUI : MonoBehaviour {
 
     private void Awake() {
         if (Instance != null) {
-            Debug.LogError("More than one instance of BossProgressUI");
+            Debug.LogError("More than one Instance of BossProgressUI");
         }
         Instance = this;
         
@@ -20,11 +21,20 @@ public class BossProgressUI : MonoBehaviour {
     }
 
     private void Start() {
-        //Subscribe to events OnGemCollected or whatever
-        
+        BossProgress.Instance.OnGemCollected += BossProgress_OnGemCollected;
+
     }
 
-
+    private void BossProgress_OnGemCollected(object sender, EventArgs e) {
+        switch (BossProgress.Instance.gemsCollected) {
+            case 0: HideAllGems(); break;
+            case 1: gemImage1.gameObject.SetActive(true); break;
+            case 2: gemImage2.gameObject.SetActive(true); break;
+            case 3: gemImage3.gameObject.SetActive(true); break;
+            case 4: gemImage4.gameObject.SetActive(true); break;
+        }
+    }
+    
 
 
     private void HideAllGems() {
