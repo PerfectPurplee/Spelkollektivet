@@ -36,6 +36,7 @@ namespace Boss {
 
 
         private void Update() {
+            Debug.Log($"Boss state: {BossState}");
             this.UpdateDistanceToPlayer();
             this.HandleBossState();
         }
@@ -66,7 +67,7 @@ namespace Boss {
         }
 
         private bool AttackCheck() {
-            AttackList.Shuffle();
+            // AttackList.Shuffle();
             return AttackList.Any(attack => attack.TryAttack());
         }
 
@@ -83,6 +84,7 @@ namespace Boss {
 
         private void OnAttackAnimationFinished(object sender, EventArgs e) {
             this.BossState = BossState.Walking;
+            Debug.Log("Wraca do state walking");
         }
 
         public void TakeDamage(int damage, Vector3 attackerPosition, bool ranged) {
