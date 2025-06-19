@@ -34,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5811982113455492669}
+  - {fileID: 4805387868842009786}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7469015937959328421
@@ -122,6 +123,99 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.30785283, y: 0.4557335, z: 0.31886733}
   m_Center: {x: 0.027337652, y: 0.2238711, z: -0.0077698035}
+--- !u!1001 &1025507937129241735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3197139744277658896}
+    m_Modifications:
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3552
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243506685296559416, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      propertyPath: m_Name
+      value: FX_Fire_Light_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7459570878629381658, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5601335765221143136}
+  m_SourcePrefab: {fileID: 100100000, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+--- !u!4 &4805387868842009786 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5515639365212190781, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+  m_PrefabInstance: {fileID: 1025507937129241735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7619789544369625757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7459570878629381658, guid: 25dbceab3b4d8e344a954da40ce6baa5, type: 3}
+  m_PrefabInstance: {fileID: 1025507937129241735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5601335765221143136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619789544369625757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &6588428580296522530
 PrefabInstance:
   m_ObjectHideFlags: 0

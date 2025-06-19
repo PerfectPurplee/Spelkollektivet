@@ -32,13 +32,7 @@ public class BossProgressUI : MonoBehaviour {
     }
 
     private void Update() {
-        Vector3 toPosition = targetPosition;
-        Vector3 fromPosition = Camera.main.transform.position;
-        fromPosition.z = 0f;
-        Vector3 direction = (toPosition - fromPosition).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if (angle < 0) angle += 360;
-        arrowTransform.localEulerAngles = new Vector3(0, 0, angle);
+        UpdateArrowRotation();
     }
 
     private void GemCollectible_OnGemCollected(object sender, EventArgs e) {
@@ -63,6 +57,15 @@ public class BossProgressUI : MonoBehaviour {
     }
 
 
+    private void UpdateArrowRotation() {
+        Vector3 toPosition = targetPosition;
+        Vector3 fromPosition = Player.Player.Instance.transform.position;
+        fromPosition.y = 0f;
+        Vector3 direction = (toPosition - fromPosition).normalized;
+        float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+        if (angle < 0) angle += 360;
+        arrowTransform.localEulerAngles = new Vector3(0, 0, angle);
+    }
     private void HideAllGemsAndFlames() {
         gemImage1.gameObject.SetActive(false);
         gemImage2.gameObject.SetActive(false);
