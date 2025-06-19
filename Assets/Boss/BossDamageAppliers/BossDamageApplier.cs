@@ -27,7 +27,7 @@ namespace Boss {
 
         private void OnTriggerEnter(Collider other) {
             if (_playerGotHit) return;
-
+            if (!other.gameObject.CompareTag("Player")) return;
             if (((IDamageApplier)this).TryDealDamage(other.gameObject, Attack, transform.position)) {
                 _playerGotHit = true;
                 OnDamageApplied?.Invoke(null, EventArgs.Empty);
