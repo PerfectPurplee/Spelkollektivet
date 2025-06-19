@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,8 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] private Transform arrowTransform;
     private Vector3 targetPosition = Vector3.zero;
 
+    [SerializeField] private GameObject portal;
+
     private void Awake() {
         if (Instance != null) {
             Debug.LogError("More than one Instance of BossProgressUI");
@@ -35,6 +38,25 @@ public class BossProgressUI : MonoBehaviour {
     }
 
     private void Update() {
+        if (BossProgress.Instance.gemsCollected < 4) {
+            // Looking for nearest gem
+            targetPosition = FindClosestGemTransform().position;
+        }
+        else {
+            // All gems collected
+            if (Boss.GameBoss.Instance != null) {
+                // Targeting boss
+                targetPosition = Boss.GameBoss.Instance.transform.position;
+            }
+            else {
+                // Boss dead, targeting portal
+                portal.SetActive(true);
+                targetPosition = portal.transform.position;
+                
+            }
+            
+        }
+        
         UpdateArrowRotation();
     }
 
@@ -69,6 +91,7 @@ public class BossProgressUI : MonoBehaviour {
         if (angle < 0) angle += 360;
         arrowTransform.localEulerAngles = new Vector3(0, 0, angle);
     }
+
     private void HideAllGemsAndFlames() {
         gemImage1.gameObject.SetActive(false);
         gemImage2.gameObject.SetActive(false);
@@ -80,9 +103,26 @@ public class BossProgressUI : MonoBehaviour {
         altarFlame4.gameObject.SetActive(false);
     }
 
-    private void FindClosestGem() {
-        foreach (Transform transform in collectiblesList) {
-            // Player.Player.Instance.transform.position 
-        }
+    // private Transform FindClosestGemTransform() {
+    //     Transform gemTransform = collectiblesList[0].gameObject.transform;
+    //     float minDistance = Vector3.Distance(collectiblesList[0].transform.position, Player.Player.Instance.transform.position);;
+    //     foreach (Transform transform in collectiblesList) {
+    //         float distance = Vector3.Distance(transform.position, Player.Player.Instance.transform.position);
+    //         if (minDistance > distance) {
+    //             minDistance = distance;
+    //             gemTransform = transform;
+    //         }
+    //     }
+    //     return gemTransform;
+    // }
+
+    private Transform FindClosestGemTransform() {
+        Vector3 playerPosition = Player.Player.Instance.transform.position;
+
+        collectiblesList.RemoveAll(item => item == null);
+
+        return collectiblesList
+            .OrderBy(gem => Vector3.Distance(gem.position, playerPosition))
+            .FirstOrDefault();
     }
 }
