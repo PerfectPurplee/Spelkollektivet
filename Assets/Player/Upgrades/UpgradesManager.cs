@@ -108,7 +108,7 @@ public class UpgradesManager : MonoBehaviour
         upgradesToChooseIcons = new List<GameObject>(upgradesToChooseAmount);
         foreach (Upgrade upgrade in upgradesToChoose)
         {
-            upgradesToChooseIcons.Add(upgrade.InstantiateIcon(iconsParents[i]));
+            upgradesToChooseIcons.Add(upgrade.InstantiateChoiceField(iconsParents[i]));
             i++;
         }
         return upgradesToChooseIcons;

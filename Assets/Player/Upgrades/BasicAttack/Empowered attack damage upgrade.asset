@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ada765e158625d439b34dda7bb6b235, type: 3}
   m_Name: Empowered attack damage upgrade
   m_EditorClassIdentifier: 
+  nameText: 
+  sprite: {fileID: 21300000, guid: 1c86a6fdb27c7f54389b2f4c05947e03, type: 3}
   maxStacks: 5
-  iconPrefab: {fileID: 0}
+  choiceFieldPrefab: {fileID: 5040749509729762714, guid: a919c29b9a5175a47a5af77c824f00db, type: 3}
   conflictingUpgrades: []
   requiredUpgrades:
   - {fileID: 11400000, guid: f0a83f093f4e0da4b9f69cea68b77559, type: 2}
