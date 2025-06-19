@@ -20,19 +20,19 @@ public class UpgradesManagerUI : MonoBehaviour {
         Instance = this;
 
         choiceAButton.onClick.AddListener(() => {
-            UpgradesManager.Instance.ChooseUpgradeByIndex(0);
             DestroyIconGameObjects();
             Hide();
+            UpgradesManager.Instance.ChooseUpgradeByIndex(0);
         });
         choiceBButton.onClick.AddListener(() => {
-            UpgradesManager.Instance.ChooseUpgradeByIndex(1);
             DestroyIconGameObjects();
             Hide();
+            UpgradesManager.Instance.ChooseUpgradeByIndex(1);
         });
         choiceCButton.onClick.AddListener(() => {
-            UpgradesManager.Instance.ChooseUpgradeByIndex(2);
             DestroyIconGameObjects();
             Hide();
+            UpgradesManager.Instance.ChooseUpgradeByIndex(2);
         });
     }
 

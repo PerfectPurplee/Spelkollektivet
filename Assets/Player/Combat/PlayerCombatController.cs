@@ -278,7 +278,7 @@ public partial class PlayerCombatController : MonoBehaviour
         currentShieldMovementDirection = direction.normalized;
         shield.SetParent(null);
         shield.rotation = shieldThrowingRotation;
-        shieldStartSpeed = shieldThrowDistance * shieldThrowingForwardDuration * 2;
+        shieldStartSpeed = shieldThrowDistance / shieldThrowingForwardDuration * 2;
         currentShieldSpeed = shieldStartSpeed;
         shieldAcceleration = shieldStartSpeed / shieldThrowingForwardDuration;
         throwAttackHitBox.StartAttack();
