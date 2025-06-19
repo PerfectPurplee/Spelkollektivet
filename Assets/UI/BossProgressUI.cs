@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] private GameObject altarFlame2;
     [SerializeField] private GameObject altarFlame3;
     [SerializeField] private GameObject altarFlame4;
+
+    [SerializeField] private List<Transform> collectiblesList;
 
     [SerializeField] private Transform arrowTransform;
     private Vector3 targetPosition = Vector3.zero;
@@ -75,5 +78,11 @@ public class BossProgressUI : MonoBehaviour {
         altarFlame2.gameObject.SetActive(false);
         altarFlame3.gameObject.SetActive(false);
         altarFlame4.gameObject.SetActive(false);
+    }
+
+    private void FindClosestGem() {
+        foreach (Transform transform in collectiblesList) {
+            // Player.Player.Instance.transform.position 
+        }
     }
 }
