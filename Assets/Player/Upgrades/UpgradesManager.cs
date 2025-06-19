@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class UpgradesManager : MonoBehaviour
 {
+    public static UpgradesManager Instance;
     public event Action<List<GameObject>> OnStartUpgradeChoice;
     public event Action<Upgrade> OnUpgradeChoice;
     public void ChooseUpgradeByIndex(int buttonIndex)
@@ -29,8 +30,18 @@ public class UpgradesManager : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
+        
         upgradesPool = allUpgrades.Where(upgrade => upgrade.requiredUpgrades.Count == 0).ToList();
         upgradesWaitingForRequirenment = allUpgrades.Where(upgrade => upgrade.requiredUpgrades.Count > 0).ToList();
+    }
+
+    private void Start() {
+        XPManager.Instance.OnLevelUp += XPManager_OnLevelUp;
+    }
+
+    private void XPManager_OnLevelUp(object sender, EventArgs e) {
+        StartUpgradeChoice();
     }
 
     private void Update()
