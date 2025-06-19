@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -18,8 +19,14 @@ public class BasicAttackRangeUpgrade : Upgrade
         }
     }
 
-    public override GameObject InstantiateIcon(Transform parent)
+    public override List<StatChange> GetStatsChanges()
     {
-        return Instantiate(iconPrefab, parent, false);
+        string previousRange = playerCombatController.BasicAttackHitBox.transform.localScale.x.ToString("0.00");
+        string rangeAfterUpgrade = (playerCombatController.BasicAttackHitBox.transform.localScale.x + bonusRange).ToString("0.00");
+        return new List<StatChange> {
+            new StatChange(
+                $"Basic Attack Range: {previousRange} => {rangeAfterUpgrade}",
+                Positivity.Positive) 
+        };
     }
 }
