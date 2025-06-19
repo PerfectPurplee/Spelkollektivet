@@ -19,7 +19,7 @@ public class PauseMenuUI : MonoBehaviour {
         
         resumeButton.onClick.AddListener(() => {
             OnButtonPressed?.Invoke(this, EventArgs.Empty);
-            Hide();
+            PauseManager.Instance.TogglePause();
         });
         settingsButton.onClick.AddListener(() => {
             OnButtonPressed?.Invoke(this, EventArgs.Empty);
@@ -28,6 +28,7 @@ public class PauseMenuUI : MonoBehaviour {
         mainMenuButton.onClick.AddListener(() => {
             OnButtonPressed?.Invoke(this, EventArgs.Empty);
             Hide();
+            Time.timeScale = 1f;
             Loader.LoadScene(Loader.Scene.MainMenuScene);
         });
         
