@@ -24,6 +24,8 @@ public class SoundManagerGame : MonoBehaviour {
     private void Start() {
         PauseMenuUI.Instance.OnButtonPressed += PauseMenuUI_OnButtonPressed;
         XPManager.Instance.OnLevelUp += XPManager_OnLevelUp;
+        PauseMenuUI.Instance.OnButtonHovered += PauseMenuUI_OnButtonHovered;
+
     }
 
     private void XPManager_OnLevelUp(object sender, EventArgs e) {
@@ -33,7 +35,11 @@ public class SoundManagerGame : MonoBehaviour {
     private void PauseMenuUI_OnButtonPressed(object sender, EventArgs e) {
         PlaySound(audioClipRefsSO.menuOption, Vector3.zero);
     }
-
+    private void PauseMenuUI_OnButtonHovered(object sender, EventArgs e)
+    {
+        PlaySound(audioClipRefsSO.menuCategory, Vector3.zero);
+        Debug.Log("Button is hovered in the Pause Menu");
+    }
 
     private void PlaySound(AudioClip[] audioClipArray, Vector3 position, float volume = 1f) {
         PlaySound(audioClipArray[Random.Range(0, audioClipArray.Length)], position, volume);
@@ -41,5 +47,14 @@ public class SoundManagerGame : MonoBehaviour {
 
     private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplayer = 1f) {
         AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplayer * volume);
+    }
+    public AudioClipRefsSO GetAudio()
+    {
+        return audioClipRefsSO;
+    }
+
+    public void PlaySwordSwishSound()
+    {
+        PlaySound(audioClipRefsSO.swordHit, transform.position);
     }
 }

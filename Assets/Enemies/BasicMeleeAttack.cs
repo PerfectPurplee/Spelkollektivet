@@ -15,7 +15,7 @@ namespace Enemies {
             if (EnemyAI.distance < this.TriggerDistance && EnemyAI.State != EnemyAI.EnemyState.Attacking) {
                 sharedMeleeWeaponHitbox.Attack = this;
                 sharedMeleeWeaponHitbox.GetComponent<Collider>().enabled = true;
-                SoundManagerGame.Instance.playSwordSwishSound();
+                SoundManagerGame.Instance.PlaySwordSwishSound();
                 return true;
             }
 
