@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class PauseMenuUI : MonoBehaviour {
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button mainMenuButton;
 
+    public event EventHandler OnButtonPressed;
     private void Awake() {
         if (Instance != null) {
             Debug.LogError("More than one instance of PauseMenuUI");
@@ -16,13 +18,17 @@ public class PauseMenuUI : MonoBehaviour {
         Instance = this;
         
         resumeButton.onClick.AddListener(() => {
-            Hide();
+            OnButtonPressed?.Invoke(this, EventArgs.Empty);
+            PauseManager.Instance.TogglePause();
         });
         settingsButton.onClick.AddListener(() => {
+            OnButtonPressed?.Invoke(this, EventArgs.Empty);
             Debug.Log("Settings");
         });
         mainMenuButton.onClick.AddListener(() => {
+            OnButtonPressed?.Invoke(this, EventArgs.Empty);
             Hide();
+            Time.timeScale = 1f;
             Loader.LoadScene(Loader.Scene.MainMenuScene);
         });
         
