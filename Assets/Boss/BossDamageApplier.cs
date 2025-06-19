@@ -8,7 +8,6 @@ namespace Boss {
     public class BossDamageApplier : MonoBehaviour, IDamageApplier {
         public Attack Attack { get; set; }
 
-        [SerializeField] private Animator animator;
         public static event EventHandler OnDamageApplied;
 
 
@@ -17,7 +16,6 @@ namespace Boss {
 
 
         private void Awake() {
-            animator = GetComponent<Animator>();
             _playerGotHit = false;
         }
 

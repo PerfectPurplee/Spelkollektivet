@@ -47,8 +47,7 @@ namespace Boss {
 
             for (int i = 0; i < attackDamageApplierList.Count; i++) {
                 Vector3 spawnPos = startPos + direction * spacing * i;
-                Instantiate(attackDamageApplierList[i].gameObject, spawnPos,
-                    transform.rotation); // optional: face same direction
+                Instantiate(attackDamageApplierList[i].gameObject, spawnPos, transform.rotation); // optional: face same direction
             }
         }
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3152921044674387259}
   - component: {fileID: 7191477966710923085}
   - component: {fileID: 1426706707922698142}
+  - component: {fileID: 3399148867383704297}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   distanceToPlayer: 0
   <AttackList>k__BackingField:
   - {fileID: 1426706707922698142}
+  - {fileID: 3399148867383704297}
   initialHealth: 1000
   bossAnimator: {fileID: 6181231473855856209}
 --- !u!195 &7191477966710923085
@@ -91,6 +93,20 @@ MonoBehaviour:
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   spacing: 3
+--- !u!114 &3399148867383704297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6489778646626514513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9632be20139c44e3a39408ff2d08a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamageApplierList:
+  - {fileID: 7619437769399884654, guid: 14db6df03fced47aabe5f34b91f3c291, type: 3}
 --- !u!1001 &3533548997370925182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110,7 +126,7 @@ PrefabInstance:
         by Humanoid clips.\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform
         'Toes_L'\n\tTransform 'Jaw'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform
         'Toes_R'\n\tFrom animation clip 'A_POLY_GBL_Walk_F_RM_Neut'\n\tFrom animation
-        clip 'A_Attack_HeavyCombo01A_RootMotion_Sword'"
+        clip 'A_Attack_HeavyCombo01A_RootMotion_Sword'\n\tFrom animation clip 'A_Attack_HeavyCombo01A_Hit_RootMotion_Sword'"
       objectReference: {fileID: 0}
     - target: {fileID: 3013918076770643685, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -193,6 +209,7 @@ MonoBehaviour:
   animator: {fileID: 1790786213774474907}
   bossAttackList:
   - {fileID: 1426706707922698142}
+  - {fileID: 3399148867383704297}
 --- !u!4 &5636829180609717473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9165874524648322207, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}

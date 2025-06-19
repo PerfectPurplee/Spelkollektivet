@@ -5,23 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Boss/AnimatorEventHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Boss/AnimatorEventHelper.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Boss.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Boss/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Boss.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Boss/BossAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossAnimatorController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/BossMeleeAttack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/BossMeleeAttack.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Sunbeam_Mat 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Sunbeam_Mat 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Sunbeam_Mat 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/FX/Sunbeam_Mat 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/WindowGlass/Glass_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/WindowGlass/Glass_03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/WindowGlass/Glass_04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/Materials/WindowGlass/Glass_04.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/AI Navigation/2.0.8/Build And Connect NavMesh Surfaces/Materials/red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/AI Navigation/2.0.8/Build And Connect NavMesh Surfaces/Materials/red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/BossCircleAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossCircleAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/BossDamageApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossDamageApplier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/BossRectangleAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossRectangleAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/BossRectangleDamageAnim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BossRectangleDamageAnim.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/BoxRectangleDamageApplier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BoxRectangleDamageApplier.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/BoxRectangleDamageApplier.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/BoxRectangleDamageApplier.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SimonEnemy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonKaiju/Materials/Alts/Kaiju_02_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonKaiju/Materials/Alts/Kaiju_02_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonKaiju/Materials/Alts/Kaiju_03_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonKaiju/Materials/Alts/Kaiju_03_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonKaiju/Materials/Alts/Kaiju_03_03_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonKaiju/Materials/Alts/Kaiju_03_03_B.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonKaiju/Materials/Alts/Kaiju_03_03_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonKaiju/Materials/Alts/Kaiju_03_03_C.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +119,7 @@
       <workItem from="1750234474419" duration="79000" />
       <workItem from="1750234585833" duration="7000" />
       <workItem from="1750234612313" duration="14333000" />
-      <workItem from="1750332202082" duration="410000" />
+      <workItem from="1750332201777" duration="869000" />
     </task>
     <servers />
   </component>
