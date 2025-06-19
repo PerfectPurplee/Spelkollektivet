@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/Fire.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/Fire.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/Misc/BlankGrey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/Misc/BlankGrey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss/Gem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss/Gem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/FX_Circle_Additive_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/FX_Circle_Additive_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/FX_Circle_Additive_Glow_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/FX_Circle_Additive_Glow_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/Fx_Circle_Glow_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/Fx_Circle_Glow_02.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/BossProgressUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/BossProgressUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +114,8 @@
       <updated>1750061296971</updated>
       <workItem from="1750061298053" duration="9013000" />
       <workItem from="1750148987326" duration="2781000" />
-      <workItem from="1750354217459" duration="4045000" />
+      <workItem from="1750354217459" duration="4069000" />
+      <workItem from="1750358480513" duration="1517000" />
     </task>
     <servers />
   </component>
