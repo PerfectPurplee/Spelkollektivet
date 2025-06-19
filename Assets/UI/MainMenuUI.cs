@@ -18,7 +18,7 @@ public class MainMenuUI : MonoBehaviour {
         
         playButton.onClick.AddListener(() => {
             OnButtonPressed?.Invoke(this, EventArgs.Empty);
-            Loader.LoadScene(Loader.Scene.UIScene);
+            Loader.LoadScene(Loader.Scene.Map);
         });
         settingsButton.onClick.AddListener(() => {
             OnButtonPressed?.Invoke(this, EventArgs.Empty);
