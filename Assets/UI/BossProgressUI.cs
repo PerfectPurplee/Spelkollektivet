@@ -3,9 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class BossProgressUI : MonoBehaviour {
-    
-    public static BossProgressUI Instance {get; private set;}
-    
+    public static BossProgressUI Instance { get; private set; }
+
     [SerializeField] private Image gemImage1;
     [SerializeField] private Image gemImage2;
     [SerializeField] private Image gemImage3;
@@ -15,17 +14,17 @@ public class BossProgressUI : MonoBehaviour {
         if (Instance != null) {
             Debug.LogError("More than one Instance of BossProgressUI");
         }
+
         Instance = this;
-        
+
         HideAllGems();
     }
 
     private void Start() {
-        BossProgress.Instance.OnGemCollected += BossProgress_OnGemCollected;
-
+        GemCollectible.OnGemCollected += GemCollectible_OnGemCollected;
     }
 
-    private void BossProgress_OnGemCollected(object sender, EventArgs e) {
+    private void GemCollectible_OnGemCollected(object sender, EventArgs e) {
         switch (BossProgress.Instance.gemsCollected) {
             case 0: HideAllGems(); break;
             case 1: gemImage1.gameObject.SetActive(true); break;
@@ -34,7 +33,6 @@ public class BossProgressUI : MonoBehaviour {
             case 4: gemImage4.gameObject.SetActive(true); break;
         }
     }
-    
 
 
     private void HideAllGems() {

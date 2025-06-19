@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class BossProgress : MonoBehaviour {
     public static BossProgress Instance { get; private set; }
-    public event EventHandler OnGemCollected;
     public int gemsCollected;
     private int maxGems = 4;
 
@@ -15,10 +14,20 @@ public class BossProgress : MonoBehaviour {
         Instance = this;
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.G) && gemsCollected < maxGems) {
-            gemsCollected++;
-            OnGemCollected?.Invoke(this, EventArgs.Empty);
+    private void Start() {
+        GemCollectible.OnGemCollected += GemCollectible_OnGemCollected;
+    }
+
+    private void GemCollectible_OnGemCollected(object sender, EventArgs e) {
+        gemsCollected++;
+        Debug.Log(gemsCollected);
+        if (gemsCollected == maxGems) {
+            SpawnBoss();
         }
+    }
+
+
+    private void SpawnBoss() {
+        Debug.Log("Spawning boss xdd");
     }
 }
