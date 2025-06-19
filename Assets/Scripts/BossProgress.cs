@@ -6,9 +6,9 @@ public class BossProgress : MonoBehaviour {
     public int gemsCollected;
     private int maxGems = 4;
 
-    
-    
-    
+    [SerializeField] private Boss.GameBoss boss;
+
+
     private void Awake() {
         if (Instance != null) {
             Debug.LogError("More than one Instance of BossProgress");
@@ -31,6 +31,7 @@ public class BossProgress : MonoBehaviour {
 
 
     private void SpawnBoss() {
+        boss.gameObject.SetActive(true);
         Debug.Log("Spawning boss xdd");
     }
 }
