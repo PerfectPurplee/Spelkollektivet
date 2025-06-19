@@ -6,6 +6,9 @@ public class BossProgress : MonoBehaviour {
     public int gemsCollected;
     private int maxGems = 4;
 
+    
+    
+    
     private void Awake() {
         if (Instance != null) {
             Debug.LogError("More than one Instance of BossProgress");
