@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac73a0524187be41b07b4757cdaec72, type: 3}
+  m_Name: Slam damage upgrade
+  m_EditorClassIdentifier: 
+  maxStacks: 3
+  iconPrefab: {fileID: 8603199109843563708, guid: 792ac56c7b26a8c4b82e33f6cfff09b3, type: 3}
+  conflictingUpgrades: []
+  requiredUpgrades:
+  - {fileID: 11400000, guid: dca5fc6e654b5e748add6a96846ac7c2, type: 2}
+  - {fileID: 11400000, guid: 5f4ad8260bd85a94fb078f6c98468072, type: 2}
+  bonusDamage: 1

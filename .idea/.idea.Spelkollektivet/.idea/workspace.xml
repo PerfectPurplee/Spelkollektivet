@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/Fire.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/FX/Fire.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/Misc/BlankGrey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyKingdom/Materials/Misc/BlankGrey.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss/Gem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss/Gem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/FX_Circle_Additive_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/FX_Circle_Additive_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/FX_Circle_Additive_Glow_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/FX_Circle_Additive_Glow_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/Fx_Circle_Glow_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/PolygonVikings2/Materials/FX/Fx_Circle_Glow_02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/BossProgressUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/BossProgressUI.cs" afterDir="false" />
-    </list>
+    <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,11 +14,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Audio/AudioClipRefsSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Boss/BossBulletHellAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Interface/IDamageApplier.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossProgress.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GemCollectible.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundManagerGame.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -43,13 +30,13 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;kuby&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;enemies&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -114,8 +101,11 @@
       <updated>1750061296971</updated>
       <workItem from="1750061298053" duration="9013000" />
       <workItem from="1750148987326" duration="2781000" />
-      <workItem from="1750354217459" duration="4069000" />
-      <workItem from="1750358480513" duration="1517000" />
+      <workItem from="1750233622562" duration="826000" />
+      <workItem from="1750234474419" duration="79000" />
+      <workItem from="1750234585833" duration="7000" />
+      <workItem from="1750234612313" duration="14333000" />
+      <workItem from="1750332201777" duration="12306000" />
     </task>
     <servers />
   </component>
@@ -140,7 +130,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="enemies" />
                       </list>
                     </value>
                   </entry>
