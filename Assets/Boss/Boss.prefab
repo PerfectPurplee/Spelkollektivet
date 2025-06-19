@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3399148867383704297}
   - component: {fileID: 4171851450414399345}
   - component: {fileID: 774504857582618815}
+  - component: {fileID: 5912644089942475121}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MonoBehaviour:
   - {fileID: 1426706707922698142}
   - {fileID: 3399148867383704297}
   - {fileID: 774504857582618815}
+  - {fileID: 5912644089942475121}
   initialHealth: 1000
   bossAnimator: {fileID: 6592701985952296629}
 --- !u!195 &7191477966710923085
@@ -94,6 +96,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 5
   attackDamageApplierList:
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
@@ -146,12 +153,46 @@ MonoBehaviour:
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
-  - {fileID: 1231784561591236736, guid: 975fec6e98e31479b8b2cdbd64821cae, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
   - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
-  - {fileID: 5314213952194995473, guid: 354c31c55cf9e4a219b4684ce4e2f4af, type: 3}
-  spawnRadius: 20
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  - {fileID: 2223799687459750772, guid: 848ff4ecaddae43fc8108d6d89b2af42, type: 3}
+  spawnRadius: 15
+--- !u!114 &5912644089942475121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6489778646626514513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53e7badf63344fb7a7db56ae146fbdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 5
+  attackDamageApplierList:
+  - {fileID: 4916158268562905549, guid: 5ecaeafbe7a55461a998e18217e316a5, type: 3}
+  projectileCount: 36
+  radius: 2
 --- !u!1001 &3533548997370925182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,6 +201,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 815677666821533133}
     m_Modifications:
+    - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
+      propertyPath: bossAttackList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
       propertyPath: 'bossAttackList.Array.data[0]'
       value: 
@@ -176,6 +221,10 @@ PrefabInstance:
       propertyPath: 'bossAttackList.Array.data[3]'
       value: 
       objectReference: {fileID: 774504857582618815}
+    - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
+      propertyPath: 'bossAttackList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 5912644089942475121}
     - target: {fileID: 8392575543211945509, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
       propertyPath: m_Name
       value: Visual
