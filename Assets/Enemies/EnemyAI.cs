@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Interface;
 using Player;
@@ -11,7 +12,8 @@ namespace Enemies {
     public class EnemyAI : MonoBehaviour, IDamageable {
         public enum EnemyState {
             Walking,
-            Attacking
+            Attacking,
+            Dying
         }
 
         public EnemyState State { get; set; } = EnemyState.Walking;
@@ -69,11 +71,13 @@ namespace Enemies {
                         if (this.attack is EnemyBasicMeleeAttack meleeAttack) {
                             meleeAttack.TurnWeaponColliderOffAfterMeleeAttack();
                         }
-                        
+
                         _agent.isStopped = false;
                         this.State = EnemyState.Walking;
                     }
 
+                    break;
+                case EnemyState.Dying:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -83,6 +87,12 @@ namespace Enemies {
         public void TakeDamage(int damage, Vector3 attackerPosition, bool range) {
             CurrentHealth -= damage;
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
+
+            if (CurrentHealth <= 0 && State != EnemyState.Dying) {
+                State = EnemyState.Dying;
+                OnDeath?.Invoke();
+            }
+
             Debug.Log($"Enemy took {damage} damage");
         }
 

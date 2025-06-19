@@ -7,6 +7,7 @@ using UnityEngine;
 public class SingleAttackHitBox : MonoBehaviour
 {
     public int damage;
+    public float multiplier = 1;
     public bool attackActive = false;
 
     public event Action<IDamageable> OnAttackEntity;
@@ -50,7 +51,7 @@ public class SingleAttackHitBox : MonoBehaviour
         if (other.TryGetComponent(out IDamageable damageable) && !damagedEntities.Contains(damageable))
         {
             Debug.Log($"Damaged something! : {other.gameObject.name}");
-            damageable.TakeDamage(damage, Vector3.zero, false);
+            damageable.TakeDamage(Mathf.FloorToInt(multiplier * damage), Vector3.zero, false);
             damagedEntities.Add(damageable);
             OnAttackEntity?.Invoke(damageable);
         }

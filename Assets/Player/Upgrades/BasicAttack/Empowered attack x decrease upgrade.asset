@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421e123c6f1675e4bad5d168ca2a82ec, type: 3}
+  m_Name: Empowered attack x decrease upgrade
+  m_EditorClassIdentifier: 
+  maxStacks: 4
+  iconPrefab: {fileID: 0}
+  conflictingUpgrades: []
+  requiredUpgrades:
+  - {fileID: 11400000, guid: f0a83f093f4e0da4b9f69cea68b77559, type: 2}

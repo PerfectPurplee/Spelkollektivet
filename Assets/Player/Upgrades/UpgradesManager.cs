@@ -55,6 +55,15 @@ public class UpgradesManager : MonoBehaviour
                 Debug.Log(upgradeToChoose.name);
             }
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GenerateUpgradesToChoose();
+            //GenerateUpgradesToChoose();
+            foreach (Upgrade upgradeToChoose in upgradesToChoose)
+            {
+                Debug.Log(upgradeToChoose.name);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChooseUpgradeByIndex(0);
@@ -136,7 +145,7 @@ public class UpgradesManager : MonoBehaviour
         }
 
         var upgradesThatNowMeetRequirenmentd = upgradesWaitingForRequirenment.Where(
-            upgradeToCheck => upgradeToCheck.requiredUpgrades.All(requiredUpgrade => upgradesAcquired.Contains(requiredUpgrade))
+            upgradeToCheck => upgradeToCheck.requiredUpgrades.Any(requiredUpgrade => upgradesAcquired.Contains(requiredUpgrade))
             ).ToList();
         upgradesWaitingForRequirenment.RemoveAll(upgrade => upgradesThatNowMeetRequirenmentd.Contains(upgrade));
         upgradesPool.AddRange(upgradesThatNowMeetRequirenmentd);
