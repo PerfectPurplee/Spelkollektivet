@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Slam size upgrade  _", menuName = "Upgrade/Slam/Slam size")]
@@ -11,8 +12,17 @@ public class SlamSizeUpgrade : Upgrade
         playerCombatController.SlamCast.size += bonusSize;
     }
 
-    public override GameObject InstantiateIcon(Transform parent)
+    public override List<StatChange> GetStatsChanges()
     {
-        return Instantiate(iconPrefab, parent);
+        float sizeBefore = playerCombatController.SlamCast.size;
+        float sizeAfter = sizeBefore + bonusSize;
+        return new List<StatChange>
+        {
+            new StatChange
+            {
+                text = $"{SlamText()} Size: {sizeBefore} => {sizeAfter}",
+                positivity = Positivity.Positive
+            }
+        };
     }
 }

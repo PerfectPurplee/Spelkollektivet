@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Dash charge upgrade  _", menuName = "Upgrade/Dash/Dash charge")]
@@ -8,8 +9,15 @@ public class DashChargesUpgrade : Upgrade
         playerCombatController.DashCooldown.maxCharges++;
     }
 
-    public override GameObject InstantiateIcon(Transform parent)
+    public override List<StatChange> GetStatsChanges()
     {
-        return Instantiate(iconPrefab, parent);
+        int currentDashCharges = playerCombatController.DashCooldown.maxCharges;
+        return new List<StatChange>
+        {
+            new StatChange(
+                $"{DashText()} charges: {currentDashCharges} => {currentDashCharges + 1}",
+                Positivity.Positive
+                )
+        };
     }
 }

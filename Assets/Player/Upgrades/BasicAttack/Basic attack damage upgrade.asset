@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c2509ceef4e9241945fdd1b3e9a7da, type: 3}
   m_Name: Basic attack damage upgrade
   m_EditorClassIdentifier: 
+  nameText: Xd
+  sprite: {fileID: 21300000, guid: 8b4b518e34751764c9d11a5ed4da9d31, type: 3}
   maxStacks: 100
-  iconPrefab: {fileID: 3582263355776038890, guid: 525cc9d5ddcd24a67a3313d315236032, type: 3}
+  choiceFieldPrefab: {fileID: 5040749509729762714, guid: a919c29b9a5175a47a5af77c824f00db, type: 3}
   conflictingUpgrades: []
   requiredUpgrades: []
   bonusDamage: 10
