@@ -21,7 +21,7 @@ public class UpgradeChoiceField : MonoBehaviour
         TMPUpgradeName.text = upgradeText;
         foreach (StatChange statChange in statChanges)
         {
-            Debug.Log("xddfgafdgssfdgsfdd");
+            //Debug.Log("xddfgafdgssfdgsfdd");
             UpgradeStatField newField = Instantiate(upgradeStatFieldPrefab, statsChangesParent);
             Debug.Log(newField.name);
             newField.text = statChange.text;

@@ -40,7 +40,7 @@ namespace Boss {
 
 
         private void Update() {
-            Debug.Log($"Boss state: {BossState}");
+            //Debug.Log($"Boss state: {BossState}");
             this.UpdateDistanceToPlayer();
             this.HandleBossState();
         }

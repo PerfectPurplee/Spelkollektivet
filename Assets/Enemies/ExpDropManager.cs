@@ -42,7 +42,7 @@ namespace Enemies {
                     speed * Time.deltaTime);
             }
 
-            Debug.Log("IN RANGE: " + expDropsInRange.Count);
+            //Debug.Log("IN RANGE: " + expDropsInRange.Count);
         }
 
         public void SpawnExpDrop(Vector3 position, int? expAmount = null) {

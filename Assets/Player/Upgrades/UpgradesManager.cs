@@ -11,6 +11,12 @@ public class UpgradesManager : MonoBehaviour
     public void ChooseUpgradeByIndex(int buttonIndex)
     {
         ChooseUpgrade(upgradesToChoose[buttonIndex]);
+        upgradeChoiceScreensLeft--;
+        if (upgradeChoiceScreensLeft != 0)
+        {
+            Debug.Log("start upgrade dziala");
+            StartUpgradeChoice();
+        }
     }
 
     [SerializeField]
@@ -28,6 +34,8 @@ public class UpgradesManager : MonoBehaviour
     private List<Upgrade> upgradesToChoose;
     private List<GameObject> upgradesToChooseIcons;
 
+    private int upgradeChoiceScreensLeft = 0;
+
     private void Awake()
     {
         Instance = this;
@@ -41,7 +49,11 @@ public class UpgradesManager : MonoBehaviour
     }
 
     private void XPManager_OnLevelUp(object sender, EventArgs e) {
-        StartUpgradeChoice();
+        if (upgradeChoiceScreensLeft == 0)
+        {
+            StartUpgradeChoice();
+        }
+        upgradeChoiceScreensLeft++;
     }
 
     private void Update()
