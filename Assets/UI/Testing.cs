@@ -11,7 +11,7 @@ public class Testing : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.E)) {
-            XPManager.Instance.AddXP(3);
+            XPManager.Instance.GainExp(3);
         }
 
     }

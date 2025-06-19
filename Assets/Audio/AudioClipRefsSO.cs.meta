@@ -1,2 +1,21 @@
 fileFormatVersion: 2
 guid: d3cf42b87570148ebbabd322be6e66a1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - xp: {instanceID: 0}
+  - playerHit: {instanceID: 0}
+  - levelUp: {instanceID: 0}
+  - playerDeath: {instanceID: 0}
+  - skeletonDeath: {instanceID: 0}
+  - shieldBlock: {instanceID: 0}
+  - swordHit: {instanceID: 0}
+  - menuSlider: {instanceID: 0}
+  - menuCategory: {instanceID: 0}
+  - menuOption: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
