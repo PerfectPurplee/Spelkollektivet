@@ -44,6 +44,15 @@ public class UpgradesManager : MonoBehaviour
                 Debug.Log(upgradeToChoose.name);
             }
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GenerateUpgradesToChoose();
+            //GenerateUpgradesToChoose();
+            foreach (Upgrade upgradeToChoose in upgradesToChoose)
+            {
+                Debug.Log(upgradeToChoose.name);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChooseUpgradeByIndex(0);
