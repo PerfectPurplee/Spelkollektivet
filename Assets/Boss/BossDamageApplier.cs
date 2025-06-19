@@ -34,7 +34,6 @@ namespace Boss {
             }
         }
 
-
         public void OnAnimationAttackFinished() {
             Destroy(gameObject);
         }

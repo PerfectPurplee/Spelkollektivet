@@ -1092,7 +1092,7 @@ PrefabInstance:
     - target: {fileID: 3399148867383704297, guid: feb3ea6feda37420e93000721675f467, type: 3}
       propertyPath: 'attackDamageApplierList.Array.data[0]'
       value: 
-      objectReference: {fileID: 7619437769399884654, guid: 14db6df03fced47aabe5f34b91f3c291, type: 3}
+      objectReference: {fileID: 5314213952194995473, guid: 354c31c55cf9e4a219b4684ce4e2f4af, type: 3}
     - target: {fileID: 3399148867383704297, guid: feb3ea6feda37420e93000721675f467, type: 3}
       propertyPath: 'attackDamageApplierList.Array.data[1]'
       value: 
