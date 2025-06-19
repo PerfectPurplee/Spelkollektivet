@@ -395,6 +395,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 695549424424359032, guid: 0ab4e62284d544b6f9f846ea9a2e1b5b, type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 1559751457}
+    - target: {fileID: 695549424424359032, guid: 0ab4e62284d544b6f9f846ea9a2e1b5b, type: 3}
       propertyPath: altarFlame1
       value: 
       objectReference: {fileID: 1936793064}
@@ -977,6 +981,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c5f3dfff83bd48d586bff04c415621d, type: 3}
+--- !u!1 &1559751457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6006215258649531138, guid: 3ad23f902b4a0432ebe1ab959f4e67da, type: 3}
+  m_PrefabInstance: {fileID: 4069012337804081227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1701928672
 PrefabInstance:
   m_ObjectHideFlags: 0
