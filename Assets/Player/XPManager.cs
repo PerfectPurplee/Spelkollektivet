@@ -19,8 +19,7 @@ public class XPManager : MonoBehaviour {
     private int levelNumber;
     private int currentXP;
     private int XPNeededToNextLevel;
-
-
+    
     private void Awake() {
         if (Instance != null) {
             Debug.LogError("More than one instance of XPManager");
