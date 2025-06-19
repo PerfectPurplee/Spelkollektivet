@@ -52,11 +52,9 @@ public class BossProgressUI : MonoBehaviour {
                 // Boss dead, targeting portal
                 portal.SetActive(true);
                 targetPosition = portal.transform.position;
-                
             }
-            
         }
-        
+
         UpdateArrowRotation();
     }
 
@@ -103,18 +101,6 @@ public class BossProgressUI : MonoBehaviour {
         altarFlame4.gameObject.SetActive(false);
     }
 
-    // private Transform FindClosestGemTransform() {
-    //     Transform gemTransform = collectiblesList[0].gameObject.transform;
-    //     float minDistance = Vector3.Distance(collectiblesList[0].transform.position, Player.Player.Instance.transform.position);;
-    //     foreach (Transform transform in collectiblesList) {
-    //         float distance = Vector3.Distance(transform.position, Player.Player.Instance.transform.position);
-    //         if (minDistance > distance) {
-    //             minDistance = distance;
-    //             gemTransform = transform;
-    //         }
-    //     }
-    //     return gemTransform;
-    // }
 
     private Transform FindClosestGemTransform() {
         Vector3 playerPosition = Player.Player.Instance.transform.position;
