@@ -18,7 +18,7 @@ public class SoundManagerGame : MonoBehaviour {
         Instance = this;
 
         // volume = PlayerPrefs.GetFloat(PLAYER_PREFS_SOUND_EFFECTS_VOLUME, 1f);
-        volume = 1f;
+        volume = 4f;
     }
 
     private void Start() {
