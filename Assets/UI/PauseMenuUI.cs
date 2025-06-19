@@ -34,9 +34,9 @@ public class PauseMenuUI : MonoBehaviour {
             Loader.LoadScene(Loader.Scene.MainMenuScene);
         });
 
-        //AddHoverTrigger(resumeButton);
-        //AddHoverTrigger(mainMenuButton);
-        //AddHoverTrigger(settingsButton);
+        AddHoverTrigger(resumeButton);
+        AddHoverTrigger(mainMenuButton);
+        AddHoverTrigger(settingsButton);
         
         Hide();
     }

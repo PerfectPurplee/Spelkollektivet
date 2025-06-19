@@ -33,11 +33,11 @@ public class SoundManagerGame : MonoBehaviour {
     }
 
     private void PauseMenuUI_OnButtonPressed(object sender, EventArgs e) {
-        PlaySound(audioClipRefsSO.menuOption, Vector3.zero);
+        PlaySound(audioClipRefsSO.menuOption, Camera.main.transform.position);
     }
     private void PauseMenuUI_OnButtonHovered(object sender, EventArgs e)
     {
-        PlaySound(audioClipRefsSO.menuCategory, Vector3.zero);
+        PlaySound(audioClipRefsSO.menuCategory, Camera.main.transform.position);
         Debug.Log("Button is hovered in the Pause Menu");
     }
 
