@@ -346,6 +346,7 @@ public partial class PlayerCombatController : MonoBehaviour
             basicAttackDeafultParticleSystem.Play();
         }
         basicAttackHitBox.StartAttack();
+        SoundManagerGame.Instance.PlayBasicPlayerAttackSound();
     }
 
     private void StartBlock()
