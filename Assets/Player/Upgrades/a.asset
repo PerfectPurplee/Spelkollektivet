@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e7dbac0615e69499b1f6874186113c, type: 3}
+  m_Name: a
+  m_EditorClassIdentifier: 
+  maxStacks: 100
+  iconPrefab: {fileID: 8180048857376544453, guid: 9a302b46f73752d47b9fada082b216bb, type: 3}
+  conflictingUpgrades:
+  - {fileID: 11400000, guid: 0c6721f2d3e06934b896f653febdb63a, type: 2}
+  - {fileID: 11400000, guid: 1e79cff17b42faa4aaa9f3691e4ecd86, type: 2}
+  requiredUpgrades:
+  - {fileID: 11400000, guid: e219e77e49fb9864d9bb3aaf55ff411d, type: 2}
+  bonusRange: 1
