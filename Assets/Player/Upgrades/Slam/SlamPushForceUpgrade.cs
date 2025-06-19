@@ -1,17 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Slam push force upgrade _", menuName = "Upgrade/Slam/Slam push force")]
 public class SlamPushForceUpgrade : Upgrade
 {
-    public float BonusForce;
+    public float bonusForce;
 
     public override void Apply()
     {
-        playerCombatController.SlamCast.pushForce += BonusForce;
+        playerCombatController.SlamCast.pushForce += bonusForce;
     }
 
-    public override GameObject InstantiateIcon(Transform parent)
+    public override List<StatChange> GetStatsChanges()
     {
-        return Instantiate(iconPrefab, parent);
+        float pushForceBefore = playerCombatController.SlamCast.pushForce;
+        float pushForceAfter = pushForceBefore + bonusForce;
+        return new List<StatChange>
+        {
+            new StatChange
+            {
+                text = $"{SlamText()} pushes with force: {pushForceBefore} => {pushForceAfter}",
+                positivity = Positivity.Positive
+            }
+        };
     }
 }

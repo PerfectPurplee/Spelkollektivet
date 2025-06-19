@@ -51,9 +51,14 @@ public class SingleAttackHitBox : MonoBehaviour
         if (other.TryGetComponent(out IDamageable damageable) && !damagedEntities.Contains(damageable))
         {
             Debug.Log($"Damaged something! : {other.gameObject.name}");
-            damageable.TakeDamage(Mathf.FloorToInt(multiplier * damage), Vector3.zero, false);
+            damageable.TakeDamage(CalculateMultipliedDamage(), Vector3.zero, false);
             damagedEntities.Add(damageable);
             OnAttackEntity?.Invoke(damageable);
         }
+    }
+
+    public int CalculateMultipliedDamage()
+    {
+        return Mathf.FloorToInt(multiplier * damage);
     }
 }
