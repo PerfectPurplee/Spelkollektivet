@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Fonts/Alegreya Sans/AlegreyaSans-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Synty/InterfaceFantasyMenus/Fonts/Alegreya Sans/AlegreyaSans-Medium SDF.asset" afterDir="false" />
-    </list>
+    <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +31,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "enemies",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -110,7 +106,7 @@
       <workItem from="1750234474419" duration="79000" />
       <workItem from="1750234585833" duration="7000" />
       <workItem from="1750234612313" duration="14333000" />
-      <workItem from="1750332201777" duration="17829000" />
+      <workItem from="1750332201777" duration="18104000" />
     </task>
     <servers />
   </component>
