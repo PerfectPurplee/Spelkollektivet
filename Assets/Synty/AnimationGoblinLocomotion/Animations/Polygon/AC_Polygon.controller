@@ -6131,21 +6131,6 @@ AnimatorStateMachine:
   - {fileID: 2568265950260115685}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 1790282451161604178}
-    second:
-    - {fileID: -8118438887669713725}
-    - {fileID: 3219769585347100239}
-    - {fileID: 8207573239289224496}
-    - {fileID: -3263827556414112360}
-    - {fileID: -1537389802226702764}
-    - {fileID: -8454007508122442119}
-    - {fileID: -494253774927471600}
-  - first: {fileID: 5175383130503594698}
-    second:
-    - {fileID: 2939765361409422258}
-    - {fileID: 148739612534417992}
-    - {fileID: 3656533616568830837}
-    - {fileID: 7185925154260828547}
   - first: {fileID: 6604365710422616744}
     second:
     - {fileID: -3517661301517864862}
@@ -6164,6 +6149,15 @@ AnimatorStateMachine:
     - {fileID: 3452755659886607670}
     - {fileID: 4348406899900917072}
     - {fileID: -2710829411721907783}
+  - first: {fileID: 1790282451161604178}
+    second:
+    - {fileID: -8118438887669713725}
+    - {fileID: 3219769585347100239}
+    - {fileID: 8207573239289224496}
+    - {fileID: -3263827556414112360}
+    - {fileID: -1537389802226702764}
+    - {fileID: -8454007508122442119}
+    - {fileID: -494253774927471600}
   - first: {fileID: -5154619669261682928}
     second:
     - {fileID: 3300079922274740214}
@@ -6172,6 +6166,12 @@ AnimatorStateMachine:
     - {fileID: 2932082331911690083}
     - {fileID: -8281619679422675082}
     - {fileID: 4165883047342736306}
+  - first: {fileID: 5175383130503594698}
+    second:
+    - {fileID: 2939765361409422258}
+    - {fileID: 148739612534417992}
+    - {fileID: 3656533616568830837}
+    - {fileID: 7185925154260828547}
   - first: {fileID: 3652802291553319676}
     second:
     - {fileID: -8534850880604765477}
@@ -6546,8 +6546,8 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.13607138
-  m_TransitionOffset: 0.16327006
+  m_TransitionDuration: 0.026922107
+  m_TransitionOffset: 0.38603854
   m_ExitTime: 0.75
   m_HasExitTime: 0
   m_HasFixedDuration: 1

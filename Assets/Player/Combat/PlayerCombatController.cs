@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Interface;
 using Synty.AnimationGoblinLocomotion.Samples;
 using UnityEngine;
@@ -100,6 +101,14 @@ public partial class PlayerCombatController : MonoBehaviour
     private int empoweredAttackCounter = 0;
     [SerializeField]
     private Light empoweredAttackLight;
+    [SerializeField]
+    private GameObject empoweredAttackVFXPrefab;
+    [SerializeField]
+    private ParticleSystem basicAttackDeafultParticleSystem;
+    private ParticleSystem.MainModule basicAttackDefaultParticleSystemMain;
+    [SerializeField]
+    private ParticleSystem basicAttackEmpoweredParticleSystem;
+    private ParticleSystem.MainModule basicAttackEmpoweredParticleSystemMain;
 
     private void Awake()
     {
@@ -108,6 +117,8 @@ public partial class PlayerCombatController : MonoBehaviour
         defaultShieldPosition = shield.localPosition;
         defaultShieldRotation = shield.localRotation;
         defaultShieldParent = shield.parent;
+        basicAttackDefaultParticleSystemMain = basicAttackDeafultParticleSystem.main;
+        basicAttackEmpoweredParticleSystemMain = basicAttackEmpoweredParticleSystem.main;
     }
 
     private void Start()
@@ -310,6 +321,7 @@ public partial class PlayerCombatController : MonoBehaviour
     {
         ChangeState(State.BasicAttack);
         animator.SetTrigger("Basic Attack");
+
         if (empoweredAttacks)
         {
             empoweredAttackCounter++;
@@ -318,12 +330,20 @@ public partial class PlayerCombatController : MonoBehaviour
                 basicAttackHitBox.multiplier = empoweredAttackDamageMultiplier;
                 empoweredAttackCounter = 0;
                 OnEmpoweredAttack?.Invoke();
+                basicAttackEmpoweredParticleSystem.Play();
+                //Instantiate(empoweredAttackVFXPrefab, transform.position + transform.forward * 1.5f + transform.up, Quaternion.identity);
             }
             else
             {
                 basicAttackHitBox.multiplier = 1;
                 empoweredAttackLight.enabled = false;
+                basicAttackDeafultParticleSystem.Play();
+                //basicAttackParticleSystemMain.startColor = defaultBasicAttackVFXColor;
             }
+        }
+        else
+        {
+            basicAttackDeafultParticleSystem.Play();
         }
         basicAttackHitBox.StartAttack();
     }
