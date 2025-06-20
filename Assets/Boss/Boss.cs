@@ -25,6 +25,8 @@ namespace Boss {
 
         private NavMeshAgent _agent;
         private Transform _target;
+        
+        
 
         private void Awake() {
             if (Instance == null) Instance = this;
@@ -40,6 +42,9 @@ namespace Boss {
 
 
         private void Update() {
+
+
+            
             Debug.Log($"Boss state: {BossState}");
             this.UpdateDistanceToPlayer();
             this.HandleBossState();
