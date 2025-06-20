@@ -131,6 +131,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c692345779c0dbe4d8dae95902f5894b, type: 2}
   - {fileID: 11400000, guid: f1fb3df232cf1e044a0780d20355193a, type: 2}
   - {fileID: 11400000, guid: f0a83f093f4e0da4b9f69cea68b77559, type: 2}
+  - {fileID: 11400000, guid: 06468dbc8586f1f4680b417bf29e44e4, type: 2}
   iconsParents:
   - {fileID: 3419618225564372977}
   - {fileID: 5300762023460817476}
@@ -442,13 +443,13 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 8dfc31cd3aca144fba1856d9e50e2ef5, type: 3}
   m_Resource: {fileID: 8300000, guid: 8dfc31cd3aca144fba1856d9e50e2ef5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
