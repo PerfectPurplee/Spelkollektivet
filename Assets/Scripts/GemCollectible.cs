@@ -5,6 +5,9 @@ using UnityEngine;
 public class GemCollectible : MonoBehaviour {
     
     public static event EventHandler OnGemCollected;
+    
+    
+    
     private void OnTriggerEnter(Collider other) {
         if (other.TryGetComponent<Player.Player>(out Player.Player player)) {
             
