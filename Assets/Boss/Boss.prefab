@@ -60,7 +60,7 @@ MonoBehaviour:
   - {fileID: 3399148867383704297}
   - {fileID: 774504857582618815}
   - {fileID: 5912644089942475121}
-  initialHealth: 1000
+  initialHealth: 10000
   bossAnimator: {fileID: 6592701985952296629}
 --- !u!195 &7191477966710923085
 NavMeshAgent:
@@ -226,7 +226,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6489778646626514513}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
