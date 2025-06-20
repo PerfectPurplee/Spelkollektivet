@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace Boss {
     public class BossCircleAttackRandom : BossAttack {
-        public override float TriggerDistance => 4f;
+        public override float TriggerDistance => 20f;
         public override AttackType AttackType => AttackType.Melee;
         public override float AttackDuration => 3f;
         public override int Damage => 40;

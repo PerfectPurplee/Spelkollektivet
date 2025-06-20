@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Boss {
     public class BossCircleAttack : BossAttack {
-        public override float TriggerDistance => 4f;
+        public override float TriggerDistance => 20f;
         public override AttackType AttackType => AttackType.Melee;
         public override float AttackDuration => 3f;
         public override int Damage => 40;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Boss {
     public class BossRectangleAttack : BossAttack {
-        public override float TriggerDistance => 4f;
+        public override float TriggerDistance => 10f;
         public override AttackType AttackType => AttackType.Ranged;
         public override float AttackDuration => 5f;
         public override int Damage => 10;
