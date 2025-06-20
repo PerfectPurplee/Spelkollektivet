@@ -676,6 +676,8 @@ MonoBehaviour:
   bossHPBar: {fileID: 2194374190691031688}
   bossHpSlider: {fileID: 1589015171590140510}
   bossHpText: {fileID: 8227920952112836667}
+  youWinText: {fileID: 6624211402087776014}
+  youLoseText: {fileID: 6465664144871830032}
 --- !u!1 &6089598077297224820
 GameObject:
   m_ObjectHideFlags: 0

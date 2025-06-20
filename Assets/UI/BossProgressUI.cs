@@ -49,6 +49,10 @@ public class BossProgressUI : MonoBehaviour {
         
     }
 
+    private void OnDestroy() {
+        GemCollectible.OnGemCollected -= GemCollectible_OnGemCollected;
+    }
+
     private void GameBoss_OnDamageTaken(object sender, IDamageable.DamageTakenArgs e) {
         Debug.Log($"Damage taken: {e.CurrentHealth}");
         float bossHpNoralized = (float) e.CurrentHealth / Boss.GameBoss.Instance.MaxHealth;
@@ -141,6 +145,4 @@ public class BossProgressUI : MonoBehaviour {
             .OrderBy(gem => Vector3.Distance(gem.position, playerPosition))
             .FirstOrDefault();
     }
-    
-    
 }
