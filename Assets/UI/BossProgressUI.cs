@@ -30,7 +30,7 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] public TextMeshProUGUI bossHpText;
     
     [SerializeField] private TextMeshProUGUI youWinText;
-    [SerializeField] private TextMeshProUGUI youLoseText;
+    [SerializeField] public TextMeshProUGUI youLoseText;
     
     private bool subscribed = false;
 
