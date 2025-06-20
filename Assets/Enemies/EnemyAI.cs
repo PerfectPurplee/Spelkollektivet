@@ -61,7 +61,7 @@ namespace Enemies {
 
 
                         OnAttack?.Invoke(this, EventArgs.Empty);
-                        Debug.Log("enemy attacking");
+                        //Debug.Log("enemy attacking");
                     }
 
                     break;
@@ -93,7 +93,7 @@ namespace Enemies {
                 OnDeath?.Invoke();
             }
 
-            Debug.Log($"Enemy took {damage} damage");
+            //Debug.Log($"Enemy took {damage} damage");
         }
 
         public Attack GetEnemyAttack() {
