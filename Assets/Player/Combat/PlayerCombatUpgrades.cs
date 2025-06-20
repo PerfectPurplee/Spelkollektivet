@@ -9,4 +9,12 @@ public partial class PlayerCombatController
 
     public event Action OnShieldCatchWhileDashing;
     public SlampCast SlamCast => slamCast;
+
+    public SingleAttackHitBox ThrowAttackHitBox => throwAttackHitBox;
+
+    public float ThrowReturnSpeed
+    {
+        get { return shieldThrowingForwardDuration; }
+        set { shieldThrowingForwardDuration = value; }
+    }
 }
