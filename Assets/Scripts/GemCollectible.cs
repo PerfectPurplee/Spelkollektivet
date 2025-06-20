@@ -13,6 +13,7 @@ public class GemCollectible : MonoBehaviour {
             
             OnGemCollected?.Invoke(this, EventArgs.Empty);
             Destroy(gameObject);
+            SoundManagerGame.Instance.PlayBossRoar();
         }
     }
 }

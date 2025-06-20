@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AudioClipRefsSO
   m_EditorClassIdentifier: 
   xp: {fileID: 8300000, guid: 8f79064db044a44cd889d606cf8ca0f7, type: 3}
-  playerHit: {fileID: 8300000, guid: 886dd3bee7d814be3b31424ace6f9a1f, type: 3}
+  playerHit: {fileID: 8300000, guid: 6454d4ea67d8e0c4b9c875306bf4db59, type: 3}
   levelUp: {fileID: 8300000, guid: 269fecf04dcd544f59ea2aa4057cb129, type: 3}
   playerDeath: {fileID: 8300000, guid: d70f3aea7b2a64bf1a03581f06ecdc69, type: 3}
   shieldHit:
@@ -25,7 +25,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a84f97624b86b4960a03b5d81ba76c30, type: 3}
   - {fileID: 8300000, guid: 0fa9f6e0462c849d681c3a495f9c8706, type: 3}
   skeletonDeath: {fileID: 8300000, guid: e05916f2e31a2463091e063de7d38c5f, type: 3}
-  shieldBlockMele: {fileID: 8300000, guid: cc721a81038cf9e42b5e0724303bba13, type: 3}
+  shieldBlockMele: {fileID: 8300000, guid: ebfe6d71a282f43fe81f8493f3c10099, type: 3}
   shieldBLockRanged: {fileID: 8300000, guid: 74c148f4971e5ed498200e2cb231e995, type: 3}
   swordHit: {fileID: 8300000, guid: 84832cbb861b3484ab888d1102e343d6, type: 3}
   playerGotHit: {fileID: 8300000, guid: 6454d4ea67d8e0c4b9c875306bf4db59, type: 3}
@@ -44,6 +44,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c87d283d1b43c534e83eaf9cf04e0359, type: 3}
   - {fileID: 8300000, guid: 2b259012e389090428e5150f714c9bbd, type: 3}
   skeletonDeathSound: {fileID: 8300000, guid: 45481c718d1533f428246f9ddb8a500f, type: 3}
+  bossRoar: {fileID: 8300000, guid: 276a82b5e8fa8489d95f1dd47de9c234, type: 3}
+  bossSpawn: {fileID: 8300000, guid: a2e028f91bf1642869295e6433b5acf6, type: 3}
+  bossAttack: {fileID: 8300000, guid: cda480904a16d44a584556ff4544c607, type: 3}
   menuSlider: {fileID: 8300000, guid: 26dca6f97ff894ca9bd1087982475729, type: 3}
   menuCategory: {fileID: 8300000, guid: 69dfae0548ad940048efd0fb37f5b650, type: 3}
   menuOption: {fileID: 8300000, guid: 0ff28e67e1fb5487880256dc1f5955ac, type: 3}
