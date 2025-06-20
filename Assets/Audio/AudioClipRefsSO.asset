@@ -38,6 +38,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a05417e0909f0cb4abf660009397ecf9, type: 3}
   - {fileID: 8300000, guid: f1cce320a040a5242a2eac9e3a48ddbb, type: 3}
   - {fileID: 8300000, guid: 60c41501082f24348b4bd18a00f83564, type: 3}
+  enemyDamageTakenSound: []
+  skeletonDeathSound: {fileID: 8300000, guid: 45481c718d1533f428246f9ddb8a500f, type: 3}
   menuSlider: {fileID: 8300000, guid: 26dca6f97ff894ca9bd1087982475729, type: 3}
   menuCategory: {fileID: 8300000, guid: 69dfae0548ad940048efd0fb37f5b650, type: 3}
   menuOption: {fileID: 8300000, guid: 0ff28e67e1fb5487880256dc1f5955ac, type: 3}
