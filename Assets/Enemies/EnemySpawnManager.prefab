@@ -48,4 +48,5 @@ MonoBehaviour:
   rangedEnemyPrefab: {fileID: 4046314038108070739, guid: 654a14e31aa4049bab50e93a243db5fe, type: 3}
   spawnRate: 5
   enemiesPerWave: 5
-  spawnDistanceFromCamera: 20
+  spawnDistanceFromCamera: 15
+  distanceToTeleport: 20
