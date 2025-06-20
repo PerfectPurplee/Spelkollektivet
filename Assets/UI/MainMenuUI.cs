@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour {
@@ -9,6 +10,7 @@ public class MainMenuUI : MonoBehaviour {
     [SerializeField] private Button quitButton;
 
     public event EventHandler OnButtonPressed;
+    public event EventHandler OnButtonHovered;
 
     private void Awake() {
         if (Instance != null) {
@@ -28,5 +30,33 @@ public class MainMenuUI : MonoBehaviour {
             OnButtonPressed?.Invoke(this, EventArgs.Empty);
             Application.Quit();
         });
+
+        AddHoverTrigger(quitButton);
+        AddHoverTrigger(playButton);
+        AddHoverTrigger(settingsButton);
+    }
+
+    private void AddHoverTrigger(Button button)
+    {
+        EventTrigger trigger = button.gameObject.GetComponent<EventTrigger>();
+        if (trigger == null)
+        {
+            trigger = button.gameObject.AddComponent<EventTrigger>();
+            Debug.Log("Nie ruszac tego loga! Bez niego nie dziala");
+        }
+
+        EventTrigger.Entry entry = new EventTrigger.Entry
+        {
+            eventID = EventTriggerType.PointerEnter
+        };
+
+        entry.callback.AddListener((_) => InvokeOnButtonHovered());
+        trigger.triggers.Add(entry);
+
+    }
+
+    private void InvokeOnButtonHovered()
+    {
+        OnButtonHovered?.Invoke(this, EventArgs.Empty);
     }
 }
