@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3007779013621219266}
   - component: {fileID: 3747569779671525443}
   - component: {fileID: 851725695809562567}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 5239068506335835657}
   - component: {fileID: 2686612551554960422}
   - component: {fileID: 5735736214371041142}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,6 +190,10 @@ PrefabInstance:
     - target: {fileID: 1346485204940934, guid: fed2327a00a9ead458966ca19d71a434, type: 3}
       propertyPath: m_Name
       value: FX_Sparkles_Trail_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346485204940934, guid: fed2327a00a9ead458966ca19d71a434, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4406529902471110, guid: fed2327a00a9ead458966ca19d71a434, type: 3}
       propertyPath: m_LocalScale.x
