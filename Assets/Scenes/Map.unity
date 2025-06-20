@@ -1095,6 +1095,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9107944776031317692, guid: 6c13eaf18d30349eab760dc754cb85b3, type: 3}
+      propertyPath: spawnRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107944776031317692, guid: 6c13eaf18d30349eab760dc754cb85b3, type: 3}
+      propertyPath: enemiesPerWave
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9145494847689190105, guid: 6c13eaf18d30349eab760dc754cb85b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.464892
