@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,18 +20,24 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] private List<Transform> collectiblesList;
 
     [SerializeField] private Transform arrowTransform;
-    private Vector3 targetPosition = Vector3.zero;
+    private Vector3 targetPosition;
 
     [SerializeField] private GameObject portal;
+
+    [SerializeField] private GameObject bossHPBar;
+    [SerializeField] private Slider bossHpSlider;
+    [SerializeField] private TextMeshProUGUI bossHpText;
+    
+    
 
     private void Awake() {
         if (Instance != null) {
             Debug.LogError("More than one Instance of BossProgressUI");
         }
-
         Instance = this;
-
-        HideAllGemsAndFlames();
+        
+        
+        HideAllGemsFlamesAndBossHP();
     }
 
     private void Start() {
@@ -47,9 +54,11 @@ public class BossProgressUI : MonoBehaviour {
             if (Boss.GameBoss.Instance != null) {
                 // Targeting boss
                 targetPosition = Boss.GameBoss.Instance.transform.position;
+                bossHPBar.SetActive(true);
             }
             else {
                 // Boss dead, targeting portal
+                bossHPBar.SetActive(false);
                 portal.SetActive(true);
                 targetPosition = portal.transform.position;
             }
@@ -90,7 +99,7 @@ public class BossProgressUI : MonoBehaviour {
         arrowTransform.localEulerAngles = new Vector3(0, 0, angle);
     }
 
-    private void HideAllGemsAndFlames() {
+    private void HideAllGemsFlamesAndBossHP() {
         gemImage1.gameObject.SetActive(false);
         gemImage2.gameObject.SetActive(false);
         gemImage3.gameObject.SetActive(false);
@@ -99,6 +108,7 @@ public class BossProgressUI : MonoBehaviour {
         altarFlame2.gameObject.SetActive(false);
         altarFlame3.gameObject.SetActive(false);
         altarFlame4.gameObject.SetActive(false);
+        bossHPBar.gameObject.SetActive(false);
     }
 
 
