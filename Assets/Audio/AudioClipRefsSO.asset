@@ -29,6 +29,15 @@ MonoBehaviour:
   shieldBLockRanged: {fileID: 8300000, guid: 74c148f4971e5ed498200e2cb231e995, type: 3}
   swordHit: {fileID: 8300000, guid: 84832cbb861b3484ab888d1102e343d6, type: 3}
   playerGotHit: {fileID: 8300000, guid: 6454d4ea67d8e0c4b9c875306bf4db59, type: 3}
+  playerWalkingSound:
+  - {fileID: 8300000, guid: a93981cb5c8debc44aa9a0c028f9fb91, type: 3}
+  - {fileID: 8300000, guid: 4f3c857a09c87334b9ec2afaa788ba8a, type: 3}
+  - {fileID: 8300000, guid: 5891bc21edea25f41801985141d34eda, type: 3}
+  - {fileID: 8300000, guid: 6d6e339cdbf449d4ca47870c7eb15d99, type: 3}
+  - {fileID: 8300000, guid: 48d3c0288725b4d439e0c479226a2a58, type: 3}
+  - {fileID: 8300000, guid: a05417e0909f0cb4abf660009397ecf9, type: 3}
+  - {fileID: 8300000, guid: f1cce320a040a5242a2eac9e3a48ddbb, type: 3}
+  - {fileID: 8300000, guid: 60c41501082f24348b4bd18a00f83564, type: 3}
   menuSlider: {fileID: 8300000, guid: 26dca6f97ff894ca9bd1087982475729, type: 3}
   menuCategory: {fileID: 8300000, guid: 69dfae0548ad940048efd0fb37f5b650, type: 3}
   menuOption: {fileID: 8300000, guid: 0ff28e67e1fb5487880256dc1f5955ac, type: 3}

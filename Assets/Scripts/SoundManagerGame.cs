@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -29,6 +30,7 @@ public class SoundManagerGame : MonoBehaviour {
         Player.Player.Instance.OnBlockMelee += PlayerOnBlockMeleSound;
         Player.Player.Instance.OnBlockRanged += PlayerOnBlockRangedSound;
         Player.Player.Instance.OnDeath += PlayerOnDeathSound;
+        StartCoroutine(PlayingPlayerWalkingSound());
 
     }
 
@@ -47,6 +49,22 @@ public class SoundManagerGame : MonoBehaviour {
 
     private void PlaySound(AudioClip[] audioClipArray, Vector3 position, float volume = 1f) {
         PlaySound(audioClipArray[Random.Range(0, audioClipArray.Length)], position, volume);
+    }
+
+    private IEnumerator PlayingPlayerWalkingSound()
+    {
+        while (true)
+        {
+            while (PlayerCombatController.Instance.PlayerMovementVector == Vector3.zero)
+            {
+                Debug.Log("Wektor wynosi przed: " + PlayerCombatController.Instance.PlayerMovementVector);
+                yield return null;
+                Debug.Log("Wektor wynosi po: " + PlayerCombatController.Instance.PlayerMovementVector);
+            }
+            PlaySound(audioClipRefsSO.playerWalkingSound, Camera.main.transform.position);
+
+            yield return new WaitForSeconds(0.4f);
+        }
     }
 
     private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplayer = 1f) {
