@@ -324,6 +324,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
         private Vector3 _moveDirection;
         private Vector3 _previousRotation;
         private Vector3 _velocity;
+        public Vector3 Velocity => _velocity;
 
         #endregion
 
@@ -747,6 +748,7 @@ namespace Synty.AnimationGoblinLocomotion.Samples
         /// </summary>
         private void Move()
         {
+            //Debug.Log("nwm co powiedziec vector: " + _velocity.ToString());
             _controller.Move(_velocity * Time.deltaTime);
 
             if (_isLockedOn)

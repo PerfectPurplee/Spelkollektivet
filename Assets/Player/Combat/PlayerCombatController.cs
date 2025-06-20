@@ -115,6 +115,8 @@ public partial class PlayerCombatController : MonoBehaviour
     private ParticleSystem basicAttackEmpoweredParticleSystem;
     private ParticleSystem.MainModule basicAttackEmpoweredParticleSystemMain;
 
+    public Vector3 PlayerMovementVector => new Vector3(samplePlayerAnimationController.Velocity.x, 0 , samplePlayerAnimationController.Velocity.z);
+
     private void Awake()
     {
         Instance = this;
@@ -352,6 +354,7 @@ public partial class PlayerCombatController : MonoBehaviour
             basicAttackDeafultParticleSystem.Play();
         }
         basicAttackHitBox.StartAttack();
+        SoundManagerGame.Instance.PlayBasicPlayerAttackSound();
     }
 
     private void StartBlock()
