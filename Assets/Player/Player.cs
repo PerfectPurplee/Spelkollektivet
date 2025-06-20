@@ -24,11 +24,24 @@ namespace Player {
         public float meleeDamageShieldedMultiplier;
         public float shieldingAngle;
 
+        public event Action OnHealthRegen;
+
         private void Awake() {
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
 
             this.CurrentHealth = this.MaxHealth = this.initialHealth;
+        }
+
+        private void Start()
+        {
+
+            EnemyAI.StaticOnDeath += HealthRegenOnEnemyKill;
+        }
+
+        private void OnDestroy()
+        {
+            EnemyAI.StaticOnDeath -= HealthRegenOnEnemyKill;
         }
 
         public void TakeDamage(int damage, Vector3 attackerPosition, bool ranged) {
@@ -54,6 +67,16 @@ namespace Player {
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
             Debug.Log($"Player took {damage} damage, current health: {CurrentHealth}");
         }
+        [SerializeField] private int healthLeash = 3;
+        private void HealthRegenOnEnemyKill()
+        {
+            if(CurrentHealth <= MaxHealth - healthLeash) {
+                CurrentHealth += healthLeash;
+                OnHealthRegen?.Invoke();
+            }
+     
+        }
     }
+  
 
 }
