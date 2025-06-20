@@ -1825,7 +1825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 0
   attack: {fileID: 3332244330363176930}
-  initialHealth: 100
+  initialHealth: 10
   hitMaterialColor: {r: 1, g: 0.2627451, b: 0.2627451, a: 0}
   hitFadeTime: 0.2
   meshRenderer: {fileID: 8209070421470726186}
