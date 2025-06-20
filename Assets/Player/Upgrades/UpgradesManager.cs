@@ -56,42 +56,8 @@ public class UpgradesManager : MonoBehaviour
         upgradeChoiceScreensLeft++;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            StartUpgradeChoice();
-            //GenerateUpgradesToChoose();
-            foreach (Upgrade upgradeToChoose in upgradesToChoose)
-            {
-                Debug.Log(upgradeToChoose.name);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            GenerateUpgradesToChoose();
-            //GenerateUpgradesToChoose();
-            foreach (Upgrade upgradeToChoose in upgradesToChoose)
-            {
-                Debug.Log(upgradeToChoose.name);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            ChooseUpgradeByIndex(0);
-            Debug.Log($"chose {upgradesToChoose[0]}");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            ChooseUpgradeByIndex(1);
-            Debug.Log($"chose {upgradesToChoose[1]}");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            ChooseUpgradeByIndex(2);
-            Debug.Log($"chose {upgradesToChoose[2]}");
-        }
-    }
+
+    
 
     public void StartUpgradeChoice()
     {
