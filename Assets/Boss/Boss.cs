@@ -71,7 +71,7 @@ namespace Boss {
         }
 
         private bool AttackCheck() {
-            AttackList.Shuffle();
+            // AttackList.Shuffle();
             foreach (var attack in AttackList) {
                 if (attack.TryAttack()) return true;
             }
@@ -96,7 +96,7 @@ namespace Boss {
         }
 
         public void TakeDamage(int damage, Vector3 attackerPosition, bool ranged) {
-            Debug.Log($"Boss took {damage} damage, Current boss health: {CurrentHealth}");
+            UnityEngine.Profiling.Profiler.BeginSample("Boss TakeDamage");
             CurrentHealth -= damage;
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
 
@@ -104,8 +104,6 @@ namespace Boss {
                 this.BossState = BossState.Dead;
                 OnDeath?.Invoke();
             }
-
-            Debug.Log($"Boss took {damage} damage, Current boss health: {CurrentHealth}");
         }
 
         public void DestroyGameObjectOnBossDeathAnimationEvent() {

@@ -1196,6 +1196,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5062583555720730798, guid: feb3ea6feda37420e93000721675f467, type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062583555720730798, guid: feb3ea6feda37420e93000721675f467, type: 3}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6489778646626514513, guid: feb3ea6feda37420e93000721675f467, type: 3}
       propertyPath: m_Name
       value: Boss

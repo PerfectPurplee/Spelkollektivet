@@ -12,6 +12,7 @@ namespace Enemies {
 
         private void Start() {
             _direction = transform.forward;
+            
         }
 
         private void Update() {
@@ -27,5 +28,7 @@ namespace Enemies {
                 Destroy(gameObject);
             }
         }
+
+            
     }
 }
