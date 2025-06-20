@@ -74,6 +74,7 @@ namespace Boss {
             // AttackList.Shuffle();
             foreach (var attack in AttackList) {
                 if (attack.TryAttack()) return true;
+                SoundManagerGame.Instance.PlayBossAttackSound();
             }
 
             return false;
@@ -103,6 +104,7 @@ namespace Boss {
             if (CurrentHealth <= 0 && this.BossState != BossState.Dead) {
                 this.BossState = BossState.Dead;
                 OnDeath?.Invoke();
+                SoundManagerGame.Instance.PlayBossSpawn();
             }
         }
 

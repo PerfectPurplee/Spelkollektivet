@@ -131,4 +131,20 @@ public class SoundManagerGame : MonoBehaviour {
     {
         PlaySound(audioClipRefsSO.swordHit, Camera.main.transform.position);
     }
+
+    public void PlayBossRoar() {
+        PlaySound(audioClipRefsSO.bossRoar, Camera.main.transform.position);
+    }
+
+    public void PlayBossSpawn() {
+        PlaySound(audioClipRefsSO.bossSpawn, Camera.main.transform.position);
+    }
+
+    public void PlayBossAttackSound() {
+        PlaySound(audioClipRefsSO.bossAttack, Camera.main.transform.position);
+    }
+
+    public void PlayGetXPSound() {
+        PlaySound(audioClipRefsSO.xp, Camera.main.transform.position);
+    }
 }

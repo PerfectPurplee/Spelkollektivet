@@ -17,7 +17,11 @@ public class AudioClipRefsSO : ScriptableObject {
     public AudioClip[] playerWalkingSound;
     public AudioClip[] enemyDamageTakenSound;
     public AudioClip skeletonDeathSound;
+    public AudioClip bossRoar;
 
+    public AudioClip bossSpawn;
+    public AudioClip bossAttack;
+    
     public AudioClip menuSlider;
     public AudioClip menuCategory;
     public AudioClip menuOption;
