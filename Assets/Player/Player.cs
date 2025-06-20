@@ -2,15 +2,19 @@ using System;
 using System.Collections.Generic;
 using Enemies;
 using Interface;
+using Synty.AnimationGoblinLocomotion.Samples;
 using UnityEngine;
 
 namespace Player {
     public class Player : MonoBehaviour, IDamageable {
+        private static readonly int Death = Animator.StringToHash("Death");
         public static Player Instance { get; private set; }
         public event EventHandler<IDamageable.DamageTakenArgs> OnDamageTaken;
         public event Action OnDeath;
         public event Action OnBlockMelee;
         public event Action OnBlockRanged;
+        
+        
 
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
@@ -18,6 +22,9 @@ namespace Player {
         public List<Attack> Attacks { get; set; }
 
         [SerializeField] private int initialHealth;
+       private Animator animator;
+       private  SamplePlayerAnimationController animationController;
+       private PlayerCombatController combatController;
 
         public bool shielding;
         public Vector3 shieldDirection;
@@ -29,6 +36,12 @@ namespace Player {
             else Destroy(gameObject);
 
             this.CurrentHealth = this.MaxHealth = this.initialHealth;
+        }
+
+        private void Start() {
+            animator = GetComponent<Animator>();
+            animationController = GetComponent<SamplePlayerAnimationController>();
+            combatController = GetComponent<PlayerCombatController>();
         }
 
         public void TakeDamage(int damage, Vector3 attackerPosition, bool ranged) {
@@ -48,6 +61,14 @@ namespace Player {
                     Debug.Log("Player blocked ranged attack");
                     return;
                 }
+            }
+
+            if (CurrentHealth <= 0) {
+                animationController.enabled = false;
+                combatController.enabled = false;
+                
+                animator.SetTrigger(Death);
+                BossProgressUI.Instance.youLoseText.gameObject.SetActive(true);
             }
 
             CurrentHealth -= damage;
