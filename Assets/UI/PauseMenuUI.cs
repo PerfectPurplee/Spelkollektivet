@@ -48,7 +48,7 @@ public class PauseMenuUI : MonoBehaviour {
         if (trigger == null)
         {
             trigger = button.gameObject.AddComponent<EventTrigger>();
-            Debug.Log("Czy log pomaga?");
+            //Debug.Log("Czy log pomaga?");
         }
 
         EventTrigger.Entry entry = new EventTrigger.Entry
