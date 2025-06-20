@@ -127,18 +127,19 @@ public class SoundManagerGame : MonoBehaviour {
 
     private void PlayerGetsHitSound(object sender, EventArgs e)
     {
-        PlaySound(audioClipRefsSO.playerGotHit, Camera.main.transform.position);
+        PlaySound(audioClipRefsSO.playerGotHit, Camera.main.transform.position, 4.0f);
+
     }
 
     private void PlayerOnBlockMeleSound()
     {
-        PlaySound(audioClipRefsSO.shieldBlockMele, Camera.main.transform.position);
+        PlaySound(audioClipRefsSO.shieldBlockMele, Camera.main.transform.position, 4.0f);
         Debug.Log("Dzwiek bloku miecza");
     }
 
     private void PlayerOnBlockRangedSound()
     {
-        PlaySound(audioClipRefsSO.shieldBLockRanged, Camera.main.transform.position);
+        PlaySound(audioClipRefsSO.shieldBLockRanged, Camera.main.transform.position, 4.0f);
         Debug.Log("Dzwiek bloku strzaly");
     }
 

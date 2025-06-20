@@ -44,7 +44,7 @@ namespace Enemies {
         private void SpawnWave() {
             for (int i = 0; i < enemiesPerWave; i++) {
                 Vector3 spawnPosition = GetSpawnPositionOutsideCamera();
-                GameObject prefabToSpawn = Random.value < 0.5f ? meleeEnemyPrefab : rangedEnemyPrefab;
+                GameObject prefabToSpawn = Random.value < 0.8f ? meleeEnemyPrefab : rangedEnemyPrefab;
                 enemiesSpawned.Add(Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity));
             }
         }
@@ -57,8 +57,8 @@ namespace Enemies {
 
             Vector3 dir = directions[Random.Range(0, directions.Length)];
 
-            Vector3 camPos = _mainCamera.transform.position;
-            Vector3 spawnPos = camPos + dir * spawnDistanceFromCamera;
+            Vector3 playerPos = Player.Player.Instance.transform.position;
+            Vector3 spawnPos = playerPos + dir * spawnDistanceFromCamera;
             spawnPos.y = 0f;
 
             return spawnPos;

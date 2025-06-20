@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4916158268562905549}
   - component: {fileID: 6301414748112187251}
   - component: {fileID: -3866084095124966933}
+  - component: {fileID: -8534834784620591449}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -96,6 +97,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 5
+--- !u!114 &-8534834784620591449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957929183645071932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9632be20139c44e3a39408ff2d08a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 5
+  attackDamageApplierList: []
+  vfx: {fileID: 0}
 --- !u!1 &2422504301734598009
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,4 +18,4 @@ MonoBehaviour:
   choiceFieldPrefab: {fileID: 5040749509729762714, guid: a919c29b9a5175a47a5af77c824f00db, type: 3}
   conflictingUpgrades: []
   requiredUpgrades: []
-  bonusRange: 0.2
+  bonusRange: 0.3

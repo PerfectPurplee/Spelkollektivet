@@ -6,7 +6,7 @@ using NUnit.Framework;
 using UnityEngine;
 
 public class BossStompAttack : BossAttack {
-    public override float TriggerDistance => 7f;
+    public override float TriggerDistance => 4f;
     public override AttackType AttackType => AttackType.Melee;
     public override float AttackDuration => 4f;
     public override int Damage => 30;
