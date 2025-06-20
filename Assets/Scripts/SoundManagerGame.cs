@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using Random = UnityEngine.Random;
 
 public class SoundManagerGame : MonoBehaviour {
@@ -61,14 +62,26 @@ public class SoundManagerGame : MonoBehaviour {
                 yield return null;
                 Debug.Log("Wektor wynosi po: " + PlayerCombatController.Instance.PlayerMovementVector);
             }
+            
             PlaySound(audioClipRefsSO.playerWalkingSound, Camera.main.transform.position);
 
             yield return new WaitForSeconds(0.4f);
         }
     }
 
-    private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplayer = 1f) {
-        AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplayer * volume);
+    private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplier = 1f)
+    {
+        GameObject tempGO = new GameObject("TempAudio");
+        tempGO.transform.position = position;
+
+        AudioSource audioSource = tempGO.AddComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.volume = volume * volumeMultiplier;
+        audioSource.pitch = Random.Range(0.9f, 1.1f); // losowy pitch
+        audioSource.spatialBlend = 1f; // 3D audio
+        audioSource.Play();
+
+        Destroy(tempGO, audioClip.length / audioSource.pitch);
     }
     public AudioClipRefsSO GetAudio()
     {
