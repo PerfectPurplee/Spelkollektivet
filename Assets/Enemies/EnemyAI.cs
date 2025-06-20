@@ -22,7 +22,6 @@ namespace Enemies {
         public float distance;
         public event Action OnDeath;
 
-
         public List<Attack> Attacks { get; set; } = new List<Attack>();
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
@@ -35,6 +34,14 @@ namespace Enemies {
         private Transform _target;
         private float _attackTimer = 0;
 
+        [SerializeField]
+        private Color hitMaterialColor;
+        [SerializeField]
+        private float hitFadeTime;
+        [SerializeField]
+        private SkinnedMeshRenderer meshRenderer;
+        private float lastHitTime = -1;
+        private Color currentColor;
 
         private void Awake() {
             this.CurrentHealth = this.MaxHealth = this.initialHealth;
@@ -82,11 +89,27 @@ namespace Enemies {
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            if (meshRenderer != null)
+            {
+                if (Time.time - lastHitTime > hitFadeTime)
+                {
+                    if (currentColor != Color.white)
+                    {
+                        meshRenderer.material.color = Color.white;
+                    }
+                }
+                else
+                {
+                    currentColor = Color.Lerp(hitMaterialColor, Color.white, (Time.time - lastHitTime) / hitFadeTime);
+                    meshRenderer.material.color = currentColor;
+                }
+            }
         }
 
         public void TakeDamage(int damage, Vector3 attackerPosition, bool range) {
             CurrentHealth -= damage;
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
+            lastHitTime = Time.time;
 
             if (CurrentHealth <= 0 && State != EnemyState.Dying) {
                 State = EnemyState.Dying;
