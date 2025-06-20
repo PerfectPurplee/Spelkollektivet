@@ -14,6 +14,7 @@ public class SlampCast : MonoBehaviour
     public void CastOnPlayer()
     {
         Cast(Player.Player.Instance.transform.position);
+        SoundManagerGame.Instance.PlaySlamSound();
     }
 
     public void Cast(Vector3 position)
