@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Interface;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,10 +26,10 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] private GameObject portal;
 
     [SerializeField] private GameObject bossHPBar;
-    [SerializeField] private Slider bossHpSlider;
-    [SerializeField] private TextMeshProUGUI bossHpText;
+    [SerializeField] public Slider bossHpSlider;
+    [SerializeField] public TextMeshProUGUI bossHpText;
     
-    
+    private bool subscribed = false;
 
     private void Awake() {
         if (Instance != null) {
@@ -42,6 +43,14 @@ public class BossProgressUI : MonoBehaviour {
 
     private void Start() {
         GemCollectible.OnGemCollected += GemCollectible_OnGemCollected;
+        
+    }
+
+    private void GameBoss_OnDamageTaken(object sender, IDamageable.DamageTakenArgs e) {
+        Debug.Log($"Damage taken: {e.CurrentHealth}");
+        float bossHpNoralized = e.CurrentHealth / Boss.GameBoss.Instance.MaxHealth;
+        bossHpSlider.value = bossHpNoralized;
+        bossHpText.text = e.CurrentHealth + "/" + Boss.GameBoss.Instance.MaxHealth;
     }
 
     private void Update() {
@@ -53,6 +62,7 @@ public class BossProgressUI : MonoBehaviour {
             // All gems collected
             if (Boss.GameBoss.Instance != null) {
                 // Targeting boss
+                Boss.GameBoss.Instance.OnDamageTaken += GameBoss_OnDamageTaken;
                 targetPosition = Boss.GameBoss.Instance.transform.position;
                 bossHPBar.SetActive(true);
             }
