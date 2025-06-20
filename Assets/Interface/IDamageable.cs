@@ -4,8 +4,8 @@ using UnityEngine;
 namespace Interface {
     public interface IDamageable {
         public class DamageTakenArgs : EventArgs {
-            private int CurrentHealth { get; set; }
-            private int Damage { get; set; }
+            public int CurrentHealth { get; set; }
+            public int Damage { get; set; }
 
             public DamageTakenArgs(int currentHealth, int damage) {
                 CurrentHealth = currentHealth;
