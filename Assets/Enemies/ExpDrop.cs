@@ -8,7 +8,7 @@ namespace Enemies {
 
 
         public void Initialize(int experience) {
-            this.exp = experience;
+            //this.exp = experience;
         }
 
         private void OnTriggerEnter(Collider other) {

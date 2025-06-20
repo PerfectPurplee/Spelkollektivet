@@ -24,7 +24,7 @@ public class DetectOverlapingObjects : MonoBehaviour
         Vector3 direction = Player.Player.Instance.transform.position - Camera.main.transform.position;
         direction.Normalize();
         RaycastHit[] hits = Physics.SphereCastAll(origin, sphereCastRadius, direction, 1000, layerMask);
-        //Debug.Log(hits.Count());
+        Debug.Log(hits.Count());
         foreach (RaycastHit hit in hits)
         {
             if (hit.transform.TryGetComponent(out MeshRenderer meshRenderer) && meshRenderer.material.HasFloat(shaderVariableName))

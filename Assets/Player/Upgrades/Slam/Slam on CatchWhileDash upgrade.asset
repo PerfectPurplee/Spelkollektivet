@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3aca00676fbc44cb585f9c382deaa0, type: 3}
   m_Name: Slam on CatchWhileDash upgrade
   m_EditorClassIdentifier: 
-  nameText: 
-  sprite: {fileID: 21300000, guid: 519eac60d31840640bd3a3327d57e2b3, type: 3}
+  nameText: Catch shield while dashing to cast SLAM
+  sprite: {fileID: 21300000, guid: 330bef15fea63624e81e0f7184613049, type: 3}
   maxStacks: 1
   choiceFieldPrefab: {fileID: 5040749509729762714, guid: a919c29b9a5175a47a5af77c824f00db, type: 3}
   conflictingUpgrades: []
