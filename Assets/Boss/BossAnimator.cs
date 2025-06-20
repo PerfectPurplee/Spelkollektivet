@@ -8,6 +8,7 @@ namespace Boss {
     public class BossAnimator : MonoBehaviour {
         private static readonly int Death = Animator.StringToHash("Death");
         [SerializeField] private Animator animator;
+        [SerializeField] private GameObject boss;
 
         [SerializeField] private List<BossAttack> bossAttackList;
 
@@ -47,8 +48,7 @@ namespace Boss {
 
             var stateinfo = animator.GetCurrentAnimatorStateInfo(0);
             yield return new WaitForSeconds(stateinfo.length);
-            Boss.GameBoss.Instance.DestroyGameObjectOnBossDeathAnimationEvent();
-            Debug.Log("Death animation finished");
+            Destroy(boss);
         }
     }
 }

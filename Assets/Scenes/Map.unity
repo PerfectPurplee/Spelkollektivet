@@ -1349,18 +1349,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 815677666821533133, guid: feb3ea6feda37420e93000721675f467, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8305285
-      objectReference: {fileID: 0}
-    - target: {fileID: 815677666821533133, guid: feb3ea6feda37420e93000721675f467, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8305285
-      objectReference: {fileID: 0}
-    - target: {fileID: 815677666821533133, guid: feb3ea6feda37420e93000721675f467, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.8305285
-      objectReference: {fileID: 0}
-    - target: {fileID: 815677666821533133, guid: feb3ea6feda37420e93000721675f467, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.63
       objectReference: {fileID: 0}
@@ -1400,28 +1388,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1790786213774474907, guid: feb3ea6feda37420e93000721675f467, type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Toes_L'\n\tTransform 'Toes_R'\n\tTransform
-        'Toes_L'\n\tTransform 'Jaw'\n\tTransform 'Toes_R'\n\tTransform 'Toes_L'\n\tTransform
-        'Toes_R'\n\tFrom animation clip 'A_POLY_GBL_Walk_F_RM_Neut'\n\tFrom animation
-        clip 'A_Attack_HeavyCombo01A_RootMotion_Sword'\n\tFrom animation clip 'A_Attack_HeavyStab01_RootMotion_Sword'\n\tFrom
-        animation clip 'A_Attack_HeavyFlourish_RootMotion_FollowThrough_Sword'\n\tFrom
-        animation clip 'A_Attack_LightFencing01_Hit_RootMotion_Sword'"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3399148867383704297, guid: feb3ea6feda37420e93000721675f467, type: 3}
-      propertyPath: vfx
-      value: 
-      objectReference: {fileID: 1728184095918548, guid: a977b50d367fe4d4d8f6c288bad7df24, type: 3}
     - target: {fileID: 6489778646626514513, guid: feb3ea6feda37420e93000721675f467, type: 3}
       propertyPath: m_Name
       value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 6489778646626514513, guid: feb3ea6feda37420e93000721675f467, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
