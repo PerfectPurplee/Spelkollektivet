@@ -10,7 +10,12 @@ public class PlayerHealthUI : MonoBehaviour {
     
     private void Start() {
         Player.Player.Instance.OnDamageTaken += Player_OnDamageTaken;
+        Player.Player.Instance.OnHealthRegen += Player_OnHealthRegen;
         
+        UpdateVisual();
+    }
+
+    private void Player_OnHealthRegen() {
         UpdateVisual();
     }
 
