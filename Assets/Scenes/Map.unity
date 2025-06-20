@@ -1468,6 +1468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
+    - target: {fileID: 7030569920169650176, guid: 3ad23f902b4a0432ebe1ab959f4e67da, type: 3}
+      propertyPath: shieldingAngle
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7939058825007011062, guid: 3ad23f902b4a0432ebe1ab959f4e67da, type: 3}
       propertyPath: 'iconsParents.Array.data[0]'
       value: 
