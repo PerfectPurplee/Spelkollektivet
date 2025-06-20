@@ -38,11 +38,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a05417e0909f0cb4abf660009397ecf9, type: 3}
   - {fileID: 8300000, guid: f1cce320a040a5242a2eac9e3a48ddbb, type: 3}
   - {fileID: 8300000, guid: 60c41501082f24348b4bd18a00f83564, type: 3}
-  enemyDamageTakenSound:
-  - {fileID: 8300000, guid: 8789bfa51ad2ab64880e234fac8b0d92, type: 3}
-  - {fileID: 8300000, guid: 3eb15afde6ad61a44a762c6c6919b7ca, type: 3}
-  - {fileID: 8300000, guid: c87d283d1b43c534e83eaf9cf04e0359, type: 3}
-  - {fileID: 8300000, guid: 2b259012e389090428e5150f714c9bbd, type: 3}
+  enemyDamageTakenSound: []
   skeletonDeathSound: {fileID: 8300000, guid: 45481c718d1533f428246f9ddb8a500f, type: 3}
   bossRoar: {fileID: 8300000, guid: 276a82b5e8fa8489d95f1dd47de9c234, type: 3}
   bossSpawn: {fileID: 8300000, guid: a2e028f91bf1642869295e6433b5acf6, type: 3}
