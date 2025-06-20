@@ -48,7 +48,7 @@ public class BossProgressUI : MonoBehaviour {
 
     private void GameBoss_OnDamageTaken(object sender, IDamageable.DamageTakenArgs e) {
         Debug.Log($"Damage taken: {e.CurrentHealth}");
-        float bossHpNoralized = e.CurrentHealth / Boss.GameBoss.Instance.MaxHealth;
+        float bossHpNoralized = (float) e.CurrentHealth / Boss.GameBoss.Instance.MaxHealth;
         bossHpSlider.value = bossHpNoralized;
         bossHpText.text = e.CurrentHealth + "/" + Boss.GameBoss.Instance.MaxHealth;
     }
