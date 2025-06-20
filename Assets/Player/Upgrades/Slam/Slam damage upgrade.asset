@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac73a0524187be41b07b4757cdaec72, type: 3}
   m_Name: Slam damage upgrade
   m_EditorClassIdentifier: 
-  nameText: 
-  sprite: {fileID: 21300000, guid: ae2a881ff27d7c443acbbc4692748aad, type: 3}
+  nameText: I love Slam Damage
+  sprite: {fileID: 21300000, guid: 330bef15fea63624e81e0f7184613049, type: 3}
   maxStacks: 3
   choiceFieldPrefab: {fileID: 5040749509729762714, guid: a919c29b9a5175a47a5af77c824f00db, type: 3}
   conflictingUpgrades: []
   requiredUpgrades:
   - {fileID: 11400000, guid: dca5fc6e654b5e748add6a96846ac7c2, type: 2}
   - {fileID: 11400000, guid: 5f4ad8260bd85a94fb078f6c98468072, type: 2}
-  bonusDamage: 1
+  bonusDamage: 25
