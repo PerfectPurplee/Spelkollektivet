@@ -60,6 +60,21 @@ public class SoundManagerGame : MonoBehaviour {
         PlaySound(audioClipRefsSO.skeletonDeathSound, Camera.main.transform.position);
     }
 
+    public void PlayDashSound()
+    {
+        PlaySound(audioClipRefsSO.dashSound, Camera.main.transform.position);
+    }
+
+    public void PlaySlamSound()
+    {
+        PlaySound(audioClipRefsSO.slamSound, Camera.main.transform.position);
+    }
+
+    public void PlayEmpoweredAttackSound()
+    {
+        PlaySound(audioClipRefsSO.empoweredAttackSound, Camera.main.transform.position);
+    }
+
     private void PlaySound(AudioClip[] audioClipArray, Vector3 position, float volume = 1f) {
         PlaySound(audioClipArray[Random.Range(0, audioClipArray.Length)], position, volume);
     }

@@ -147,6 +147,7 @@ public partial class PlayerCombatController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldown.IsUsable)
         {
             SetBufforAction(Dash);
+
         }
         if (Input.GetMouseButton(1) && bufforAction == null && state != State.Block)
         {
@@ -179,6 +180,7 @@ public partial class PlayerCombatController : MonoBehaviour
                 if (bufforAction != null && (shieldInHand || bufforAction == Dash))
                 {
                     InvokeBufforAction();
+                    SoundManagerGame.Instance.PlayDashSound();
                 }
                 break;
             case State.BasicAttack:
@@ -339,6 +341,8 @@ public partial class PlayerCombatController : MonoBehaviour
                 empoweredAttackCounter = 0;
                 OnEmpoweredAttack?.Invoke();
                 basicAttackEmpoweredParticleSystem.Play();
+                SoundManagerGame.Instance.PlayEmpoweredAttackSound();
+                
                 //Instantiate(empoweredAttackVFXPrefab, transform.position + transform.forward * 1.5f + transform.up, Quaternion.identity);
             }
             else
