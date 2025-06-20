@@ -9,6 +9,7 @@ public class SingleAttackHitBox : MonoBehaviour
     public int damage;
     public float multiplier = 1;
     public bool attackActive = false;
+    public GameObject particlesToSpawn;
 
     public event Action<IDamageable> OnAttackEntity;
 
@@ -52,6 +53,10 @@ public class SingleAttackHitBox : MonoBehaviour
         {
             Debug.Log($"Damaged something! : {other.gameObject.name}");
             damageable.TakeDamage(CalculateMultipliedDamage(), Vector3.zero, false);
+            if (particlesToSpawn != null)
+            {
+                Instantiate(particlesToSpawn, other.transform.position, Quaternion.identity);
+            }
             damagedEntities.Add(damageable);
             OnAttackEntity?.Invoke(damageable);
         }

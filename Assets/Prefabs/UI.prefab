@@ -124,15 +124,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allUpgrades:
-  - {fileID: 11400000, guid: 503d94d6f5324b44bbb624a5c33db290, type: 2}
-  - {fileID: 11400000, guid: e219e77e49fb9864d9bb3aaf55ff411d, type: 2}
   - {fileID: 11400000, guid: 4fd606591f413364c9d66b1f8e8b6045, type: 2}
-  - {fileID: 11400000, guid: d6e5fd8b6021a3f46b03b7d9b450f273, type: 2}
-  - {fileID: 11400000, guid: 1e79cff17b42faa4aaa9f3691e4ecd86, type: 2}
+  - {fileID: 11400000, guid: bcf26953801e8ca47ac73f74af7c31df, type: 2}
+  - {fileID: 11400000, guid: dca5fc6e654b5e748add6a96846ac7c2, type: 2}
+  - {fileID: 11400000, guid: fdcf5cc2da6ce0e44969248fb41ae870, type: 2}
+  - {fileID: 11400000, guid: c692345779c0dbe4d8dae95902f5894b, type: 2}
+  - {fileID: 11400000, guid: f1fb3df232cf1e044a0780d20355193a, type: 2}
+  - {fileID: 11400000, guid: f0a83f093f4e0da4b9f69cea68b77559, type: 2}
+  - {fileID: 11400000, guid: 5f4ad8260bd85a94fb078f6c98468072, type: 2}
   iconsParents:
   - {fileID: 3419618225564372977}
   - {fileID: 5300762023460817476}
   - {fileID: 6906266113046622085}
+--- !u!1 &1101098690887177074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6099531586285905383}
+  - component: {fileID: 591234974710746788}
+  - component: {fileID: 5595946198245750948}
+  m_Layer: 5
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6099531586285905383
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101098690887177074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8954508385714446901}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -131}
+  m_SizeDelta: {x: 120, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &591234974710746788
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101098690887177074}
+  m_CullTransparentMesh: 1
+--- !u!114 &5595946198245750948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101098690887177074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2630b2d7b5970644f982cd9ce00b79e6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1167389776712057535
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +376,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3441507889960347083}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8dfc31cd3aca144fba1856d9e50e2ef5, type: 3}
@@ -497,6 +575,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7539430678135443577}
+  - {fileID: 6099531586285905383}
   m_Father: {fileID: 8058917939315498073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -520,6 +599,11 @@ MonoBehaviour:
   gemImage2: {fileID: 8820183410684364225}
   gemImage3: {fileID: 555386071321745061}
   gemImage4: {fileID: 7021005671808389479}
+  altarFlame1: {fileID: 0}
+  altarFlame2: {fileID: 0}
+  altarFlame3: {fileID: 0}
+  altarFlame4: {fileID: 0}
+  arrowTransform: {fileID: 6099531586285905383}
 --- !u!1 &6089598077297224820
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemsCollected: 0
+  boss: {fileID: 0}
 --- !u!1 &8429348665398877907
 GameObject:
   m_ObjectHideFlags: 0
