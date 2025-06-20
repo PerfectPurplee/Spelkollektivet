@@ -15476,6 +15476,7 @@ MonoBehaviour:
   damage: 10
   multiplier: 1
   attackActive: 0
+  particlesToSpawn: {fileID: 3327472014617105562, guid: 81b4eada05cf63a4bb3981d23381cebc, type: 3}
 --- !u!1 &2714835517279234576
 GameObject:
   m_ObjectHideFlags: 0
@@ -15685,6 +15686,7 @@ MonoBehaviour:
   damage: 100
   size: 3
   pushForce: 1
+  enemyHitParticles: {fileID: 6102294188418849462, guid: 21613793281c56a4b86f49ebd2292400, type: 3}
 --- !u!1 &3821365551631044962
 GameObject:
   m_ObjectHideFlags: 0
@@ -40880,6 +40882,7 @@ MonoBehaviour:
   damage: 10
   multiplier: 1
   attackActive: 0
+  particlesToSpawn: {fileID: 3327472014617105562, guid: 81b4eada05cf63a4bb3981d23381cebc, type: 3}
 --- !u!1 &6007828586289518517
 GameObject:
   m_ObjectHideFlags: 0
@@ -41112,6 +41115,7 @@ MonoBehaviour:
   damage: 10
   multiplier: 1
   attackActive: 0
+  particlesToSpawn: {fileID: 0}
 --- !u!135 &4299889642064036612
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -51694,6 +51698,7 @@ MonoBehaviour:
   damage: 4
   multiplier: 1
   attackActive: 0
+  particlesToSpawn: {fileID: 6102294188418849462, guid: 21613793281c56a4b86f49ebd2292400, type: 3}
 --- !u!1 &8278094916837162174
 GameObject:
   m_ObjectHideFlags: 0

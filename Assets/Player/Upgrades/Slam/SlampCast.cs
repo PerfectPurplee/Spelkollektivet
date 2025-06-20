@@ -9,6 +9,7 @@ public class SlampCast : MonoBehaviour
     public int damage;
     public float size;
     public float pushForce;
+    public GameObject enemyHitParticles;
 
     public void CastOnPlayer()
     {
@@ -32,6 +33,7 @@ public class SlampCast : MonoBehaviour
             if (enemyCollider.TryGetComponent(out IDamageable damageable))
             {
                 damageable.TakeDamage(damage, Vector3.zero, false);
+                Instantiate(enemyHitParticles, ((MonoBehaviour)damageable).transform.position, Quaternion.identity);
             }
             else
             {

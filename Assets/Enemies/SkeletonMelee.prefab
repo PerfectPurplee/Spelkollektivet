@@ -2024,6 +2024,9 @@ MonoBehaviour:
   distance: 0
   attack: {fileID: 3411858728211344013}
   initialHealth: 100
+  hitMaterialColor: {r: 1, g: 0.26226407, b: 0.26226407, a: 1}
+  hitFadeTime: 0.2
+  meshRenderer: {fileID: 3370873547893336059}
 --- !u!114 &3491451484080423475
 MonoBehaviour:
   m_ObjectHideFlags: 0
