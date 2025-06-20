@@ -17,7 +17,7 @@ MonoBehaviour:
   levelUp: {fileID: 8300000, guid: 269fecf04dcd544f59ea2aa4057cb129, type: 3}
   playerDeath: {fileID: 8300000, guid: d70f3aea7b2a64bf1a03581f06ecdc69, type: 3}
   shieldHit:
-  - {fileID: 8300000, guid: e5a508f87f56d4992a07e5b260eb9b7e, type: 3}
+  - {fileID: 8300000, guid: 0022d5528c3f54a039a68cf9c623e156, type: 3}
   - {fileID: 8300000, guid: 88ed9a2b781f54a6280d8d986a51c2d5, type: 3}
   skeletonHurt:
   - {fileID: 8300000, guid: c5bba6c10161746fc94378157572384e, type: 3}
