@@ -14,6 +14,7 @@ public class AudioClipRefsSO : ScriptableObject {
     public AudioClip shieldBLockRanged;
     public AudioClip swordHit;
     public AudioClip playerGotHit;
+    public AudioClip[] playerWalkingSound;
 
     public AudioClip menuSlider;
     public AudioClip menuCategory;
