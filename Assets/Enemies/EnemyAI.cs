@@ -36,12 +36,9 @@ namespace Enemies {
         private Transform _target;
         private float _attackTimer = 0;
 
-        [SerializeField]
-        private Color hitMaterialColor;
-        [SerializeField]
-        private float hitFadeTime;
-        [SerializeField]
-        private SkinnedMeshRenderer meshRenderer;
+        [SerializeField] private Color hitMaterialColor;
+        [SerializeField] private float hitFadeTime;
+        [SerializeField] private SkinnedMeshRenderer meshRenderer;
         private float lastHitTime = -1;
         private Color currentColor;
 
@@ -91,17 +88,14 @@ namespace Enemies {
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            if (meshRenderer != null)
-            {
-                if (Time.time - lastHitTime > hitFadeTime)
-                {
-                    if (currentColor != Color.white)
-                    {
+
+            if (meshRenderer != null) {
+                if (Time.time - lastHitTime > hitFadeTime) {
+                    if (currentColor != Color.white) {
                         meshRenderer.material.color = Color.white;
                     }
                 }
-                else
-                {
+                else {
                     currentColor = Color.Lerp(hitMaterialColor, Color.white, (Time.time - lastHitTime) / hitFadeTime);
                     meshRenderer.material.color = currentColor;
                 }
@@ -115,9 +109,9 @@ namespace Enemies {
             StaticOnDamage?.Invoke();
 
             if (CurrentHealth <= 0 && State != EnemyState.Dying) {
-                StaticOnDeath?.Invoke();
                 State = EnemyState.Dying;
                 OnDeath?.Invoke();
+                StaticOnDeath?.Invoke();
             }
 
             //Debug.Log($"Enemy took {damage} damage");
