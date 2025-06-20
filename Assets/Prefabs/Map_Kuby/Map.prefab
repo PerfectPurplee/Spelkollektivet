@@ -3726,6 +3726,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6720413327638953297, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
+      propertyPath: healthLeash
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6720413327638953297, guid: f3af1442d2ee1f1408ab5920c311907a, type: 3}
       propertyPath: initialHealth
       value: 200
       objectReference: {fileID: 0}
