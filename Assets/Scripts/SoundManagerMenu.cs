@@ -45,6 +45,7 @@ public class SoundManagerMenu : MonoBehaviour {
     private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplayer = 1f) {
         AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplayer * volume);
     }
+
     public AudioClipRefsSO GetAudio()
     {
         return audioClipRefsSO;
