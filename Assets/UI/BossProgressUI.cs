@@ -1,4 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Interface;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,24 +18,62 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] private GameObject altarFlame3;
     [SerializeField] private GameObject altarFlame4;
 
+    [SerializeField] private List<Transform> collectiblesList;
+
     [SerializeField] private Transform arrowTransform;
-    private Vector3 targetPosition = Vector3.zero;
+    private Vector3 targetPosition;
+
+    [SerializeField] private GameObject portal;
+
+    [SerializeField] private GameObject bossHPBar;
+    [SerializeField] public Slider bossHpSlider;
+    [SerializeField] public TextMeshProUGUI bossHpText;
+    
+    private bool subscribed = false;
 
     private void Awake() {
         if (Instance != null) {
             Debug.LogError("More than one Instance of BossProgressUI");
         }
-
         Instance = this;
-
-        HideAllGemsAndFlames();
+        
+        
+        HideAllGemsFlamesAndBossHP();
     }
 
     private void Start() {
         GemCollectible.OnGemCollected += GemCollectible_OnGemCollected;
+        
+    }
+
+    private void GameBoss_OnDamageTaken(object sender, IDamageable.DamageTakenArgs e) {
+        Debug.Log($"Damage taken: {e.CurrentHealth}");
+        float bossHpNoralized = e.CurrentHealth / Boss.GameBoss.Instance.MaxHealth;
+        bossHpSlider.value = bossHpNoralized;
+        bossHpText.text = e.CurrentHealth + "/" + Boss.GameBoss.Instance.MaxHealth;
     }
 
     private void Update() {
+        if (BossProgress.Instance.gemsCollected < 4) {
+            // Looking for nearest gem
+            targetPosition = FindClosestGemTransform().position;
+        }
+        else {
+            // All gems collected
+            if (Boss.GameBoss.Instance != null) {
+                // Targeting boss
+                Boss.GameBoss.Instance.OnDamageTaken += GameBoss_OnDamageTaken;
+                targetPosition = Boss.GameBoss.Instance.transform.position;
+                bossHPBar.SetActive(true);
+            }
+            else {
+                // Boss dead, targeting portal
+                bossHPBar.SetActive(false);
+                portal.SetActive(true);
+                targetPosition = portal.transform.position;
+            }
+        }
+
         UpdateArrowRotation();
     }
 
@@ -66,7 +108,8 @@ public class BossProgressUI : MonoBehaviour {
         if (angle < 0) angle += 360;
         arrowTransform.localEulerAngles = new Vector3(0, 0, angle);
     }
-    private void HideAllGemsAndFlames() {
+
+    private void HideAllGemsFlamesAndBossHP() {
         gemImage1.gameObject.SetActive(false);
         gemImage2.gameObject.SetActive(false);
         gemImage3.gameObject.SetActive(false);
@@ -75,5 +118,17 @@ public class BossProgressUI : MonoBehaviour {
         altarFlame2.gameObject.SetActive(false);
         altarFlame3.gameObject.SetActive(false);
         altarFlame4.gameObject.SetActive(false);
+        bossHPBar.gameObject.SetActive(false);
+    }
+
+
+    private Transform FindClosestGemTransform() {
+        Vector3 playerPosition = Player.Player.Instance.transform.position;
+
+        collectiblesList.RemoveAll(item => item == null);
+
+        return collectiblesList
+            .OrderBy(gem => Vector3.Distance(gem.position, playerPosition))
+            .FirstOrDefault();
     }
 }

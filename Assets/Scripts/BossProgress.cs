@@ -32,6 +32,8 @@ public class BossProgress : MonoBehaviour {
 
     private void SpawnBoss() {
         boss.gameObject.SetActive(true);
+        BossProgressUI.Instance.bossHpSlider.value = 1f;
+        BossProgressUI.Instance.bossHpText.text = Boss.GameBoss.Instance.CurrentHealth + "/" + Boss.GameBoss.Instance.MaxHealth;
         Debug.Log("Spawning boss xdd");
     }
 }
