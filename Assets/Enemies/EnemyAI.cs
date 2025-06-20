@@ -21,6 +21,8 @@ namespace Enemies {
         public event EventHandler<IDamageable.DamageTakenArgs> OnDamageTaken;
         public float distance;
         public event Action OnDeath;
+        public static event Action StaticOnDamage;
+        public static event Action StaticOnDeath;
 
         public List<Attack> Attacks { get; set; } = new List<Attack>();
         public int MaxHealth { get; set; }
@@ -110,8 +112,10 @@ namespace Enemies {
             CurrentHealth -= damage;
             OnDamageTaken?.Invoke(this, new IDamageable.DamageTakenArgs(CurrentHealth, damage));
             lastHitTime = Time.time;
+            StaticOnDamage?.Invoke();
 
             if (CurrentHealth <= 0 && State != EnemyState.Dying) {
+                StaticOnDeath?.Invoke();
                 State = EnemyState.Dying;
                 OnDeath?.Invoke();
             }
