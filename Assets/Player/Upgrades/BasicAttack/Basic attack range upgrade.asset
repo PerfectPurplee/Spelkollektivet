@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e7dbac0615e69499b1f6874186113c, type: 3}
   m_Name: Basic attack range upgrade
   m_EditorClassIdentifier: 
-  nameText: "prosze dzia\u0142aj kurwa"
-  sprite: {fileID: 21300000, guid: 173f7bf0258285c4f8bf01825ac02a11, type: 3}
+  nameText: Bigger Slash
+  sprite: {fileID: 21300000, guid: 179047b03fc93294c9a9f5d3d4f22cf1, type: 3}
   maxStacks: 100
   choiceFieldPrefab: {fileID: 5040749509729762714, guid: a919c29b9a5175a47a5af77c824f00db, type: 3}
   conflictingUpgrades: []
   requiredUpgrades: []
-  bonusRange: 0.3
+  bonusRange: 0.2
