@@ -29,6 +29,9 @@ public class BossProgressUI : MonoBehaviour {
     [SerializeField] public Slider bossHpSlider;
     [SerializeField] public TextMeshProUGUI bossHpText;
     
+    [SerializeField] private TextMeshProUGUI youWinText;
+    [SerializeField] private TextMeshProUGUI youLoseText;
+    
     private bool subscribed = false;
 
     private void Awake() {
@@ -62,12 +65,17 @@ public class BossProgressUI : MonoBehaviour {
             // All gems collected
             if (Boss.GameBoss.Instance != null) {
                 // Targeting boss
-                Boss.GameBoss.Instance.OnDamageTaken += GameBoss_OnDamageTaken;
+                if (!subscribed) {
+                    Boss.GameBoss.Instance.OnDamageTaken += GameBoss_OnDamageTaken;
+                    subscribed = true;
+                }
+                
                 targetPosition = Boss.GameBoss.Instance.transform.position;
                 bossHPBar.SetActive(true);
             }
             else {
                 // Boss dead, targeting portal
+                youWinText.gameObject.SetActive(true);
                 bossHPBar.SetActive(false);
                 portal.SetActive(true);
                 targetPosition = portal.transform.position;
@@ -119,6 +127,8 @@ public class BossProgressUI : MonoBehaviour {
         altarFlame3.gameObject.SetActive(false);
         altarFlame4.gameObject.SetActive(false);
         bossHPBar.gameObject.SetActive(false);
+        youLoseText.gameObject.SetActive(false);
+        youWinText.gameObject.SetActive(false);
     }
 
 
@@ -131,4 +141,6 @@ public class BossProgressUI : MonoBehaviour {
             .OrderBy(gem => Vector3.Distance(gem.position, playerPosition))
             .FirstOrDefault();
     }
+    
+    
 }
