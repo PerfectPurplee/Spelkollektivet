@@ -103,6 +103,12 @@ namespace Boss {
                 this.BossState = BossState.Dead;
                 OnDeath?.Invoke();
             }
+
+            Debug.Log($"Boss took {damage} damage, Current boss health: {CurrentHealth}");
+        }
+
+        public void DestroyGameObjectOnBossDeathAnimationEvent() {
+            Destroy(gameObject);
         }
     }
 }
