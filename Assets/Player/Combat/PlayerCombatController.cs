@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Interface;
 using Synty.AnimationGoblinLocomotion.Samples;
 using UnityEngine;
@@ -91,6 +92,10 @@ public partial class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private SlampCast slamCast;
 
+    [SerializeField]
+    private GameObject blockObject;
+    private List<ParticleSystem> blockParticles;
+
     private float bufforTime;
     private Action bufforAction;
 
@@ -119,6 +124,7 @@ public partial class PlayerCombatController : MonoBehaviour
         defaultShieldParent = shield.parent;
         basicAttackDefaultParticleSystemMain = basicAttackDeafultParticleSystem.main;
         basicAttackEmpoweredParticleSystemMain = basicAttackEmpoweredParticleSystem.main;
+        blockParticles = blockObject.GetComponentsInChildren<ParticleSystem>().ToList();
     }
 
     private void Start()
@@ -140,7 +146,7 @@ public partial class PlayerCombatController : MonoBehaviour
         {
             SetBufforAction(Dash);
         }
-        if (Input.GetMouseButton(1) && bufforAction == null)
+        if (Input.GetMouseButton(1) && bufforAction == null && state != State.Block)
         {
             SetBufforAction(StartBlock);
         }
@@ -278,7 +284,7 @@ public partial class PlayerCombatController : MonoBehaviour
         currentShieldMovementDirection = direction.normalized;
         shield.SetParent(null);
         shield.rotation = shieldThrowingRotation;
-        shieldStartSpeed = shieldThrowDistance * shieldThrowingForwardDuration * 2;
+        shieldStartSpeed = shieldThrowDistance / shieldThrowingForwardDuration * 2;
         currentShieldSpeed = shieldStartSpeed;
         shieldAcceleration = shieldStartSpeed / shieldThrowingForwardDuration;
         throwAttackHitBox.StartAttack();
@@ -350,6 +356,10 @@ public partial class PlayerCombatController : MonoBehaviour
 
     private void StartBlock()
     {
+        blockObject.SetActive(true);
+        shield.transform.SetParent(blockObject.transform);
+        shield.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+        animator.SetBool("Block", true);
         ChangeState(State.Block);
     }
 
@@ -380,6 +390,14 @@ public partial class PlayerCombatController : MonoBehaviour
     private void ChangeState(State newState)
     {
         player.shielding = false;
+
+        if (state == State.Block && newState != State.Block)
+        {
+            shield.parent = defaultShieldParent;
+            shield.SetLocalPositionAndRotation(defaultShieldPosition, defaultShieldRotation);
+            blockObject.SetActive(false);
+            animator.SetBool("Block", false);
+        }
 
         float speed = 0;
         switch (newState)
