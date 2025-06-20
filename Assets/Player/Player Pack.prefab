@@ -52621,7 +52621,7 @@ MonoBehaviour:
   shielding: 0
   shieldDirection: {x: 0, y: 0, z: 0}
   meleeDamageShieldedMultiplier: 0.7
-  shieldingAngle: 0.7
+  shieldingAngle: 1.5
 --- !u!1001 &7027779882559257516
 PrefabInstance:
   m_ObjectHideFlags: 0

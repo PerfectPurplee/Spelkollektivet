@@ -10,8 +10,13 @@ public class AudioClipRefsSO : ScriptableObject {
     public AudioClip[] shieldHit;
     public AudioClip[] skeletonHurt;
     public AudioClip skeletonDeath;
-    public AudioClip shieldBlock;
+    public AudioClip shieldBlockMele;
+    public AudioClip shieldBLockRanged;
     public AudioClip swordHit;
+    public AudioClip playerGotHit;
+    public AudioClip[] playerWalkingSound;
+    public AudioClip[] enemyDamageTakenSound;
+    public AudioClip skeletonDeathSound;
 
     public AudioClip menuSlider;
     public AudioClip menuCategory;
