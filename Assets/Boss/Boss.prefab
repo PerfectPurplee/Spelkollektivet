@@ -24,7 +24,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &815677666821533133
 Transform:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   cooldown: 5
   attackDamageApplierList:
   - {fileID: 5314213952194995473, guid: 354c31c55cf9e4a219b4684ce4e2f4af, type: 3}
-  vfx: {fileID: 0}
+  vfx: {fileID: 1728184095918548, guid: a977b50d367fe4d4d8f6c288bad7df24, type: 3}
 --- !u!114 &4171851450414399345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 6489778646626514513}
     - target: {fileID: 7670839154649448139, guid: 656bc1d66d8580f4c8f0c1d907913285, type: 3}
       propertyPath: bossAttackList.Array.size
       value: 5
