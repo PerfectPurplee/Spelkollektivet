@@ -23,11 +23,18 @@ public class SoundManagerMenu : MonoBehaviour {
 
     private void Start() {
         MainMenuUI.Instance.OnButtonPressed += MainMenuUI_OnButtonPressed;
+        MainMenuUI.Instance.OnButtonHovered += MainMenuUI_OnButtonHovered;
     }
 
 
-    private void MainMenuUI_OnButtonPressed(object sender, EventArgs e) {
+    private void MainMenuUI_OnButtonPressed(object sender, EventArgs e)
+    {
+        PlaySound(audioClipRefsSO.menuOption, Vector3.zero);
+    }
+    private void MainMenuUI_OnButtonHovered(object sender, EventArgs e)
+    {
         PlaySound(audioClipRefsSO.menuCategory, Vector3.zero);
+        Debug.Log("Button is hovered in the MainMenu");
     }
 
 
@@ -37,5 +44,9 @@ public class SoundManagerMenu : MonoBehaviour {
 
     private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplayer = 1f) {
         AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplayer * volume);
+    }
+    public AudioClipRefsSO GetAudio()
+    {
+        return audioClipRefsSO;
     }
 }

@@ -12,6 +12,10 @@ namespace Boss {
             _direction = transform.forward;
         }
 
+        private void OnDestroy() {
+            Boss.BossDamageApplier.OnDamageApplied -= BossDamageApplierOnOnDamageApplied;
+        }
+
         private void Update() {
             transform.position += _direction * (speed * Time.deltaTime);
         }

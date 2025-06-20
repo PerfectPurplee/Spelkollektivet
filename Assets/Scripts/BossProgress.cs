@@ -6,6 +6,8 @@ public class BossProgress : MonoBehaviour {
     public int gemsCollected;
     private int maxGems = 4;
 
+    [SerializeField] private Boss.GameBoss boss;
+
 
     private void Awake() {
         if (Instance != null) {
@@ -29,6 +31,7 @@ public class BossProgress : MonoBehaviour {
 
 
     private void SpawnBoss() {
+        boss.gameObject.SetActive(true);
         Debug.Log("Spawning boss xdd");
     }
 }
