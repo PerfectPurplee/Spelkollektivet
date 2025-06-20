@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421e123c6f1675e4bad5d168ca2a82ec, type: 3}
   m_Name: Empowered attack x decrease upgrade
   m_EditorClassIdentifier: 
-  nameText: 
-  sprite: {fileID: 21300000, guid: 6080d2b1b6bd55a43ade5e9bb1e82e64, type: 3}
-  maxStacks: 4
+  nameText: More Empowered Attacks
+  sprite: {fileID: 21300000, guid: 9121cdb6f8f88ab4e87e9f0c3f17653a, type: 3}
+  maxStacks: 3
   choiceFieldPrefab: {fileID: 5040749509729762714, guid: a919c29b9a5175a47a5af77c824f00db, type: 3}
   conflictingUpgrades: []
   requiredUpgrades:
