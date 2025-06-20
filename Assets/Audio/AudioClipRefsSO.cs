@@ -15,6 +15,8 @@ public class AudioClipRefsSO : ScriptableObject {
     public AudioClip swordHit;
     public AudioClip playerGotHit;
     public AudioClip[] playerWalkingSound;
+    public AudioClip[] enemyDamageTakenSound;
+    public AudioClip skeletonDeathSound;
 
     public AudioClip menuSlider;
     public AudioClip menuCategory;

@@ -31,6 +31,8 @@ public class SoundManagerGame : MonoBehaviour {
         Player.Player.Instance.OnBlockMelee += PlayerOnBlockMeleSound;
         Player.Player.Instance.OnBlockRanged += PlayerOnBlockRangedSound;
         Player.Player.Instance.OnDeath += PlayerOnDeathSound;
+        Enemies.EnemyAI.StaticOnDamage += PlaySkeletonDamageSound;
+        Enemies.EnemyAI.StaticOnDeath += PlaySkeletonDeathSound;
         StartCoroutine(PlayingPlayerWalkingSound());
 
     }
@@ -46,6 +48,16 @@ public class SoundManagerGame : MonoBehaviour {
     {
         PlaySound(audioClipRefsSO.menuCategory, Camera.main.transform.position);
         Debug.Log("Button is hovered in the Pause Menu");
+    }
+
+    private void PlaySkeletonDamageSound()
+    {
+        PlaySound(audioClipRefsSO.enemyDamageTakenSound, Camera.main.transform.position);
+    }
+
+    private void PlaySkeletonDeathSound()
+    {
+        PlaySound(audioClipRefsSO.skeletonDeathSound, Camera.main.transform.position);
     }
 
     private void PlaySound(AudioClip[] audioClipArray, Vector3 position, float volume = 1f) {
