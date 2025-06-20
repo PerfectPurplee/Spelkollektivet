@@ -26,6 +26,7 @@ public class BossProgress : MonoBehaviour {
         Debug.Log(gemsCollected);
         if (gemsCollected == maxGems) {
             SpawnBoss();
+            SoundManagerGame.Instance.PlayBossSpawn();
         }
     }
 

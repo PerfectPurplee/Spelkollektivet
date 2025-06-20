@@ -5,14 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924978-eab3-448b-a2ac-a7bc3d435650" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SM_Prop_Ritual_Circle_01.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SM_Prop_Ritual_Circle_01.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PortalEndGame.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PortalEndGame.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Map_Kuby/BaseTerain_POI_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Map_Kuby/BaseTerain_POI_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Map_Kuby/Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Map_Kuby/Map.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/BossProgressUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/BossProgressUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spelkollektivet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioClipRefsSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioClipRefsSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/BlockMele.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/BlockMele.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/BossAttack.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/BossRoar.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/BossSpawn.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Bow_Shot.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/HitSound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/HitSound.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/PlayerWalk.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/PlayerWalk.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/ShieldHit1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/ShieldHit1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/DashSound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/ElectricitySound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/EmpoweredAttack.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/HitSound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/LevelUp.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/MainMenuTheme.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/MenuConfirm.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/MenuSliderUpDown.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/MenuSwitchOption.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerDeath.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalk.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalk.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalkingSound_1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalkingSound_2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalkingSound_3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalkingSound_4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalkingSound_5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalkingSound_6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalkingSound_7.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PlayerWalkingSound_8.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/ShieldBlock.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/ShieldHit1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/ShieldHit2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SkeletonDeath.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SkeletonHurt1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SkeletonHurt2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SkeletonHurt3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SkeletonHurt4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SkeletonWalk1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SlamSound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SpelkoMainThemeWork2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SpelkoMainThemeWork3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SwordSwish.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/UpgradeBreaker.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/getXP.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Boss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Boss.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/ExpDrop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/ExpDrop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManagerGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManagerGame.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +85,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "enemies",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
