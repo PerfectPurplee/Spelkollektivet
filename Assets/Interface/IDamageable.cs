@@ -13,7 +13,7 @@ namespace Interface {
             }
         }
 
-        int MaxHealth { get; set; }
+        int MaxHealth { get;  set; }
         int CurrentHealth { get; set; }
         event EventHandler<DamageTakenArgs> OnDamageTaken;
         event Action OnDeath;

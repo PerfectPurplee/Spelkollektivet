@@ -69,6 +69,7 @@ namespace Boss {
                     throw new ArgumentOutOfRangeException();
             }
         }
+        
 
         private bool AttackCheck() {
             // AttackList.Shuffle();
